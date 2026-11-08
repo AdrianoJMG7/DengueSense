@@ -37,3 +37,12 @@ python scripts/04_icen.py
 python scripts/05_panel.py
 python scripts/06_modelado_prep.py
 ```
+
+## Fase 2 de la guía metodológica: líneas base (scripts 07 y 08)
+- **Panel departamento × semana** (`07_panel_region.py` → `data/processed/panel_depto_semana.parquet`): 23 departamentos × 782 semanas = 17,986 filas, 937,119 casos (los mismos del panel de celdas). Los casos se suman por ubigeo → departamento; el clima es el promedio simple de las celdas que tienen algún distrito del departamento (24 celdas abarcan más de un departamento y cuentan en ambos).
+- **Regiones principales**: Piura (costa norte), Loreto (selva baja) y San Martín (selva alta), constante `REGIONES` en `08_lineas_base.py`. Alternativas para la tercera: Ucayali o Madre de Dios. Las líneas base se calculan para los 19 departamentos con ≥ 1,000 casos en entrenamiento.
+- **Pronóstico a h = 1..4 semanas**: la fila de la semana T solo usa información hasta T − h. Entrenamiento 2010–2023, prueba 2024.
+- **Modelos**: persistencia (casos de T − h), promedio estacional (media de la misma semana en los años anteriores) y regresión lineal de log1p(casos) sobre los casos de T − h a T − h − 3, una por departamento y horizonte.
+- **Resultados (prueba 2024, R²)**: Piura 0.92 / 0.84 / 0.73 / 0.60 con la regresión a 1–4 semanas; Loreto 0.82 / 0.63 / 0.42 / 0.23; San Martín 0.77 / 0.53 / 0.21 / −0.08 (ahí gana la persistencia: 0.88 / 0.82 / 0.65 / 0.51). El promedio estacional falla en 2024 (R² 0.01 en Piura, negativo en Loreto y San Martín) porque fue un año epidémico atípico. Detalle en `outputs/fase2_lineas_base_metricas.csv` y `outputs/fase2_lineas_base_2024.png`.
+- **Lectura**: a 1 semana casi todo lo explica la inercia de los casos; desde 3–4 semanas el R² cae rápido. Ese es el espacio que el clima rezagado (fase 3, XGBoost) tiene que mejorar. La regresión subestima los picos al volver de la escala log (sesgo de retransformación).
+- **Pendiente para la fase 3**: un conjunto de validación (por ejemplo 2022–2023) para ajustar XGBoost sin tocar 2024, y la incidencia por 100,000 habitantes (falta la población del INEI 2010–2024).
