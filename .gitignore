@@ -1,0 +1,12 @@
+# Datos pesados: CSV originales y parquet intermedios/procesados.
+# Son regenerables ejecutando scripts/01 a 06.
+/*.csv
+data/raw/*.csv
+data/interim/*.parquet
+data/processed/*.parquet
+outputs/*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,11 @@
+control,estado,detalle
+sin duplicados celda-ano-semana,OK,0 duplicados
+rango fisico: temp_min<=temp_max,OK,0 violaciones
+rango fisico: precip_total>=0,OK,0 violaciones
+rango fisico: dias_lluvia 0-7,OK,0 violaciones
+rango fisico: hum_rel 0-100,OK,0 violaciones
+rango fisico: temp_media entre min y max,OK,0 violaciones
+NA en rezagos solo en primeras semanas,OK,cols con NA tardios: 0
+"temp_media_lag2 == lag(temp_media,2)",OK,max diff = 0
+"temp_media_lag4 == lag(temp_media,4)",OK,max diff = 0
+series completas por celda,OK,"min=782, max=782 semanas por celda"

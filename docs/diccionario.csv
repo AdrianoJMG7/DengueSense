@@ -1,0 +1,43 @@
+tabla,columna,descripcion,tipo,unidad,rol,notas_limpieza
+casos,departamento,Departamento del caso,texto,,categoria,Normalizado a mayusculas sin acentos
+casos,provincia,Provincia del caso,texto,,categoria,Normalizado a mayusculas sin acentos
+casos,distrito,Distrito del caso,texto,,categoria,Normalizado a mayusculas sin acentos
+casos,localidad,Localidad/barrio del caso,texto,,categoria,Contiene codigos numericos de localidad; no usar como llave
+casos,enfermedad,Forma clinica del dengue,texto,,categoria,3 valores: SIN SIGNOS DE ALARMA / CON SIGNOS DE ALARMA / GRAVE
+casos,ano,Año de notificacion/semana epidemiologica,entero,anio,identificador,Rango 2000-2024
+casos,semana,Semana epidemiologica MINSA,entero,semana,identificador,Rango 1-53; NO es semana ISO - no mezclar con calendario
+casos,diagnostic,Codigo CIE-10,texto,,objetivo_filtro,Todos A97.x (dengue); el archivo solo contiene dengue
+casos,diresa,Codigo de region de salud,DIRESA,entero,,contexto,33 valores; codigo numerico no secuencial
+casos,ubigeo,Ubiigeo distrital,texteo,ubigeo,identificador,Pad a 6 digitos; solo 2 filas descartadas por ubigeo sin celda (0.00%)
+casos,localcod,Codigo de localidad,texteo,,contexto,Muchos vacios
+casos,edad,Edad reportada,entero,unidad_tipo_edad,contexto,Convertida a edad_anos segun tipo_edad
+casos,tipo_edad,Unidad de la edad,texto,,contexto,A=anos M=meses D=dias (supuesto verificado: solo estos 3 codigos)
+casos,sexo,Sexo del paciente,texto,,contexto,F/M
+casos,edad_anos,Edad normalizada a anos,numerico,anos,contexto,edad/12 si M, /365 si D; 0 NA
+casos,duplicado_exacto,Fila identica a otra,booleano,,control,24.09% de filas en grupos duplicados - SE CONSERVAN (no hay ID de caso)
+clima,celda_grilla,Identificador de celda de grilla 0.5x0.5,texteo,,identificador,"Formato 'lat|lon' ej -0.500|-74.375"
+clima,ano,Año,entero,anio,identificador,2010-2024
+clima,semana,Semana epidemiologica,entero,semana,identificador,782 semanas por celda (~15 anos)
+clima,temp_media,Temperatura media semanal,C,grados,base,predictor solo via rezagos
+clima,temp_max,Temperatura maxima semanal,C,grados,base,predictor solo via rezagos
+clima,temp_min,Temperatura minima semanal,C,grados,base,predictor solo via rezagos
+clima,rango_term,Amplitud termica semanal,C,grados,base,predictor solo via rezagos
+clima,precip_total,Precipitacion acumulada semanal,mm,mm,base,predictor solo via rezagos
+clima,precip_max_d,Precipitacion maxima diaria mm,mm,mm,base,SIN rezagos - excluida de predictores
+clima,dias_lluvia,Dias con lluvia en la semana,dias,conteo,base,predictor solo via rezagos
+clima,hum_rel,Humedad relativa %,porcentaje,%,base,predictor solo via rezagos
+clima,viento,Viento medio m/s?,m/s?,m/s,base,SIN rezagos - excluida; unidad por confirmar
+clima,*_lag2/4/6/8,Rezagos de variables base,semanas,predictor,Derivadas verificadas: lag2/lag4 coinciden exactamente
+clima,*_mm4_lag2,Media movil 4 semanas rezagada 2,semanas,predictor,Verificar definicion exacta antes de usar con h>2
+clima,*_anomalia,Anomalia vs periodo de referencia,semanas,predictor,EXCLUIDAS del modelado: posible fuga (calculadas con todos los anos)
+icen,ano/mes,Periodo mensual,entero,,identificador,2009-2024 completo sin duplicados ni huecos
+icen,icen,ICEN del mes,indice,,atributo,Se usa en el panel solo via icen_lag1..6
+icen,icen_lag1..6,Rezagos mensuales 1-6,indice,,atributo,Seguros para h=2
+icen,icen_trad/cap/verano*,Variantes del ICEN,indice,,atributo,EXCLUIDAS: corresponden al mes en curso (no publicadas al predecir)
+icen,icen_mm3/icen_tendencia,Media movil 3m y tendencia,indice,,atributo,EXCLUIDAS por las mismas razones
+mapa,ubigeo,Ubiigeo distrital,texteo,ubigeo,identificador,660 distritos, sin duplicados
+mapa,celda_grilla,Celda de grilla asignada,texteo,,identificador,Varias celdas abarcan >1 distrito; para celda->depto se uso departamento con mas distritos
+mapa,n_distritos_en_celda,Cantidad de distritos en la celda,entero,conteo,contexto,
+distritos,casos_2011_2024,Casos agregados 2011-2024,entero,casos,validacion,Util para sanity check interno (OpenDengue no disponible)
+distritos,pct_alarma_grave,% casos graves+alarma,porcentaje,%,contexto,
+distritos,idh_2019/pct_pobreza*,Indicadores INEI,numerico,,contexto,Disponibles para analisis de contexto (no entran al panel base)
