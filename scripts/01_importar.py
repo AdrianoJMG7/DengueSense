@@ -27,9 +27,18 @@ def ascii_upper(s: pd.Series) -> pd.Series:
 def clean_df(df: pd.DataFrame) -> pd.DataFrame:
     df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
     for col in df.columns:
-        if df[col].dtype == object:
+        # Con pandas 3 el texto se lee como dtype "str", que ya no es igual a
+        # object; is_string_dtype cubre ambos casos.
+        if pd.api.types.is_string_dtype(df[col]):
             df[col] = ascii_upper(df[col])
     return df
+
+
+# El CSV de casos ya trae la letra perdida como U+FFFD ("FERRE�AFE"); el
+# dano viene de la fuente. En provincia y distrito siempre era una N con tilde
+# (verificado: CANETE, FERRENAFE, PARINAS, ...). En localidad no siempre (por
+# ejemplo "N� 11" es el simbolo de numero), asi que ahi no se reemplaza.
+COLS_CON_ENE = ["provincia", "distrito"]
 
 
 # ---------------------------------------------------------------- casos ----
@@ -40,6 +49,10 @@ casos = pd.read_csv(
     dtype=str,
     keep_default_na=False,
 )
+n_fffd = casos[COLS_CON_ENE].apply(lambda s: s.str.contains("�")).sum().to_dict()
+print(f"  letras perdidas en la fuente (U+FFFD), reemplazadas por N: {n_fffd}")
+for col in COLS_CON_ENE:
+    casos[col] = casos[col].str.replace("�", "N")
 casos = clean_df(casos)
 casos["ubigeo"] = casos["ubigeo"].str.replace(r"\D", "", regex=True).str.zfill(6)
 casos["ano"] = pd.to_numeric(casos["ano"], errors="coerce").astype("Int64")
