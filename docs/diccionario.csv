@@ -1,7 +1,7 @@
 tabla,columna,descripcion,tipo,unidad,rol,notas_limpieza
 casos,departamento,Departamento del caso,texto,,categoria,Normalizado a mayusculas sin acentos
-casos,provincia,Provincia del caso,texto,,categoria,Normalizado a mayusculas sin acentos
-casos,distrito,Distrito del caso,texto,,categoria,Normalizado a mayusculas sin acentos
+casos,provincia,Provincia del caso,texto,,categoria,"Normalizado a mayusculas sin acentos; la Ñ viene dañada en la fuente (U+FFFD) y se reemplaza por N"
+casos,distrito,Distrito del caso,texto,,categoria,"Normalizado a mayusculas sin acentos; la Ñ viene dañada en la fuente (U+FFFD) y se reemplaza por N"
 casos,localidad,Localidad/barrio del caso,texto,,categoria,Contiene codigos numericos de localidad; no usar como llave
 casos,enfermedad,Forma clinica del dengue,texto,,categoria,3 valores: SIN SIGNOS DE ALARMA / CON SIGNOS DE ALARMA / GRAVE
 casos,ano,Año de notificacion/semana epidemiologica,entero,anio,identificador,Rango 2000-2024
@@ -13,8 +13,8 @@ casos,localcod,Codigo de localidad,texteo,,contexto,Muchos vacios
 casos,edad,Edad reportada,entero,unidad_tipo_edad,contexto,Convertida a edad_anos segun tipo_edad
 casos,tipo_edad,Unidad de la edad,texto,,contexto,A=anos M=meses D=dias (supuesto verificado: solo estos 3 codigos)
 casos,sexo,Sexo del paciente,texto,,contexto,F/M
-casos,edad_anos,Edad normalizada a anos,numerico,anos,contexto,edad/12 si M, /365 si D; 0 NA
-casos,duplicado_exacto,Fila identica a otra,booleano,,control,24.09% de filas en grupos duplicados - SE CONSERVAN (no hay ID de caso)
+casos,edad_anos,Edad normalizada a anos,numerico,anos,contexto,"edad/12 si M, /365 si D; 14 edades > 110 anos quedan como NA"
+casos,duplicado_exacto,Copia de una fila identica anterior,booleano,,control,"True desde la 2.a copia: 152,091 filas (14.77%); 24.09% contando todo el grupo - SE CONSERVAN (no hay ID de caso)"
 clima,celda_grilla,Identificador de celda de grilla 0.5x0.5,texteo,,identificador,"Formato 'lat|lon' ej -0.500|-74.375"
 clima,ano,Año,entero,anio,identificador,2010-2024
 clima,semana,Semana epidemiologica,entero,semana,identificador,782 semanas por celda (~15 anos)
@@ -31,8 +31,8 @@ clima,*_lag2/4/6/8,Rezagos de variables base,semanas,predictor,Derivadas verific
 clima,*_mm4_lag2,Media movil 4 semanas rezagada 2,semanas,predictor,Verificar definicion exacta antes de usar con h>2
 clima,*_anomalia,Anomalia vs periodo de referencia,semanas,predictor,EXCLUIDAS del modelado: posible fuga (calculadas con todos los anos)
 icen,ano/mes,Periodo mensual,entero,,identificador,2009-2024 completo sin duplicados ni huecos
-icen,icen,ICEN del mes,indice,,atributo,Se usa en el panel solo via icen_lag1..6
-icen,icen_lag1..6,Rezagos mensuales 1-6,indice,,atributo,Seguros para h=2
+icen,icen,ICEN del mes,indice,,atributo,Se usa en el panel solo via icen_lag3..6
+icen,icen_lag1..6,Rezagos mensuales 1-6,indice,,atributo,"Solo lag3..6 son seguros para h=2; lag1 y lag2 EXCLUIDOS (mes no terminado o no publicado al predecir)"
 icen,icen_trad/cap/verano*,Variantes del ICEN,indice,,atributo,EXCLUIDAS: corresponden al mes en curso (no publicadas al predecir)
 icen,icen_mm3/icen_tendencia,Media movil 3m y tendencia,indice,,atributo,EXCLUIDAS por las mismas razones
 mapa,ubigeo,Ubiigeo distrital,texteo,ubigeo,identificador,660 distritos, sin duplicados
