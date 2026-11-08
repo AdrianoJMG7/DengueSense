@@ -84,16 +84,32 @@ casos.loc[mask_a, "edad_anos"] = casos.loc[mask_a, "edad"]
 casos.loc[mask_m, "edad_anos"] = casos.loc[mask_m, "edad"] / 12
 casos.loc[mask_d, "edad_anos"] = casos.loc[mask_d, "edad"] / 365
 print("  tipo_edad no reconocido:", casos.loc[~casos["tipo_edad"].isin(["A", "M", "D"]), "tipo_edad"].unique())
+# Edades imposibles (> 110 anos): quedan como NA en edad_anos. No se borra la
+# fila: el caso cuenta igual para la variable objetivo.
+EDAD_MAXIMA = 110
+n_imposibles = int((casos["edad_anos"] > EDAD_MAXIMA).sum())
+casos.loc[casos["edad_anos"] > EDAD_MAXIMA, "edad_anos"] = np.nan
+print(f"  edades imposibles (> {EDAD_MAXIMA} anos) marcadas como NA: {n_imposibles}")
 print("  edad_anos NA:", casos["edad_anos"].isna().sum())
 
-# 5) Duplicados exactos: se MARCAN, no se borran (no hay ID de caso)
-casos["duplicado_exacto"] = casos.duplicated(keep=False)
-n_dup = casos["duplicado_exacto"].sum()
-print(f"  filas en grupos duplicados exactos: {n_dup:,} "
-      f"({n_dup / len(casos) * 100:.2f}%) - se conservan")
+# 5) Duplicados exactos: se MARCAN, no se borran (no hay ID de caso).
+#    duplicado_exacto = True en la 2.a copia en adelante de cada grupo; asi
+#    la suma da las copias sobrantes, que es lo que cambiaria al deduplicar.
+n_en_grupos = int(casos.duplicated(keep=False).sum())  # antes de agregar la columna
+casos["duplicado_exacto"] = casos.duplicated(keep="first")
+n_sobrantes = int(casos["duplicado_exacto"].sum())
+print(f"  duplicados exactos: {n_sobrantes:,} copias sobrantes "
+      f"({n_sobrantes / len(casos) * 100:.2f}%); {n_en_grupos:,} filas en grupos "
+      f"repetidos ({n_en_grupos / len(casos) * 100:.2f}%) - se conservan")
+pd.DataFrame([
+    {"control": "edades_imposibles_mayores_110", "n": n_imposibles},
+    {"control": "duplicados_copias_sobrantes", "n": n_sobrantes},
+    {"control": "duplicados_filas_en_grupos", "n": n_en_grupos},
+]).to_csv(OUT / "casos_controles.csv", index=False)
 
 # --------------------------------------------------- variable objetivo -----
-casos_limpios = casos.drop(columns=["duplicado_exacto"])
+# Se guarda con la marca de duplicado para el analisis de sensibilidad.
+casos_limpios = casos
 casos_limpios.to_parquet(INTERIM / "casos_limpios.parquet", index=False)
 print(f"\nGuardado casos_limpios: {len(casos_limpios):,} filas")
 
