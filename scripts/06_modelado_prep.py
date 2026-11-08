@@ -7,8 +7,9 @@ Decisiones (documentadas en docs/diccionario.csv):
   - Horizonte h = 2 semanas.
   - Solo se usan predictores con rezago >= h; se EXCLUYEN las variables base
     sin rezago y las *_anomalia (calculadas con todos los anos = fuga).
-  - Split temporal: train <= 2023, test >= 2024 (clima cubre 2010-2025;
+  - Split temporal: train <= 2023, test >= 2024 (clima cubre 2010-2024;
     los casos empiezan a ser densos ~2010).
+  - ICEN: solo icen_lag3..6 (ver MIN_REZAGO_ICEN).
   - Objetivo: casos (conteo) y log1p_casos. incidencia queda pendiente de
     poblacion INEI.
 """
@@ -23,6 +24,16 @@ OUT = ROOT / "outputs"
 
 H = 2
 ANIO_CORTE = 2024
+
+# Rezago minimo del ICEN, en meses. Al predecir la semana t se conoce hasta la
+# semana t - H. Con H = 2:
+#   - icen_lag1 (mes m-1): en el 38 % de las semanas, t-2 cae en el mes m-1,
+#     que aun no termina -> fuga de informacion.
+#   - icen_lag2 (mes m-2): el mes ya termino, pero el ICEN se calcula con
+#     medias moviles de 3 meses y se publica con retraso (supuesto a
+#     confirmar con ENFEN / quien armo la tabla).
+#   - icen_lag3 en adelante: disponibles al predecir.
+MIN_REZAGO_ICEN = 3
 
 panel = pd.read_parquet(PROC / "panel_celda_semana.parquet")
 print(f"Panel: {len(panel):,} filas")
@@ -55,15 +66,15 @@ for c in panel.columns:
         continue
     if c.endswith("_anomalia"):
         continue  # fuga: calculadas con todos los anos
-    if c.endswith(("_lag2", "_lag4", "_lag6", "_lag8", "_mm4_lag2")):
-        predictors.append(c)
-    elif c.startswith("icen"):
-        # ICEN se usa solo con rezago: se conservan icen_lag1..6 (rezagos
-        # mensuales ya calculados). Se excluyen icen, icen_trad, icen_cap,
-        # icen_mm3, icen_tendencia y variantes de verano: corresponden al
-        # mes en curso y aun no estan publicados al predecir con h=2.
-        if "lag" in c:
+    if c.startswith("icen"):
+        # Va antes de la regla de clima: icen_lag2/4/6 tambien terminan en
+        # "_lag2/4/6", pero sus rezagos son en meses, no en semanas.
+        # Se excluyen icen, icen_trad, icen_cap, icen_mm3, icen_tendencia y
+        # variantes de verano: corresponden al mes en curso.
+        if c.startswith("icen_lag") and int(c.removeprefix("icen_lag")) >= MIN_REZAGO_ICEN:
             predictors.append(c)
+    elif c.endswith(("_lag2", "_lag4", "_lag6", "_lag8", "_mm4_lag2")):
+        predictors.append(c)
 
 print(f"Predictores seleccionados: {len(predictors)}")
 print("  (se excluyeron variables sin rezago y *_anomalia por fuga de informacion)")
