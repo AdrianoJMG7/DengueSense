@@ -5,12 +5,15 @@
 El ICEN es mensual; se convierte a semanal asignando a cada semana el mes de
 su fecha central (misma convencion de fecha que usa 05_panel.py).
 
-Convencion de fecha (semana epidemiologica MINSA ~ lunes-domingo):
-    fecha = 1-ene del ano + 7*(semana-1) dias ; el mes de esa fecha se usa.
+Convencion de fecha: semana epidemiologica estandar (domingo a sabado, la
+semana 1 contiene el 4 de enero); se usa el miercoles de cada semana. Ver
+scripts/comun.py.
 """
 from pathlib import Path
 
 import pandas as pd
+
+from comun import agregar_fecha_y_mes
 
 ROOT = Path(__file__).resolve().parents[1]
 INTERIM = ROOT / "data" / "interim"
@@ -41,10 +44,9 @@ icen = (icen.set_index(["ano", "mes"])
 #    aproximada y tomar el mes correspondiente.
 clima = pd.read_parquet(INTERIM / "clima_typed.parquet",
                         columns=["celda_grilla", "ano", "semana"])
-cal = clima[["ano", "semana"]].drop_duplicates().copy()
-cal["fecha"] = (pd.to_datetime(cal["ano"].astype(str) + "-01-01")
-                + pd.to_timedelta(7 * (cal["semana"] - 1), unit="D"))
-cal["mes"] = cal["fecha"].dt.month
+cal = agregar_fecha_y_mes(clima[["ano", "semana"]].drop_duplicates())
+# El mes de la semana debe ser del mismo ano (el ICEN se une por ano y mes)
+assert (cal["fecha"].dt.year == cal["ano"]).all(), "una semana cae en otro ano"
 
 # 4) Unir ICEN por (ano, mes); conservar una fila por (ano, semana)
 icen_cols = [c for c in icen.columns if c not in ("ano", "mes")]

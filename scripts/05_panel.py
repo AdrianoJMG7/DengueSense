@@ -13,6 +13,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from comun import agregar_fecha_y_mes
+
 ROOT = Path(__file__).resolve().parents[1]
 INTERIM = ROOT / "data" / "interim"
 PROC = ROOT / "data" / "processed"
@@ -32,10 +34,9 @@ panel["casos"] = panel["casos"].fillna(0).astype(int)
 panel = panel.merge(icen_sem, on=["ano", "semana"], how="left")
 assert len(panel) == n0, f"join icen creo filas: {len(panel)} vs {n0}"
 
-# Fecha aproximada de la semana (lunes de la semana epidemiologica)
-panel["fecha"] = (pd.to_datetime(panel["ano"].astype(str) + "-01-01")
-                  + pd.to_timedelta(7 * (panel["semana"] - 1), unit="D"))
-panel["mes"] = panel["fecha"].dt.month
+# Fecha de la semana: miercoles (dia central) de la semana epidemiologica
+panel = agregar_fecha_y_mes(panel)
+assert len(panel) == n0, f"join fecha creo filas: {len(panel)} vs {n0}"
 
 # Chequeos basicos
 assert (panel["casos"] >= 0).all() and panel["casos"].dtype.kind == "i"
