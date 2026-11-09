@@ -1,0 +1,681 @@
+conjunto,departamento,horizonte,modelo,rmse,mae,r2,objetivo,max_depth,min_child_weight,n_arboles,n_variables
+Validacion,AMAZONAS,1,XGBoost sin clima,15.4890,11.4395,0.7256,delta,4.0000,5.0000,46.0000,6.0000
+Prueba,AMAZONAS,1,XGBoost sin clima,9.6408,7.4869,0.2906,delta,4.0000,5.0000,46.0000,6.0000
+Validacion,AMAZONAS,1,XGBoost con clima,15.6879,11.8212,0.7186,delta,4.0000,5.0000,7.0000,23.0000
+Prueba,AMAZONAS,1,XGBoost con clima,9.7030,7.7204,0.2815,delta,4.0000,5.0000,7.0000,23.0000
+Validacion,AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",15.6819,11.6678,0.7188,delta,2.0000,5.0000,12.0000,55.0000
+Prueba,AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",9.5597,7.5581,0.3025,delta,2.0000,5.0000,12.0000,55.0000
+Validacion,AMAZONAS,2,XGBoost sin clima,21.6335,16.2339,0.4648,delta,2.0000,1.0000,6.0000,6.0000
+Prueba,AMAZONAS,2,XGBoost sin clima,9.5609,7.8470,0.3024,delta,2.0000,1.0000,6.0000,6.0000
+Validacion,AMAZONAS,2,XGBoost con clima,21.3633,15.9681,0.4781,delta,3.0000,5.0000,8.0000,23.0000
+Prueba,AMAZONAS,2,XGBoost con clima,9.5539,7.7947,0.3034,delta,3.0000,5.0000,8.0000,23.0000
+Validacion,AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",21.2434,15.9607,0.4839,delta,3.0000,5.0000,6.0000,51.0000
+Prueba,AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",9.5099,7.7822,0.3098,delta,3.0000,5.0000,6.0000,51.0000
+Validacion,AMAZONAS,3,XGBoost sin clima,26.4568,19.8591,0.1995,delta,2.0000,5.0000,5.0000,6.0000
+Prueba,AMAZONAS,3,XGBoost sin clima,10.6509,8.8197,0.1342,delta,2.0000,5.0000,5.0000,6.0000
+Validacion,AMAZONAS,3,XGBoost con clima,26.5948,19.9287,0.1912,delta,2.0000,1.0000,3.0000,23.0000
+Prueba,AMAZONAS,3,XGBoost con clima,10.6353,8.7873,0.1367,delta,2.0000,1.0000,3.0000,23.0000
+Validacion,AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",26.1111,19.6099,0.2203,delta,4.0000,5.0000,4.0000,47.0000
+Prueba,AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",10.4035,8.6129,0.1740,delta,4.0000,5.0000,4.0000,47.0000
+Validacion,AMAZONAS,4,XGBoost sin clima,29.3866,21.5062,0.0124,delta,4.0000,1.0000,7.0000,6.0000
+Prueba,AMAZONAS,4,XGBoost sin clima,11.6525,9.7956,-0.0363,delta,4.0000,1.0000,7.0000,6.0000
+Validacion,AMAZONAS,4,XGBoost con clima,29.0214,20.8785,0.0368,delta,4.0000,5.0000,8.0000,23.0000
+Prueba,AMAZONAS,4,XGBoost con clima,11.6317,9.7629,-0.0326,delta,4.0000,5.0000,8.0000,23.0000
+Validacion,AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",28.5863,20.7986,0.0655,delta,4.0000,5.0000,6.0000,43.0000
+Prueba,AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",11.1316,9.2885,0.0543,delta,4.0000,5.0000,6.0000,43.0000
+Validacion,ANCASH,1,XGBoost sin clima,50.4264,26.2242,0.9169,delta,2.0000,1.0000,17.0000,6.0000
+Prueba,ANCASH,1,XGBoost sin clima,131.0447,73.3607,0.9400,delta,2.0000,1.0000,17.0000,6.0000
+Validacion,ANCASH,1,XGBoost con clima,48.9739,25.6774,0.9216,delta,2.0000,1.0000,23.0000,23.0000
+Prueba,ANCASH,1,XGBoost con clima,126.9702,68.6252,0.9437,delta,2.0000,1.0000,23.0000,23.0000
+Validacion,ANCASH,1,"XGBoost con clima, rezagos hasta 12",45.9667,24.0100,0.9310,delta,2.0000,5.0000,17.0000,55.0000
+Prueba,ANCASH,1,"XGBoost con clima, rezagos hasta 12",131.2054,72.7593,0.9398,delta,2.0000,5.0000,17.0000,55.0000
+Validacion,ANCASH,2,XGBoost sin clima,75.2268,38.6845,0.8151,delta,4.0000,5.0000,18.0000,6.0000
+Prueba,ANCASH,2,XGBoost sin clima,220.3167,124.8168,0.8304,delta,4.0000,5.0000,18.0000,6.0000
+Validacion,ANCASH,2,XGBoost con clima,64.0651,34.6611,0.8659,delta,2.0000,5.0000,18.0000,23.0000
+Prueba,ANCASH,2,XGBoost con clima,248.5599,141.3003,0.7841,delta,2.0000,5.0000,18.0000,23.0000
+Validacion,ANCASH,2,"XGBoost con clima, rezagos hasta 12",65.1153,34.4089,0.8614,delta,2.0000,5.0000,40.0000,51.0000
+Prueba,ANCASH,2,"XGBoost con clima, rezagos hasta 12",248.7157,136.5094,0.7838,delta,2.0000,5.0000,40.0000,51.0000
+Validacion,ANCASH,3,XGBoost sin clima,110.0122,59.1122,0.6045,delta,4.0000,1.0000,66.0000,6.0000
+Prueba,ANCASH,3,XGBoost sin clima,303.7591,174.2820,0.6775,delta,4.0000,1.0000,66.0000,6.0000
+Validacion,ANCASH,3,XGBoost con clima,83.9422,42.9173,0.7697,delta,4.0000,5.0000,28.0000,23.0000
+Prueba,ANCASH,3,XGBoost con clima,340.6354,192.3561,0.5945,delta,4.0000,5.0000,28.0000,23.0000
+Validacion,ANCASH,3,"XGBoost con clima, rezagos hasta 12",79.0410,39.4967,0.7958,delta,3.0000,1.0000,29.0000,47.0000
+Prueba,ANCASH,3,"XGBoost con clima, rezagos hasta 12",320.6864,183.1485,0.6406,delta,3.0000,1.0000,29.0000,47.0000
+Validacion,ANCASH,4,XGBoost sin clima,124.5308,67.9953,0.4932,delta,3.0000,1.0000,61.0000,6.0000
+Prueba,ANCASH,4,XGBoost sin clima,361.5641,204.5416,0.5431,delta,3.0000,1.0000,61.0000,6.0000
+Validacion,ANCASH,4,XGBoost con clima,88.1742,46.0587,0.7459,delta,3.0000,1.0000,19.0000,23.0000
+Prueba,ANCASH,4,XGBoost con clima,401.3858,240.0247,0.4370,delta,3.0000,1.0000,19.0000,23.0000
+Validacion,ANCASH,4,"XGBoost con clima, rezagos hasta 12",89.2457,49.5619,0.7397,delta,2.0000,5.0000,74.0000,43.0000
+Prueba,ANCASH,4,"XGBoost con clima, rezagos hasta 12",381.8643,218.6713,0.4904,delta,2.0000,5.0000,74.0000,43.0000
+Validacion,AYACUCHO,1,XGBoost sin clima,5.9867,4.6925,0.5861,delta,4.0000,1.0000,24.0000,6.0000
+Prueba,AYACUCHO,1,XGBoost sin clima,3.6691,2.6252,0.5056,delta,4.0000,1.0000,24.0000,6.0000
+Validacion,AYACUCHO,1,XGBoost con clima,5.9883,4.7545,0.5858,delta,4.0000,1.0000,13.0000,23.0000
+Prueba,AYACUCHO,1,XGBoost con clima,3.7515,2.7145,0.4831,delta,4.0000,1.0000,13.0000,23.0000
+Validacion,AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",5.9732,4.6253,0.5879,delta,4.0000,1.0000,16.0000,55.0000
+Prueba,AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",3.7751,2.8212,0.4766,delta,4.0000,1.0000,16.0000,55.0000
+Validacion,AYACUCHO,2,XGBoost sin clima,6.7511,4.9834,0.4736,delta,3.0000,1.0000,58.0000,6.0000
+Prueba,AYACUCHO,2,XGBoost sin clima,4.3291,3.4616,0.3117,delta,3.0000,1.0000,58.0000,6.0000
+Validacion,AYACUCHO,2,XGBoost con clima,6.7431,5.0624,0.4748,delta,2.0000,1.0000,26.0000,23.0000
+Prueba,AYACUCHO,2,XGBoost con clima,4.4718,3.4886,0.2656,delta,2.0000,1.0000,26.0000,23.0000
+Validacion,AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",6.5700,4.9367,0.5015,delta,3.0000,1.0000,23.0000,51.0000
+Prueba,AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",4.6010,3.5375,0.2226,delta,3.0000,1.0000,23.0000,51.0000
+Validacion,AYACUCHO,3,XGBoost sin clima,7.4343,5.2658,0.3617,log,2.0000,5.0000,60.0000,6.0000
+Prueba,AYACUCHO,3,XGBoost sin clima,4.2032,3.4833,0.3512,log,2.0000,5.0000,60.0000,6.0000
+Validacion,AYACUCHO,3,XGBoost con clima,7.2656,5.4114,0.3903,delta,3.0000,5.0000,9.0000,23.0000
+Prueba,AYACUCHO,3,XGBoost con clima,4.8719,3.7629,0.1283,delta,3.0000,5.0000,9.0000,23.0000
+Validacion,AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",7.5381,5.5314,0.3437,log,2.0000,5.0000,45.0000,47.0000
+Prueba,AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",4.1917,3.5418,0.3547,log,2.0000,5.0000,45.0000,47.0000
+Validacion,AYACUCHO,4,XGBoost sin clima,6.9508,5.3345,0.4420,delta,2.0000,1.0000,72.0000,6.0000
+Prueba,AYACUCHO,4,XGBoost sin clima,4.3842,3.4662,0.2941,delta,2.0000,1.0000,72.0000,6.0000
+Validacion,AYACUCHO,4,XGBoost con clima,7.0710,5.4727,0.4225,delta,4.0000,1.0000,9.0000,23.0000
+Prueba,AYACUCHO,4,XGBoost con clima,4.6577,3.6952,0.2033,delta,4.0000,1.0000,9.0000,23.0000
+Validacion,AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",7.1573,5.5311,0.4084,delta,3.0000,5.0000,12.0000,43.0000
+Prueba,AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",4.6429,3.7275,0.2083,delta,3.0000,5.0000,12.0000,43.0000
+Validacion,CAJAMARCA,1,XGBoost sin clima,28.9654,19.5485,0.9133,delta,2.0000,5.0000,12.0000,6.0000
+Prueba,CAJAMARCA,1,XGBoost sin clima,17.0264,12.6698,0.8447,delta,2.0000,5.0000,12.0000,6.0000
+Validacion,CAJAMARCA,1,XGBoost con clima,28.9306,19.0453,0.9135,delta,4.0000,1.0000,15.0000,23.0000
+Prueba,CAJAMARCA,1,XGBoost con clima,17.0666,12.8812,0.8440,delta,4.0000,1.0000,15.0000,23.0000
+Validacion,CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",28.8473,19.1445,0.9140,delta,3.0000,5.0000,14.0000,55.0000
+Prueba,CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",16.7483,12.6893,0.8497,delta,3.0000,5.0000,14.0000,55.0000
+Validacion,CAJAMARCA,2,XGBoost sin clima,38.6986,25.3046,0.8452,delta,2.0000,1.0000,11.0000,6.0000
+Prueba,CAJAMARCA,2,XGBoost sin clima,21.5937,16.1404,0.7502,delta,2.0000,1.0000,11.0000,6.0000
+Validacion,CAJAMARCA,2,XGBoost con clima,37.9677,24.0687,0.8510,delta,3.0000,1.0000,22.0000,23.0000
+Prueba,CAJAMARCA,2,XGBoost con clima,21.1818,15.2533,0.7596,delta,3.0000,1.0000,22.0000,23.0000
+Validacion,CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",37.2638,23.3682,0.8565,delta,3.0000,5.0000,40.0000,51.0000
+Prueba,CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",22.3565,16.0022,0.7322,delta,3.0000,5.0000,40.0000,51.0000
+Validacion,CAJAMARCA,3,XGBoost sin clima,42.7695,29.5583,0.8109,delta,2.0000,1.0000,16.0000,6.0000
+Prueba,CAJAMARCA,3,XGBoost sin clima,23.4846,16.2300,0.7045,delta,2.0000,1.0000,16.0000,6.0000
+Validacion,CAJAMARCA,3,XGBoost con clima,41.3148,28.5610,0.8235,delta,3.0000,1.0000,23.0000,23.0000
+Prueba,CAJAMARCA,3,XGBoost con clima,23.4478,16.6582,0.7055,delta,3.0000,1.0000,23.0000,23.0000
+Validacion,CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",39.0166,26.5045,0.8426,delta,2.0000,1.0000,57.0000,47.0000
+Prueba,CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",24.6596,17.8608,0.6742,delta,2.0000,1.0000,57.0000,47.0000
+Validacion,CAJAMARCA,4,XGBoost sin clima,53.1668,34.9502,0.7078,delta,2.0000,1.0000,16.0000,6.0000
+Prueba,CAJAMARCA,4,XGBoost sin clima,26.0823,18.2362,0.6356,delta,2.0000,1.0000,16.0000,6.0000
+Validacion,CAJAMARCA,4,XGBoost con clima,52.0651,34.0357,0.7198,delta,2.0000,5.0000,28.0000,23.0000
+Prueba,CAJAMARCA,4,XGBoost con clima,25.6461,17.2212,0.6476,delta,2.0000,5.0000,28.0000,23.0000
+Validacion,CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",53.2440,33.8174,0.7069,delta,3.0000,1.0000,22.0000,43.0000
+Prueba,CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",26.0292,17.0462,0.6370,delta,3.0000,1.0000,22.0000,43.0000
+Validacion,CUSCO,1,XGBoost sin clima,15.9533,11.7099,0.8785,delta,3.0000,1.0000,25.0000,6.0000
+Prueba,CUSCO,1,XGBoost sin clima,17.7152,10.1581,0.8474,delta,3.0000,1.0000,25.0000,6.0000
+Validacion,CUSCO,1,XGBoost con clima,15.3042,10.9600,0.8881,delta,4.0000,1.0000,5.0000,23.0000
+Prueba,CUSCO,1,XGBoost con clima,18.1278,10.1723,0.8402,delta,4.0000,1.0000,5.0000,23.0000
+Validacion,CUSCO,1,"XGBoost con clima, rezagos hasta 12",15.7949,11.0497,0.8809,delta,3.0000,1.0000,2.0000,55.0000
+Prueba,CUSCO,1,"XGBoost con clima, rezagos hasta 12",17.9913,10.2378,0.8426,delta,3.0000,1.0000,2.0000,55.0000
+Validacion,CUSCO,2,XGBoost sin clima,21.7083,15.3081,0.7750,delta,2.0000,1.0000,16.0000,6.0000
+Prueba,CUSCO,2,XGBoost sin clima,26.4347,15.2246,0.6603,delta,2.0000,1.0000,16.0000,6.0000
+Validacion,CUSCO,2,XGBoost con clima,21.3268,15.2792,0.7828,delta,2.0000,5.0000,17.0000,23.0000
+Prueba,CUSCO,2,XGBoost con clima,27.0598,15.1250,0.6440,delta,2.0000,5.0000,17.0000,23.0000
+Validacion,CUSCO,2,"XGBoost con clima, rezagos hasta 12",21.5462,15.5744,0.7783,delta,2.0000,5.0000,16.0000,51.0000
+Prueba,CUSCO,2,"XGBoost con clima, rezagos hasta 12",26.9532,15.3400,0.6468,delta,2.0000,5.0000,16.0000,51.0000
+Validacion,CUSCO,3,XGBoost sin clima,25.0555,18.8290,0.7002,delta,2.0000,1.0000,17.0000,6.0000
+Prueba,CUSCO,3,XGBoost sin clima,32.3133,19.2276,0.4924,delta,2.0000,1.0000,17.0000,6.0000
+Validacion,CUSCO,3,XGBoost con clima,23.1047,18.2276,0.7451,delta,3.0000,5.0000,7.0000,23.0000
+Prueba,CUSCO,3,XGBoost con clima,35.9540,20.1842,0.3715,delta,3.0000,5.0000,7.0000,23.0000
+Validacion,CUSCO,3,"XGBoost con clima, rezagos hasta 12",24.4280,18.7942,0.7150,delta,3.0000,5.0000,13.0000,47.0000
+Prueba,CUSCO,3,"XGBoost con clima, rezagos hasta 12",33.4071,19.5842,0.4574,delta,3.0000,5.0000,13.0000,47.0000
+Validacion,CUSCO,4,XGBoost sin clima,28.7360,22.1572,0.6057,delta,2.0000,1.0000,13.0000,6.0000
+Prueba,CUSCO,4,XGBoost sin clima,40.1222,24.4671,0.2174,delta,2.0000,1.0000,13.0000,6.0000
+Validacion,CUSCO,4,XGBoost con clima,27.3084,21.3659,0.6439,delta,2.0000,1.0000,7.0000,23.0000
+Prueba,CUSCO,4,XGBoost con clima,41.4583,25.1839,0.1644,delta,2.0000,1.0000,7.0000,23.0000
+Validacion,CUSCO,4,"XGBoost con clima, rezagos hasta 12",28.4682,22.3546,0.6130,delta,4.0000,5.0000,7.0000,43.0000
+Prueba,CUSCO,4,"XGBoost con clima, rezagos hasta 12",40.9294,24.9049,0.1856,delta,4.0000,5.0000,7.0000,43.0000
+Validacion,HUANUCO,1,XGBoost sin clima,12.9857,8.8905,0.8397,delta,4.0000,1.0000,86.0000,6.0000
+Prueba,HUANUCO,1,XGBoost sin clima,6.6838,5.3476,0.2742,delta,4.0000,1.0000,86.0000,6.0000
+Validacion,HUANUCO,1,XGBoost con clima,12.5964,8.7256,0.8491,delta,2.0000,1.0000,74.0000,23.0000
+Prueba,HUANUCO,1,XGBoost con clima,6.2408,4.8371,0.3672,delta,2.0000,1.0000,74.0000,23.0000
+Validacion,HUANUCO,1,"XGBoost con clima, rezagos hasta 12",12.2049,8.8191,0.8584,delta,3.0000,5.0000,75.0000,55.0000
+Prueba,HUANUCO,1,"XGBoost con clima, rezagos hasta 12",6.3090,4.8089,0.3533,delta,3.0000,5.0000,75.0000,55.0000
+Validacion,HUANUCO,2,XGBoost sin clima,15.9520,10.2510,0.7580,delta,4.0000,5.0000,18.0000,6.0000
+Prueba,HUANUCO,2,XGBoost sin clima,8.3032,6.7050,-0.1201,delta,4.0000,5.0000,18.0000,6.0000
+Validacion,HUANUCO,2,XGBoost con clima,16.0006,10.2628,0.7566,delta,2.0000,5.0000,24.0000,23.0000
+Prueba,HUANUCO,2,XGBoost con clima,8.4200,6.8207,-0.1519,delta,2.0000,5.0000,24.0000,23.0000
+Validacion,HUANUCO,2,"XGBoost con clima, rezagos hasta 12",15.8627,10.1239,0.7608,delta,2.0000,5.0000,35.0000,51.0000
+Prueba,HUANUCO,2,"XGBoost con clima, rezagos hasta 12",8.2457,6.7088,-0.1047,delta,2.0000,5.0000,35.0000,51.0000
+Validacion,HUANUCO,3,XGBoost sin clima,16.9433,11.5186,0.7270,delta,2.0000,1.0000,24.0000,6.0000
+Prueba,HUANUCO,3,XGBoost sin clima,10.6372,8.3404,-0.8384,delta,2.0000,1.0000,24.0000,6.0000
+Validacion,HUANUCO,3,XGBoost con clima,15.9360,10.5333,0.7585,delta,4.0000,1.0000,42.0000,23.0000
+Prueba,HUANUCO,3,XGBoost con clima,10.0043,7.8384,-0.6261,delta,4.0000,1.0000,42.0000,23.0000
+Validacion,HUANUCO,3,"XGBoost con clima, rezagos hasta 12",15.8412,10.8577,0.7614,delta,2.0000,1.0000,36.0000,47.0000
+Prueba,HUANUCO,3,"XGBoost con clima, rezagos hasta 12",10.6316,8.4377,-0.8365,delta,2.0000,1.0000,36.0000,47.0000
+Validacion,HUANUCO,4,XGBoost sin clima,20.3482,12.8204,0.6063,delta,2.0000,1.0000,19.0000,6.0000
+Prueba,HUANUCO,4,XGBoost sin clima,11.4409,9.0286,-1.1267,delta,2.0000,1.0000,19.0000,6.0000
+Validacion,HUANUCO,4,XGBoost con clima,18.0443,11.4723,0.6904,delta,3.0000,1.0000,29.0000,23.0000
+Prueba,HUANUCO,4,XGBoost con clima,11.4039,8.9203,-1.1130,delta,3.0000,1.0000,29.0000,23.0000
+Validacion,HUANUCO,4,"XGBoost con clima, rezagos hasta 12",18.2749,11.6951,0.6825,delta,3.0000,5.0000,29.0000,43.0000
+Prueba,HUANUCO,4,"XGBoost con clima, rezagos hasta 12",11.2044,8.8664,-1.0397,delta,3.0000,5.0000,29.0000,43.0000
+Validacion,ICA,1,XGBoost sin clima,72.5310,34.1127,0.9539,delta,4.0000,5.0000,68.0000,6.0000
+Prueba,ICA,1,XGBoost sin clima,175.4938,91.7555,0.9614,delta,4.0000,5.0000,68.0000,6.0000
+Validacion,ICA,1,XGBoost con clima,55.7539,27.5806,0.9728,delta,2.0000,1.0000,46.0000,23.0000
+Prueba,ICA,1,XGBoost con clima,490.3064,225.3362,0.6985,delta,2.0000,1.0000,46.0000,23.0000
+Validacion,ICA,1,"XGBoost con clima, rezagos hasta 12",41.6150,21.2178,0.9848,delta,4.0000,1.0000,47.0000,55.0000
+Prueba,ICA,1,"XGBoost con clima, rezagos hasta 12",309.1336,149.9506,0.8801,delta,4.0000,1.0000,47.0000,55.0000
+Validacion,ICA,2,XGBoost sin clima,119.0789,53.5974,0.8757,delta,4.0000,1.0000,114.0000,6.0000
+Prueba,ICA,2,XGBoost sin clima,387.3055,196.4485,0.8119,delta,4.0000,1.0000,114.0000,6.0000
+Validacion,ICA,2,XGBoost con clima,92.3015,45.1473,0.9253,delta,4.0000,1.0000,51.0000,23.0000
+Prueba,ICA,2,XGBoost con clima,557.2493,271.1851,0.6105,delta,4.0000,1.0000,51.0000,23.0000
+Validacion,ICA,2,"XGBoost con clima, rezagos hasta 12",75.1294,40.9610,0.9505,delta,4.0000,5.0000,72.0000,51.0000
+Prueba,ICA,2,"XGBoost con clima, rezagos hasta 12",1340.0364,605.2704,-1.2521,delta,4.0000,5.0000,72.0000,51.0000
+Validacion,ICA,3,XGBoost sin clima,155.5198,73.3607,0.7880,delta,4.0000,1.0000,47.0000,6.0000
+Prueba,ICA,3,XGBoost sin clima,470.5330,252.9604,0.7223,delta,4.0000,1.0000,47.0000,6.0000
+Validacion,ICA,3,XGBoost con clima,120.8513,62.9755,0.8720,delta,4.0000,1.0000,79.0000,23.0000
+Prueba,ICA,3,XGBoost con clima,1038.9203,459.5288,-0.3537,delta,4.0000,1.0000,79.0000,23.0000
+Validacion,ICA,3,"XGBoost con clima, rezagos hasta 12",106.9498,57.3121,0.8997,delta,4.0000,1.0000,96.0000,47.0000
+Prueba,ICA,3,"XGBoost con clima, rezagos hasta 12",1765.3269,794.0042,-2.9085,delta,4.0000,1.0000,96.0000,47.0000
+Validacion,ICA,4,XGBoost sin clima,199.6270,94.4622,0.6507,delta,3.0000,1.0000,78.0000,6.0000
+Prueba,ICA,4,XGBoost sin clima,628.7808,315.9104,0.5041,delta,3.0000,1.0000,78.0000,6.0000
+Validacion,ICA,4,XGBoost con clima,141.9702,75.0597,0.8233,delta,4.0000,5.0000,55.0000,23.0000
+Prueba,ICA,4,XGBoost con clima,1510.9082,692.6817,-1.8631,delta,4.0000,5.0000,55.0000,23.0000
+Validacion,ICA,4,"XGBoost con clima, rezagos hasta 12",126.6701,68.4277,0.8594,delta,4.0000,5.0000,85.0000,43.0000
+Prueba,ICA,4,"XGBoost con clima, rezagos hasta 12",2686.3504,1216.3604,-8.0508,delta,4.0000,5.0000,85.0000,43.0000
+Validacion,JUNIN,1,XGBoost sin clima,16.0751,11.7979,0.8391,delta,2.0000,1.0000,75.0000,6.0000
+Prueba,JUNIN,1,XGBoost sin clima,13.6103,10.3819,0.8951,delta,2.0000,1.0000,75.0000,6.0000
+Validacion,JUNIN,1,XGBoost con clima,16.6898,11.8949,0.8265,delta,3.0000,5.0000,40.0000,23.0000
+Prueba,JUNIN,1,XGBoost con clima,13.2905,9.9005,0.9000,delta,3.0000,5.0000,40.0000,23.0000
+Validacion,JUNIN,1,"XGBoost con clima, rezagos hasta 12",16.6098,11.9902,0.8282,delta,2.0000,5.0000,52.0000,55.0000
+Prueba,JUNIN,1,"XGBoost con clima, rezagos hasta 12",14.0201,10.5385,0.8887,delta,2.0000,5.0000,52.0000,55.0000
+Validacion,JUNIN,2,XGBoost sin clima,21.3882,15.6484,0.7151,poisson,2.0000,1.0000,178.0000,6.0000
+Prueba,JUNIN,2,XGBoost sin clima,15.9520,12.7393,0.8559,poisson,2.0000,1.0000,178.0000,6.0000
+Validacion,JUNIN,2,XGBoost con clima,20.9611,15.3602,0.7264,poisson,2.0000,1.0000,177.0000,23.0000
+Prueba,JUNIN,2,XGBoost con clima,18.2793,14.5508,0.8107,poisson,2.0000,1.0000,177.0000,23.0000
+Validacion,JUNIN,2,"XGBoost con clima, rezagos hasta 12",20.4877,15.4471,0.7386,poisson,2.0000,1.0000,155.0000,51.0000
+Prueba,JUNIN,2,"XGBoost con clima, rezagos hasta 12",19.4930,15.4028,0.7848,poisson,2.0000,1.0000,155.0000,51.0000
+Validacion,JUNIN,3,XGBoost sin clima,23.9831,17.0878,0.6418,log,2.0000,1.0000,134.0000,6.0000
+Prueba,JUNIN,3,XGBoost sin clima,18.3757,14.3260,0.8087,log,2.0000,1.0000,134.0000,6.0000
+Validacion,JUNIN,3,XGBoost con clima,24.5863,17.5817,0.6235,poisson,2.0000,1.0000,220.0000,23.0000
+Prueba,JUNIN,3,XGBoost con clima,24.2144,19.9684,0.6679,poisson,2.0000,1.0000,220.0000,23.0000
+Validacion,JUNIN,3,"XGBoost con clima, rezagos hasta 12",23.3904,17.1990,0.6593,poisson,2.0000,1.0000,191.0000,47.0000
+Prueba,JUNIN,3,"XGBoost con clima, rezagos hasta 12",25.8831,21.3030,0.6205,poisson,2.0000,1.0000,191.0000,47.0000
+Validacion,JUNIN,4,XGBoost sin clima,26.8954,18.9312,0.5495,poisson,3.0000,1.0000,142.0000,6.0000
+Prueba,JUNIN,4,XGBoost sin clima,19.0628,15.4313,0.7942,poisson,3.0000,1.0000,142.0000,6.0000
+Validacion,JUNIN,4,XGBoost con clima,27.1403,18.3822,0.5412,delta,2.0000,1.0000,200.0000,23.0000
+Prueba,JUNIN,4,XGBoost con clima,22.1576,18.4627,0.7219,delta,2.0000,1.0000,200.0000,23.0000
+Validacion,JUNIN,4,"XGBoost con clima, rezagos hasta 12",24.8718,18.6270,0.6147,poisson,2.0000,1.0000,170.0000,43.0000
+Prueba,JUNIN,4,"XGBoost con clima, rezagos hasta 12",31.1315,25.5835,0.4511,poisson,2.0000,1.0000,170.0000,43.0000
+Validacion,LA LIBERTAD,1,XGBoost sin clima,113.5125,45.9948,0.9323,delta,4.0000,5.0000,52.0000,6.0000
+Prueba,LA LIBERTAD,1,XGBoost sin clima,406.6404,211.3036,0.9178,delta,4.0000,5.0000,52.0000,6.0000
+Validacion,LA LIBERTAD,1,XGBoost con clima,86.8637,36.8975,0.9604,delta,4.0000,5.0000,51.0000,23.0000
+Prueba,LA LIBERTAD,1,XGBoost con clima,407.7357,199.0968,0.9173,delta,4.0000,5.0000,51.0000,23.0000
+Validacion,LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",95.4825,40.1845,0.9521,delta,2.0000,5.0000,53.0000,55.0000
+Prueba,LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",383.6626,204.9244,0.9268,delta,2.0000,5.0000,53.0000,55.0000
+Validacion,LA LIBERTAD,2,XGBoost sin clima,180.3621,76.1516,0.8291,delta,4.0000,5.0000,53.0000,6.0000
+Prueba,LA LIBERTAD,2,XGBoost sin clima,774.5248,422.6887,0.7017,delta,4.0000,5.0000,53.0000,6.0000
+Validacion,LA LIBERTAD,2,XGBoost con clima,125.0182,56.0059,0.9179,delta,4.0000,5.0000,87.0000,23.0000
+Prueba,LA LIBERTAD,2,XGBoost con clima,679.6987,346.1722,0.7703,delta,4.0000,5.0000,87.0000,23.0000
+Validacion,LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",135.3485,53.4894,0.9037,delta,3.0000,1.0000,41.0000,51.0000
+Prueba,LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",782.3923,387.8336,0.6956,delta,3.0000,1.0000,41.0000,51.0000
+Validacion,LA LIBERTAD,3,XGBoost sin clima,250.9294,115.0314,0.6691,delta,4.0000,1.0000,161.0000,6.0000
+Prueba,LA LIBERTAD,3,XGBoost sin clima,1070.5799,608.7240,0.4301,delta,4.0000,1.0000,161.0000,6.0000
+Validacion,LA LIBERTAD,3,XGBoost con clima,151.7222,64.7902,0.8790,delta,3.0000,5.0000,40.0000,23.0000
+Prueba,LA LIBERTAD,3,XGBoost con clima,940.6559,480.9345,0.5600,delta,3.0000,5.0000,40.0000,23.0000
+Validacion,LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",146.6193,63.9365,0.8870,delta,4.0000,1.0000,65.0000,47.0000
+Prueba,LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",1285.8419,647.9760,0.1779,delta,4.0000,1.0000,65.0000,47.0000
+Validacion,LA LIBERTAD,4,XGBoost sin clima,301.0413,138.6446,0.5238,delta,4.0000,1.0000,90.0000,6.0000
+Prueba,LA LIBERTAD,4,XGBoost sin clima,1156.6258,671.4294,0.3348,delta,4.0000,1.0000,90.0000,6.0000
+Validacion,LA LIBERTAD,4,XGBoost con clima,184.7192,78.8365,0.8207,delta,3.0000,5.0000,60.0000,23.0000
+Prueba,LA LIBERTAD,4,XGBoost con clima,1282.9056,683.4859,0.1816,delta,3.0000,5.0000,60.0000,23.0000
+Validacion,LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",185.0186,83.0521,0.8201,delta,2.0000,1.0000,73.0000,43.0000
+Prueba,LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",1709.6748,858.5534,-0.4534,delta,2.0000,1.0000,73.0000,43.0000
+Validacion,LAMBAYEQUE,1,XGBoost sin clima,180.6116,63.5528,0.9114,delta,4.0000,5.0000,24.0000,6.0000
+Prueba,LAMBAYEQUE,1,XGBoost sin clima,53.9961,31.8493,0.9481,delta,4.0000,5.0000,24.0000,6.0000
+Validacion,LAMBAYEQUE,1,XGBoost con clima,160.8254,59.2666,0.9297,delta,2.0000,1.0000,26.0000,23.0000
+Prueba,LAMBAYEQUE,1,XGBoost con clima,51.1650,30.6195,0.9534,delta,2.0000,1.0000,26.0000,23.0000
+Validacion,LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",164.5374,63.3838,0.9264,delta,3.0000,5.0000,21.0000,55.0000
+Prueba,LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",51.7905,30.3074,0.9523,delta,3.0000,5.0000,21.0000,55.0000
+Validacion,LAMBAYEQUE,2,XGBoost sin clima,269.7743,96.3483,0.8023,delta,3.0000,5.0000,47.0000,6.0000
+Prueba,LAMBAYEQUE,2,XGBoost sin clima,97.1265,56.8155,0.8321,delta,3.0000,5.0000,47.0000,6.0000
+Validacion,LAMBAYEQUE,2,XGBoost con clima,229.0794,83.8274,0.8574,delta,2.0000,1.0000,36.0000,23.0000
+Prueba,LAMBAYEQUE,2,XGBoost con clima,68.7098,39.7863,0.9160,delta,2.0000,1.0000,36.0000,23.0000
+Validacion,LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",223.8297,85.2636,0.8639,delta,2.0000,5.0000,35.0000,51.0000
+Prueba,LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",71.9709,42.5914,0.9078,delta,2.0000,5.0000,35.0000,51.0000
+Validacion,LAMBAYEQUE,3,XGBoost sin clima,336.0420,126.9270,0.6932,delta,3.0000,1.0000,37.0000,6.0000
+Prueba,LAMBAYEQUE,3,XGBoost sin clima,145.2329,85.9446,0.6247,delta,3.0000,1.0000,37.0000,6.0000
+Validacion,LAMBAYEQUE,3,XGBoost con clima,262.4869,106.3222,0.8128,delta,2.0000,1.0000,47.0000,23.0000
+Prueba,LAMBAYEQUE,3,XGBoost con clima,104.1891,56.9837,0.8068,delta,2.0000,1.0000,47.0000,23.0000
+Validacion,LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",273.0817,112.4708,0.7974,delta,4.0000,5.0000,20.0000,47.0000
+Prueba,LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",110.7723,59.6248,0.7817,delta,4.0000,5.0000,20.0000,47.0000
+Validacion,LAMBAYEQUE,4,XGBoost sin clima,433.4562,169.5483,0.4895,delta,4.0000,1.0000,44.0000,6.0000
+Prueba,LAMBAYEQUE,4,XGBoost sin clima,245.3152,142.9909,-0.0709,delta,4.0000,1.0000,44.0000,6.0000
+Validacion,LAMBAYEQUE,4,XGBoost con clima,314.6292,126.9446,0.7310,delta,2.0000,1.0000,63.0000,23.0000
+Prueba,LAMBAYEQUE,4,XGBoost con clima,117.1960,61.1637,0.7556,delta,2.0000,1.0000,63.0000,23.0000
+Validacion,LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",361.1368,143.8347,0.6457,delta,2.0000,1.0000,29.0000,43.0000
+Prueba,LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",130.9368,73.2793,0.6949,delta,2.0000,1.0000,29.0000,43.0000
+Validacion,LORETO,1,XGBoost sin clima,42.7617,29.1844,0.8397,delta,4.0000,5.0000,26.0000,6.0000
+Prueba,LORETO,1,XGBoost sin clima,43.1521,29.7244,0.8517,delta,4.0000,5.0000,26.0000,6.0000
+Validacion,LORETO,1,XGBoost con clima,44.0082,29.5999,0.8302,poisson,2.0000,1.0000,189.0000,23.0000
+Prueba,LORETO,1,XGBoost con clima,52.1051,33.2364,0.7837,poisson,2.0000,1.0000,189.0000,23.0000
+Validacion,LORETO,1,"XGBoost con clima, rezagos hasta 12",43.1822,29.4074,0.8365,delta,4.0000,1.0000,21.0000,55.0000
+Prueba,LORETO,1,"XGBoost con clima, rezagos hasta 12",44.8469,31.8881,0.8398,delta,4.0000,1.0000,21.0000,55.0000
+Validacion,LORETO,2,XGBoost sin clima,56.7429,40.8187,0.7177,delta,2.0000,1.0000,24.0000,6.0000
+Prueba,LORETO,2,XGBoost sin clima,58.7702,38.4881,0.7249,delta,2.0000,1.0000,24.0000,6.0000
+Validacion,LORETO,2,XGBoost con clima,57.3370,41.4481,0.7117,delta,4.0000,5.0000,22.0000,23.0000
+Prueba,LORETO,2,XGBoost con clima,57.1030,38.0392,0.7403,delta,4.0000,5.0000,22.0000,23.0000
+Validacion,LORETO,2,"XGBoost con clima, rezagos hasta 12",57.8385,40.9676,0.7067,delta,2.0000,5.0000,181.0000,51.0000
+Prueba,LORETO,2,"XGBoost con clima, rezagos hasta 12",58.7806,40.2844,0.7248,delta,2.0000,5.0000,181.0000,51.0000
+Validacion,LORETO,3,XGBoost sin clima,67.7741,46.6290,0.5972,delta,4.0000,1.0000,14.0000,6.0000
+Prueba,LORETO,3,XGBoost sin clima,76.1798,50.1432,0.5377,delta,4.0000,1.0000,14.0000,6.0000
+Validacion,LORETO,3,XGBoost con clima,60.6236,41.7796,0.6777,log,3.0000,1.0000,91.0000,23.0000
+Prueba,LORETO,3,XGBoost con clima,84.2256,55.9279,0.4349,log,3.0000,1.0000,91.0000,23.0000
+Validacion,LORETO,3,"XGBoost con clima, rezagos hasta 12",60.8106,42.9900,0.6757,log,3.0000,1.0000,249.0000,47.0000
+Prueba,LORETO,3,"XGBoost con clima, rezagos hasta 12",85.2488,56.0432,0.4211,log,3.0000,1.0000,249.0000,47.0000
+Validacion,LORETO,4,XGBoost sin clima,81.4436,56.7537,0.4184,delta,4.0000,5.0000,16.0000,6.0000
+Prueba,LORETO,4,XGBoost sin clima,85.4093,52.0979,0.4189,delta,4.0000,5.0000,16.0000,6.0000
+Validacion,LORETO,4,XGBoost con clima,65.8389,45.6457,0.6199,log,3.0000,5.0000,123.0000,23.0000
+Prueba,LORETO,4,XGBoost con clima,89.3067,59.5137,0.3647,log,3.0000,5.0000,123.0000,23.0000
+Validacion,LORETO,4,"XGBoost con clima, rezagos hasta 12",61.3274,43.3399,0.6702,log,3.0000,1.0000,144.0000,43.0000
+Prueba,LORETO,4,"XGBoost con clima, rezagos hasta 12",90.8158,60.4307,0.3430,log,3.0000,1.0000,144.0000,43.0000
+Validacion,MADRE DE DIOS,1,XGBoost sin clima,15.6268,10.4902,0.9107,delta,4.0000,5.0000,28.0000,6.0000
+Prueba,MADRE DE DIOS,1,XGBoost sin clima,4.5521,3.2382,0.7197,delta,4.0000,5.0000,28.0000,6.0000
+Validacion,MADRE DE DIOS,1,XGBoost con clima,15.6445,10.4244,0.9105,delta,2.0000,5.0000,72.0000,23.0000
+Prueba,MADRE DE DIOS,1,XGBoost con clima,4.5719,3.2843,0.7173,delta,2.0000,5.0000,72.0000,23.0000
+Validacion,MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",15.7000,10.5107,0.9099,delta,4.0000,1.0000,24.0000,55.0000
+Prueba,MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",4.4570,3.2570,0.7313,delta,4.0000,1.0000,24.0000,55.0000
+Validacion,MADRE DE DIOS,2,XGBoost sin clima,20.5128,13.5505,0.8462,delta,3.0000,1.0000,34.0000,6.0000
+Prueba,MADRE DE DIOS,2,XGBoost sin clima,5.7316,4.1419,0.5557,delta,3.0000,1.0000,34.0000,6.0000
+Validacion,MADRE DE DIOS,2,XGBoost con clima,21.0996,13.7660,0.8372,delta,3.0000,1.0000,37.0000,23.0000
+Prueba,MADRE DE DIOS,2,XGBoost con clima,5.7661,4.1988,0.5503,delta,3.0000,1.0000,37.0000,23.0000
+Validacion,MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",21.1503,13.7397,0.8365,delta,3.0000,5.0000,44.0000,51.0000
+Prueba,MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",5.7880,4.2423,0.5469,delta,3.0000,5.0000,44.0000,51.0000
+Validacion,MADRE DE DIOS,3,XGBoost sin clima,25.8576,17.2302,0.7556,delta,2.0000,1.0000,66.0000,6.0000
+Prueba,MADRE DE DIOS,3,XGBoost sin clima,6.5044,4.9142,0.4278,delta,2.0000,1.0000,66.0000,6.0000
+Validacion,MADRE DE DIOS,3,XGBoost con clima,25.1012,16.5111,0.7697,delta,4.0000,5.0000,29.0000,23.0000
+Prueba,MADRE DE DIOS,3,XGBoost con clima,6.7161,5.0619,0.3899,delta,4.0000,5.0000,29.0000,23.0000
+Validacion,MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",26.3634,17.5478,0.7459,delta,2.0000,5.0000,82.0000,47.0000
+Prueba,MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",6.7798,5.1629,0.3783,delta,2.0000,5.0000,82.0000,47.0000
+Validacion,MADRE DE DIOS,4,XGBoost sin clima,31.2580,20.2831,0.6428,delta,2.0000,1.0000,66.0000,6.0000
+Prueba,MADRE DE DIOS,4,XGBoost sin clima,7.2738,5.2525,0.2844,delta,2.0000,1.0000,66.0000,6.0000
+Validacion,MADRE DE DIOS,4,XGBoost con clima,30.9814,20.0191,0.6491,poisson,4.0000,1.0000,240.0000,23.0000
+Prueba,MADRE DE DIOS,4,XGBoost con clima,7.7875,6.1359,0.1798,poisson,4.0000,1.0000,240.0000,23.0000
+Validacion,MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",30.7492,20.1158,0.6543,delta,2.0000,5.0000,109.0000,43.0000
+Prueba,MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",7.9079,6.0428,0.1542,delta,2.0000,5.0000,109.0000,43.0000
+Validacion,PASCO,1,XGBoost sin clima,8.1267,5.1294,0.6700,delta,4.0000,1.0000,35.0000,6.0000
+Prueba,PASCO,1,XGBoost sin clima,7.3640,5.4447,0.5002,delta,4.0000,1.0000,35.0000,6.0000
+Validacion,PASCO,1,XGBoost con clima,8.6111,5.3337,0.6295,delta,2.0000,5.0000,23.0000,23.0000
+Prueba,PASCO,1,XGBoost con clima,7.2897,5.3949,0.5102,delta,2.0000,5.0000,23.0000,23.0000
+Validacion,PASCO,1,"XGBoost con clima, rezagos hasta 12",8.5014,5.3919,0.6389,delta,2.0000,1.0000,35.0000,55.0000
+Prueba,PASCO,1,"XGBoost con clima, rezagos hasta 12",7.2743,5.3223,0.5123,delta,2.0000,1.0000,35.0000,55.0000
+Validacion,PASCO,2,XGBoost sin clima,9.0283,5.8466,0.5927,delta,4.0000,5.0000,11.0000,6.0000
+Prueba,PASCO,2,XGBoost sin clima,8.2093,5.9813,0.3789,delta,4.0000,5.0000,11.0000,6.0000
+Validacion,PASCO,2,XGBoost con clima,9.8014,6.2085,0.5200,delta,2.0000,1.0000,2.0000,23.0000
+Prueba,PASCO,2,XGBoost con clima,8.5348,6.4071,0.3286,delta,2.0000,1.0000,2.0000,23.0000
+Validacion,PASCO,2,"XGBoost con clima, rezagos hasta 12",9.6580,6.0953,0.5339,delta,3.0000,5.0000,6.0000,51.0000
+Prueba,PASCO,2,"XGBoost con clima, rezagos hasta 12",8.4855,6.4258,0.3364,delta,3.0000,5.0000,6.0000,51.0000
+Validacion,PASCO,3,XGBoost sin clima,8.7816,5.8019,0.6147,delta,4.0000,5.0000,13.0000,6.0000
+Prueba,PASCO,3,XGBoost sin clima,8.9975,6.7389,0.2539,delta,4.0000,5.0000,13.0000,6.0000
+Validacion,PASCO,3,XGBoost con clima,9.7140,6.5407,0.5285,delta,2.0000,1.0000,10.0000,23.0000
+Prueba,PASCO,3,XGBoost con clima,9.6579,7.0291,0.1403,delta,2.0000,1.0000,10.0000,23.0000
+Validacion,PASCO,3,"XGBoost con clima, rezagos hasta 12",9.4399,6.3266,0.5548,delta,2.0000,1.0000,12.0000,47.0000
+Prueba,PASCO,3,"XGBoost con clima, rezagos hasta 12",9.9126,7.1927,0.0944,delta,2.0000,1.0000,12.0000,47.0000
+Validacion,PASCO,4,XGBoost sin clima,10.1895,6.9350,0.4812,delta,4.0000,5.0000,10.0000,6.0000
+Prueba,PASCO,4,XGBoost sin clima,10.0211,7.0895,0.0745,delta,4.0000,5.0000,10.0000,6.0000
+Validacion,PASCO,4,XGBoost con clima,10.2524,6.8901,0.4748,delta,4.0000,1.0000,10.0000,23.0000
+Prueba,PASCO,4,XGBoost con clima,10.7932,7.8201,-0.0737,delta,4.0000,1.0000,10.0000,23.0000
+Validacion,PASCO,4,"XGBoost con clima, rezagos hasta 12",10.1801,6.8457,0.4822,delta,4.0000,5.0000,15.0000,43.0000
+Prueba,PASCO,4,"XGBoost con clima, rezagos hasta 12",10.2707,7.3631,0.0278,delta,4.0000,5.0000,15.0000,43.0000
+Validacion,PIURA,1,XGBoost sin clima,421.6674,134.0265,0.9293,delta,4.0000,1.0000,46.0000,6.0000
+Prueba,PIURA,1,XGBoost sin clima,203.6194,105.2175,0.9326,delta,4.0000,1.0000,46.0000,6.0000
+Validacion,PIURA,1,XGBoost con clima,445.3640,145.8987,0.9212,delta,3.0000,1.0000,68.0000,23.0000
+Prueba,PIURA,1,XGBoost con clima,217.4440,103.0441,0.9231,delta,3.0000,1.0000,68.0000,23.0000
+Validacion,PIURA,1,"XGBoost con clima, rezagos hasta 12",453.3374,143.2254,0.9183,delta,3.0000,5.0000,74.0000,55.0000
+Prueba,PIURA,1,"XGBoost con clima, rezagos hasta 12",211.6862,107.2568,0.9271,delta,3.0000,5.0000,74.0000,55.0000
+Validacion,PIURA,2,XGBoost sin clima,675.9041,213.4033,0.8185,delta,3.0000,1.0000,80.0000,6.0000
+Prueba,PIURA,2,XGBoost sin clima,371.7813,193.2657,0.7752,delta,3.0000,1.0000,80.0000,6.0000
+Validacion,PIURA,2,XGBoost con clima,608.4784,225.7158,0.8529,delta,2.0000,5.0000,106.0000,23.0000
+Prueba,PIURA,2,XGBoost con clima,284.5813,164.3802,0.8683,delta,2.0000,5.0000,106.0000,23.0000
+Validacion,PIURA,2,"XGBoost con clima, rezagos hasta 12",614.4144,234.2013,0.8500,delta,2.0000,1.0000,74.0000,51.0000
+Prueba,PIURA,2,"XGBoost con clima, rezagos hasta 12",338.1083,168.9196,0.8141,delta,2.0000,1.0000,74.0000,51.0000
+Validacion,PIURA,3,XGBoost sin clima,922.8843,281.4293,0.6615,delta,4.0000,1.0000,47.0000,6.0000
+Prueba,PIURA,3,XGBoost sin clima,471.2353,259.6770,0.6389,delta,4.0000,1.0000,47.0000,6.0000
+Validacion,PIURA,3,XGBoost con clima,782.5361,285.9196,0.7567,delta,4.0000,1.0000,57.0000,23.0000
+Prueba,PIURA,3,XGBoost con clima,380.7557,216.0471,0.7642,delta,4.0000,1.0000,57.0000,23.0000
+Validacion,PIURA,3,"XGBoost con clima, rezagos hasta 12",756.7545,278.0035,0.7724,delta,3.0000,5.0000,63.0000,47.0000
+Prueba,PIURA,3,"XGBoost con clima, rezagos hasta 12",358.8185,195.1275,0.7906,delta,3.0000,5.0000,63.0000,47.0000
+Validacion,PIURA,4,XGBoost sin clima,1140.2711,358.0003,0.4833,delta,4.0000,5.0000,40.0000,6.0000
+Prueba,PIURA,4,XGBoost sin clima,618.3784,345.4286,0.3781,delta,4.0000,5.0000,40.0000,6.0000
+Validacion,PIURA,4,XGBoost con clima,898.7659,324.5992,0.6790,delta,2.0000,1.0000,57.0000,23.0000
+Prueba,PIURA,4,XGBoost con clima,535.9570,298.5635,0.5329,delta,2.0000,1.0000,57.0000,23.0000
+Validacion,PIURA,4,"XGBoost con clima, rezagos hasta 12",829.9251,302.7259,0.7263,delta,3.0000,5.0000,66.0000,43.0000
+Prueba,PIURA,4,"XGBoost con clima, rezagos hasta 12",511.7300,267.0186,0.5741,delta,3.0000,5.0000,66.0000,43.0000
+Validacion,SAN MARTIN,1,XGBoost sin clima,22.2570,16.8060,0.7968,delta,4.0000,1.0000,1.0000,6.0000
+Prueba,SAN MARTIN,1,XGBoost sin clima,31.3682,25.5942,0.8811,delta,4.0000,1.0000,1.0000,6.0000
+Validacion,SAN MARTIN,1,XGBoost con clima,22.4677,16.5583,0.7929,delta,4.0000,1.0000,15.0000,23.0000
+Prueba,SAN MARTIN,1,XGBoost con clima,32.5662,25.5130,0.8718,delta,4.0000,1.0000,15.0000,23.0000
+Validacion,SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",22.5549,16.9888,0.7913,delta,3.0000,5.0000,4.0000,55.0000
+Prueba,SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",31.5257,25.5296,0.8799,delta,3.0000,5.0000,4.0000,55.0000
+Validacion,SAN MARTIN,2,XGBoost sin clima,28.0812,20.5549,0.6765,delta,3.0000,1.0000,1.0000,6.0000
+Prueba,SAN MARTIN,2,XGBoost sin clima,39.1716,30.4020,0.8146,delta,3.0000,1.0000,1.0000,6.0000
+Validacion,SAN MARTIN,2,XGBoost con clima,28.3599,20.7307,0.6700,delta,2.0000,1.0000,3.0000,23.0000
+Prueba,SAN MARTIN,2,XGBoost con clima,38.2139,29.4306,0.8235,delta,2.0000,1.0000,3.0000,23.0000
+Validacion,SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",27.9973,20.6047,0.6784,delta,2.0000,1.0000,7.0000,51.0000
+Prueba,SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",37.3610,28.4458,0.8313,delta,2.0000,1.0000,7.0000,51.0000
+Validacion,SAN MARTIN,3,XGBoost sin clima,35.4679,26.7299,0.4839,delta,4.0000,5.0000,1.0000,6.0000
+Prueba,SAN MARTIN,3,XGBoost sin clima,53.7296,41.7028,0.6511,delta,4.0000,5.0000,1.0000,6.0000
+Validacion,SAN MARTIN,3,XGBoost con clima,34.2703,26.4835,0.5181,delta,4.0000,5.0000,4.0000,23.0000
+Prueba,SAN MARTIN,3,XGBoost con clima,56.0858,41.8591,0.6198,delta,4.0000,5.0000,4.0000,23.0000
+Validacion,SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",34.7975,26.7603,0.5032,delta,3.0000,1.0000,3.0000,47.0000
+Prueba,SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",54.2895,41.0239,0.6438,delta,3.0000,1.0000,3.0000,47.0000
+Validacion,SAN MARTIN,4,XGBoost sin clima,39.6052,29.4443,0.3564,delta,3.0000,5.0000,1.0000,6.0000
+Prueba,SAN MARTIN,4,XGBoost sin clima,63.0014,44.7607,0.5203,delta,3.0000,5.0000,1.0000,6.0000
+Validacion,SAN MARTIN,4,XGBoost con clima,38.0310,28.3477,0.4066,delta,4.0000,5.0000,4.0000,23.0000
+Prueba,SAN MARTIN,4,XGBoost con clima,65.3780,47.3337,0.4834,delta,4.0000,5.0000,4.0000,23.0000
+Validacion,SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",38.2500,28.5011,0.3997,delta,3.0000,5.0000,3.0000,43.0000
+Prueba,SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",65.8981,49.2891,0.4752,delta,3.0000,5.0000,3.0000,43.0000
+Validacion,TUMBES,1,XGBoost sin clima,49.8643,25.7003,0.9427,delta,4.0000,1.0000,66.0000,6.0000
+Prueba,TUMBES,1,XGBoost sin clima,29.1550,17.0331,0.9289,delta,4.0000,1.0000,66.0000,6.0000
+Validacion,TUMBES,1,XGBoost con clima,46.3235,23.8320,0.9505,delta,4.0000,1.0000,25.0000,23.0000
+Prueba,TUMBES,1,XGBoost con clima,31.3976,18.0159,0.9175,delta,4.0000,1.0000,25.0000,23.0000
+Validacion,TUMBES,1,"XGBoost con clima, rezagos hasta 12",46.0494,23.8997,0.9511,delta,3.0000,5.0000,56.0000,55.0000
+Prueba,TUMBES,1,"XGBoost con clima, rezagos hasta 12",33.6770,19.0547,0.9051,delta,3.0000,5.0000,56.0000,55.0000
+Validacion,TUMBES,2,XGBoost sin clima,75.3186,38.7287,0.8692,delta,3.0000,1.0000,53.0000,6.0000
+Prueba,TUMBES,2,XGBoost sin clima,46.4829,29.1816,0.8192,delta,3.0000,1.0000,53.0000,6.0000
+Validacion,TUMBES,2,XGBoost con clima,68.5231,36.1338,0.8918,delta,2.0000,5.0000,126.0000,23.0000
+Prueba,TUMBES,2,XGBoost con clima,42.7304,25.8623,0.8473,delta,2.0000,5.0000,126.0000,23.0000
+Validacion,TUMBES,2,"XGBoost con clima, rezagos hasta 12",59.2875,32.0037,0.9190,delta,2.0000,1.0000,121.0000,51.0000
+Prueba,TUMBES,2,"XGBoost con clima, rezagos hasta 12",46.9355,27.8563,0.8157,delta,2.0000,1.0000,121.0000,51.0000
+Validacion,TUMBES,3,XGBoost sin clima,94.8243,49.7870,0.7927,delta,4.0000,5.0000,23.0000,6.0000
+Prueba,TUMBES,3,XGBoost sin clima,60.6480,38.4955,0.6923,delta,4.0000,5.0000,23.0000,6.0000
+Validacion,TUMBES,3,XGBoost con clima,85.7408,44.5472,0.8305,delta,2.0000,5.0000,38.0000,23.0000
+Prueba,TUMBES,3,XGBoost con clima,59.8257,36.5500,0.7006,delta,2.0000,5.0000,38.0000,23.0000
+Validacion,TUMBES,3,"XGBoost con clima, rezagos hasta 12",88.6936,46.6112,0.8187,delta,3.0000,5.0000,85.0000,47.0000
+Prueba,TUMBES,3,"XGBoost con clima, rezagos hasta 12",74.7580,44.3614,0.5325,delta,3.0000,5.0000,85.0000,47.0000
+Validacion,TUMBES,4,XGBoost sin clima,116.5322,61.8346,0.6870,delta,2.0000,5.0000,41.0000,6.0000
+Prueba,TUMBES,4,XGBoost sin clima,77.2439,48.2290,0.5009,delta,2.0000,5.0000,41.0000,6.0000
+Validacion,TUMBES,4,XGBoost con clima,108.0989,57.6776,0.7306,delta,2.0000,1.0000,33.0000,23.0000
+Prueba,TUMBES,4,XGBoost con clima,74.4603,46.3709,0.5362,delta,2.0000,1.0000,33.0000,23.0000
+Validacion,TUMBES,4,"XGBoost con clima, rezagos hasta 12",111.4482,59.0116,0.7137,delta,3.0000,5.0000,94.0000,43.0000
+Prueba,TUMBES,4,"XGBoost con clima, rezagos hasta 12",97.5521,54.2970,0.2039,delta,3.0000,5.0000,94.0000,43.0000
+Validacion,UCAYALI,1,XGBoost sin clima,36.4893,25.8773,0.8842,delta,2.0000,1.0000,61.0000,6.0000
+Prueba,UCAYALI,1,XGBoost sin clima,10.0446,5.8959,-0.0103,delta,2.0000,1.0000,61.0000,6.0000
+Validacion,UCAYALI,1,XGBoost con clima,37.4840,26.5970,0.8778,delta,3.0000,5.0000,53.0000,23.0000
+Prueba,UCAYALI,1,XGBoost con clima,9.8728,5.9845,0.0240,delta,3.0000,5.0000,53.0000,23.0000
+Validacion,UCAYALI,1,"XGBoost con clima, rezagos hasta 12",37.5951,25.7630,0.8771,delta,4.0000,5.0000,73.0000,55.0000
+Prueba,UCAYALI,1,"XGBoost con clima, rezagos hasta 12",10.8411,6.1486,-0.1768,delta,4.0000,5.0000,73.0000,55.0000
+Validacion,UCAYALI,2,XGBoost sin clima,56.7824,34.6929,0.7196,delta,3.0000,1.0000,26.0000,6.0000
+Prueba,UCAYALI,2,XGBoost sin clima,13.4102,7.3321,-0.8007,delta,3.0000,1.0000,26.0000,6.0000
+Validacion,UCAYALI,2,XGBoost con clima,55.4078,34.9670,0.7330,delta,2.0000,1.0000,77.0000,23.0000
+Prueba,UCAYALI,2,XGBoost con clima,14.0202,7.4556,-0.9682,delta,2.0000,1.0000,77.0000,23.0000
+Validacion,UCAYALI,2,"XGBoost con clima, rezagos hasta 12",54.1416,35.8878,0.7450,delta,2.0000,1.0000,85.0000,51.0000
+Prueba,UCAYALI,2,"XGBoost con clima, rezagos hasta 12",14.7494,7.9012,-1.1783,delta,2.0000,1.0000,85.0000,51.0000
+Validacion,UCAYALI,3,XGBoost sin clima,71.0815,42.0717,0.5605,delta,3.0000,1.0000,11.0000,6.0000
+Prueba,UCAYALI,3,XGBoost sin clima,16.2472,8.8639,-1.6431,delta,3.0000,1.0000,11.0000,6.0000
+Validacion,UCAYALI,3,XGBoost con clima,71.4505,41.8332,0.5560,delta,2.0000,5.0000,48.0000,23.0000
+Prueba,UCAYALI,3,XGBoost con clima,17.6583,9.2968,-2.1222,delta,2.0000,5.0000,48.0000,23.0000
+Validacion,UCAYALI,3,"XGBoost con clima, rezagos hasta 12",68.6272,41.9833,0.5904,delta,4.0000,5.0000,40.0000,47.0000
+Prueba,UCAYALI,3,"XGBoost con clima, rezagos hasta 12",19.0409,9.6424,-2.6303,delta,4.0000,5.0000,40.0000,47.0000
+Validacion,UCAYALI,4,XGBoost sin clima,81.0789,47.2373,0.4282,delta,3.0000,5.0000,12.0000,6.0000
+Prueba,UCAYALI,4,XGBoost sin clima,20.3134,10.5668,-3.1317,delta,3.0000,5.0000,12.0000,6.0000
+Validacion,UCAYALI,4,XGBoost con clima,79.3652,47.1605,0.4522,delta,4.0000,5.0000,16.0000,23.0000
+Prueba,UCAYALI,4,XGBoost con clima,21.0002,11.0572,-3.4158,delta,4.0000,5.0000,16.0000,23.0000
+Validacion,UCAYALI,4,"XGBoost con clima, rezagos hasta 12",79.9905,46.4181,0.4435,delta,2.0000,1.0000,73.0000,43.0000
+Prueba,UCAYALI,4,"XGBoost con clima, rezagos hasta 12",22.9415,12.1578,-4.2700,delta,2.0000,1.0000,73.0000,43.0000
+Prueba,AMAZONAS,1,Persistencia,9.6715,7.7308,0.2861,,,,,
+Prueba,AMAZONAS,1,Regresion con rezagos,8.4317,6.7028,0.4574,,,,,
+Prueba,AMAZONAS,2,Persistencia,9.6207,7.9423,0.2936,,,,,
+Prueba,AMAZONAS,2,Regresion con rezagos,8.9836,7.3043,0.3841,,,,,
+Prueba,AMAZONAS,3,Persistencia,10.7184,8.8846,0.1232,,,,,
+Prueba,AMAZONAS,3,Regresion con rezagos,9.7413,7.5802,0.2758,,,,,
+Prueba,AMAZONAS,4,Persistencia,11.2489,9.5385,0.0343,,,,,
+Prueba,AMAZONAS,4,Regresion con rezagos,10.2756,8.2700,0.1942,,,,,
+Prueba,ANCASH,1,Persistencia,129.1164,71.0000,0.9417,,,,,
+Prueba,ANCASH,1,Regresion con rezagos,156.3727,78.1252,0.9145,,,,,
+Prueba,ANCASH,2,Persistencia,221.0252,127.9615,0.8293,,,,,
+Prueba,ANCASH,2,Regresion con rezagos,242.2956,121.5659,0.7948,,,,,
+Prueba,ANCASH,3,Persistencia,315.7914,185.3077,0.6515,,,,,
+Prueba,ANCASH,3,Regresion con rezagos,329.1999,165.7707,0.6213,,,,,
+Prueba,ANCASH,4,Persistencia,403.8670,246.1923,0.4300,,,,,
+Prueba,ANCASH,4,Regresion con rezagos,399.1001,201.1653,0.4433,,,,,
+Prueba,AYACUCHO,1,Persistencia,3.9150,2.9038,0.4371,,,,,
+Prueba,AYACUCHO,1,Regresion con rezagos,3.7059,2.8259,0.4956,,,,,
+Prueba,AYACUCHO,2,Persistencia,4.7596,3.6538,0.1680,,,,,
+Prueba,AYACUCHO,2,Regresion con rezagos,4.2053,3.2387,0.3505,,,,,
+Prueba,AYACUCHO,3,Persistencia,4.8457,3.7115,0.1377,,,,,
+Prueba,AYACUCHO,3,Regresion con rezagos,4.3534,3.4578,0.3040,,,,,
+Prueba,AYACUCHO,4,Persistencia,4.8556,3.7692,0.1341,,,,,
+Prueba,AYACUCHO,4,Regresion con rezagos,4.6496,3.5945,0.2060,,,,,
+Prueba,CAJAMARCA,1,Persistencia,17.2755,12.8269,0.8401,,,,,
+Prueba,CAJAMARCA,1,Regresion con rezagos,18.1355,13.6993,0.8238,,,,,
+Prueba,CAJAMARCA,2,Persistencia,22.7309,16.9615,0.7232,,,,,
+Prueba,CAJAMARCA,2,Regresion con rezagos,23.4814,17.2781,0.7046,,,,,
+Prueba,CAJAMARCA,3,Persistencia,26.8890,18.7500,0.6127,,,,,
+Prueba,CAJAMARCA,3,Regresion con rezagos,27.8080,19.1171,0.5857,,,,,
+Prueba,CAJAMARCA,4,Persistencia,30.9308,22.2500,0.4875,,,,,
+Prueba,CAJAMARCA,4,Regresion con rezagos,31.8326,21.9024,0.4571,,,,,
+Prueba,CUSCO,1,Persistencia,18.1415,10.2692,0.8400,,,,,
+Prueba,CUSCO,1,Regresion con rezagos,19.1355,10.9996,0.8220,,,,,
+Prueba,CUSCO,2,Persistencia,27.6106,15.5769,0.6294,,,,,
+Prueba,CUSCO,2,Regresion con rezagos,27.6387,16.5981,0.6286,,,,,
+Prueba,CUSCO,3,Persistencia,35.4653,20.8269,0.3885,,,,,
+Prueba,CUSCO,3,Regresion con rezagos,34.4504,20.4814,0.4230,,,,,
+Prueba,CUSCO,4,Persistencia,42.8488,26.5577,0.1074,,,,,
+Prueba,CUSCO,4,Regresion con rezagos,40.0516,23.9759,0.2201,,,,,
+Prueba,HUANUCO,1,Persistencia,6.2788,4.8846,0.3595,,,,,
+Prueba,HUANUCO,1,Regresion con rezagos,6.9975,5.4479,0.2044,,,,,
+Prueba,HUANUCO,2,Persistencia,8.4785,6.8846,-0.1679,,,,,
+Prueba,HUANUCO,2,Regresion con rezagos,8.8517,6.9048,-0.2730,,,,,
+Prueba,HUANUCO,3,Persistencia,11.0044,8.5962,-0.9675,,,,,
+Prueba,HUANUCO,3,Regresion con rezagos,10.3299,7.9825,-0.7337,,,,,
+Prueba,HUANUCO,4,Persistencia,11.9115,9.5000,-1.3053,,,,,
+Prueba,HUANUCO,4,Regresion con rezagos,10.9607,8.2526,-0.9519,,,,,
+Prueba,ICA,1,Persistencia,186.3810,104.5769,0.9564,,,,,
+Prueba,ICA,1,Regresion con rezagos,203.7197,115.2384,0.9479,,,,,
+Prueba,ICA,2,Persistencia,343.9094,205.1538,0.8517,,,,,
+Prueba,ICA,2,Regresion con rezagos,340.6421,189.5853,0.8545,,,,,
+Prueba,ICA,3,Persistencia,504.0121,303.3077,0.6814,,,,,
+Prueba,ICA,3,Regresion con rezagos,476.1387,259.0459,0.7157,,,,,
+Prueba,ICA,4,Persistencia,653.0414,398.3077,0.4651,,,,,
+Prueba,ICA,4,Regresion con rezagos,598.7813,324.6308,0.5503,,,,,
+Prueba,JUNIN,1,Persistencia,13.9498,10.6346,0.8898,,,,,
+Prueba,JUNIN,1,Regresion con rezagos,14.4378,10.7392,0.8819,,,,,
+Prueba,JUNIN,2,Persistencia,17.2130,13.6346,0.8322,,,,,
+Prueba,JUNIN,2,Regresion con rezagos,18.7977,14.5267,0.7999,,,,,
+Prueba,JUNIN,3,Persistencia,21.2286,15.8077,0.7447,,,,,
+Prueba,JUNIN,3,Regresion con rezagos,23.0904,17.6272,0.6980,,,,,
+Prueba,JUNIN,4,Persistencia,26.0602,19.9808,0.6153,,,,,
+Prueba,JUNIN,4,Regresion con rezagos,27.7975,21.8343,0.5623,,,,,
+Prueba,LA LIBERTAD,1,Persistencia,330.3026,188.4615,0.9458,,,,,
+Prueba,LA LIBERTAD,1,Regresion con rezagos,436.0326,228.3759,0.9055,,,,,
+Prueba,LA LIBERTAD,2,Persistencia,583.5046,336.5577,0.8307,,,,,
+Prueba,LA LIBERTAD,2,Regresion con rezagos,706.2128,381.2394,0.7520,,,,,
+Prueba,LA LIBERTAD,3,Persistencia,822.3516,464.4808,0.6637,,,,,
+Prueba,LA LIBERTAD,3,Regresion con rezagos,933.7995,507.7412,0.5664,,,,,
+Prueba,LA LIBERTAD,4,Persistencia,1041.6681,614.3462,0.4605,,,,,
+Prueba,LA LIBERTAD,4,Regresion con rezagos,1101.1093,601.2139,0.3971,,,,,
+Prueba,LAMBAYEQUE,1,Persistencia,56.6034,34.8654,0.9430,,,,,
+Prueba,LAMBAYEQUE,1,Regresion con rezagos,71.9217,38.9036,0.9080,,,,,
+Prueba,LAMBAYEQUE,2,Persistencia,92.0579,55.6923,0.8492,,,,,
+Prueba,LAMBAYEQUE,2,Regresion con rezagos,111.3237,61.2291,0.7795,,,,,
+Prueba,LAMBAYEQUE,3,Persistencia,131.0677,80.2500,0.6943,,,,,
+Prueba,LAMBAYEQUE,3,Regresion con rezagos,147.2329,81.4623,0.6143,,,,,
+Prueba,LAMBAYEQUE,4,Persistencia,166.4443,103.0962,0.5070,,,,,
+Prueba,LAMBAYEQUE,4,Regresion con rezagos,176.2746,98.3295,0.4471,,,,,
+Prueba,LORETO,1,Persistencia,45.9615,32.6538,0.8317,,,,,
+Prueba,LORETO,1,Regresion con rezagos,47.7623,30.2482,0.8183,,,,,
+Prueba,LORETO,2,Persistencia,65.6150,45.4423,0.6571,,,,,
+Prueba,LORETO,2,Regresion con rezagos,68.2138,42.2078,0.6294,,,,,
+Prueba,LORETO,3,Persistencia,84.4308,56.3654,0.4322,,,,,
+Prueba,LORETO,3,Regresion con rezagos,85.9442,53.5512,0.4116,,,,,
+Prueba,LORETO,4,Persistencia,96.2631,62.8846,0.2619,,,,,
+Prueba,LORETO,4,Regresion con rezagos,99.0496,61.1139,0.2185,,,,,
+Prueba,MADRE DE DIOS,1,Persistencia,4.6534,3.3077,0.7071,,,,,
+Prueba,MADRE DE DIOS,1,Regresion con rezagos,4.6149,3.2417,0.7119,,,,,
+Prueba,MADRE DE DIOS,2,Persistencia,6.0796,4.3077,0.5001,,,,,
+Prueba,MADRE DE DIOS,2,Regresion con rezagos,6.0806,4.2308,0.4999,,,,,
+Prueba,MADRE DE DIOS,3,Persistencia,7.1333,5.0769,0.3118,,,,,
+Prueba,MADRE DE DIOS,3,Regresion con rezagos,7.1206,5.0879,0.3142,,,,,
+Prueba,MADRE DE DIOS,4,Persistencia,8.0216,5.6538,0.1297,,,,,
+Prueba,MADRE DE DIOS,4,Regresion con rezagos,7.6995,5.6245,0.1982,,,,,
+Prueba,PASCO,1,Persistencia,7.4897,5.5577,0.4830,,,,,
+Prueba,PASCO,1,Regresion con rezagos,6.8074,4.8311,0.5729,,,,,
+Prueba,PASCO,2,Persistencia,8.5777,6.4615,0.3219,,,,,
+Prueba,PASCO,2,Regresion con rezagos,7.8487,5.7654,0.4322,,,,,
+Prueba,PASCO,3,Persistencia,9.8576,7.0962,0.1044,,,,,
+Prueba,PASCO,3,Regresion con rezagos,8.8993,6.5930,0.2701,,,,,
+Prueba,PASCO,4,Persistencia,11.3154,8.1538,-0.1801,,,,,
+Prueba,PASCO,4,Regresion con rezagos,9.7461,7.0353,0.1246,,,,,
+Prueba,PIURA,1,Persistencia,193.6598,119.6154,0.9390,,,,,
+Prueba,PIURA,1,Regresion con rezagos,218.6827,128.0642,0.9222,,,,,
+Prueba,PIURA,2,Persistencia,307.4911,200.3077,0.8462,,,,,
+Prueba,PIURA,2,Regresion con rezagos,311.5656,183.2725,0.8421,,,,,
+Prueba,PIURA,3,Persistencia,423.4242,266.9231,0.7084,,,,,
+Prueba,PIURA,3,Regresion con rezagos,402.6435,237.8576,0.7363,,,,,
+Prueba,PIURA,4,Persistencia,543.9334,346.8654,0.5188,,,,,
+Prueba,PIURA,4,Regresion con rezagos,490.2172,288.5283,0.6092,,,,,
+Prueba,SAN MARTIN,1,Persistencia,31.6407,25.8654,0.8790,,,,,
+Prueba,SAN MARTIN,1,Regresion con rezagos,45.7824,33.6488,0.7467,,,,,
+Prueba,SAN MARTIN,2,Persistencia,39.1322,30.0577,0.8149,,,,,
+Prueba,SAN MARTIN,2,Regresion con rezagos,64.5915,47.3550,0.4958,,,,,
+Prueba,SAN MARTIN,3,Persistencia,53.8761,41.8269,0.6492,,,,,
+Prueba,SAN MARTIN,3,Regresion con rezagos,82.2052,60.7281,0.1833,,,,,
+Prueba,SAN MARTIN,4,Persistencia,63.5664,44.8846,0.5117,,,,,
+Prueba,SAN MARTIN,4,Regresion con rezagos,95.5802,71.6220,-0.1041,,,,,
+Prueba,TUMBES,1,Persistencia,30.0413,18.4808,0.9245,,,,,
+Prueba,TUMBES,1,Regresion con rezagos,36.3536,20.9836,0.8894,,,,,
+Prueba,TUMBES,2,Persistencia,46.2323,29.4231,0.8212,,,,,
+Prueba,TUMBES,2,Regresion con rezagos,51.8482,28.6655,0.7751,,,,,
+Prueba,TUMBES,3,Persistencia,62.5592,39.5000,0.6726,,,,,
+Prueba,TUMBES,3,Regresion con rezagos,65.4541,36.8913,0.6416,,,,,
+Prueba,TUMBES,4,Persistencia,75.6482,51.4231,0.5213,,,,,
+Prueba,TUMBES,4,Regresion con rezagos,76.8201,44.4407,0.5063,,,,,
+Prueba,UCAYALI,1,Persistencia,9.9557,6.0000,0.0076,,,,,
+Prueba,UCAYALI,1,Regresion con rezagos,9.3298,5.2678,0.1284,,,,,
+Prueba,UCAYALI,2,Persistencia,13.4006,7.4615,-0.7981,,,,,
+Prueba,UCAYALI,2,Regresion con rezagos,11.9288,6.6953,-0.4248,,,,,
+Prueba,UCAYALI,3,Persistencia,16.0881,8.9038,-1.5916,,,,,
+Prueba,UCAYALI,3,Regresion con rezagos,14.1182,8.2344,-0.9958,,,,,
+Prueba,UCAYALI,4,Persistencia,19.9224,10.6346,-2.9742,,,,,
+Prueba,UCAYALI,4,Regresion con rezagos,15.6674,9.4177,-1.4579,,,,,
+Validacion,AMAZONAS,1,Persistencia,15.9693,11.9231,0.7084,,,,,
+Validacion,AMAZONAS,1,Regresion con rezagos,20.0870,14.3139,0.5386,,,,,
+Validacion,AMAZONAS,2,Persistencia,21.8735,16.4135,0.4529,,,,,
+Validacion,AMAZONAS,2,Regresion con rezagos,25.5798,18.4549,0.2517,,,,,
+Validacion,AMAZONAS,3,Persistencia,26.7179,20.1154,0.1837,,,,,
+Validacion,AMAZONAS,3,Regresion con rezagos,29.9768,21.8025,-0.0276,,,,,
+Validacion,AMAZONAS,4,Persistencia,30.1448,22.2308,-0.0392,,,,,
+Validacion,AMAZONAS,4,Regresion con rezagos,33.5545,24.4143,-0.2876,,,,,
+Validacion,ANCASH,1,Persistencia,46.9493,25.4904,0.9280,,,,,
+Validacion,ANCASH,1,Regresion con rezagos,68.5481,33.5886,0.8464,,,,,
+Validacion,ANCASH,2,Persistencia,66.1844,36.0481,0.8569,,,,,
+Validacion,ANCASH,2,Regresion con rezagos,97.6653,51.3989,0.6883,,,,,
+Validacion,ANCASH,3,Persistencia,77.5734,42.8942,0.8034,,,,,
+Validacion,ANCASH,3,Regresion con rezagos,122.3092,67.5557,0.5111,,,,,
+Validacion,ANCASH,4,Persistencia,90.1164,54.7981,0.7346,,,,,
+Validacion,ANCASH,4,Regresion con rezagos,142.3331,80.5046,0.3380,,,,,
+Validacion,AYACUCHO,1,Persistencia,6.1777,4.8558,0.5592,,,,,
+Validacion,AYACUCHO,1,Regresion con rezagos,5.8222,4.4542,0.6085,,,,,
+Validacion,AYACUCHO,2,Persistencia,7.0329,5.2885,0.4287,,,,,
+Validacion,AYACUCHO,2,Regresion con rezagos,6.4640,4.7636,0.5174,,,,,
+Validacion,AYACUCHO,3,Persistencia,7.6088,5.6250,0.3314,,,,,
+Validacion,AYACUCHO,3,Regresion con rezagos,6.6197,4.9451,0.4939,,,,,
+Validacion,AYACUCHO,4,Persistencia,7.5154,5.7885,0.3477,,,,,
+Validacion,AYACUCHO,4,Regresion con rezagos,6.5412,4.9532,0.5058,,,,,
+Validacion,CAJAMARCA,1,Persistencia,29.4503,19.9327,0.9103,,,,,
+Validacion,CAJAMARCA,1,Regresion con rezagos,38.5670,24.1811,0.8462,,,,,
+Validacion,CAJAMARCA,2,Persistencia,40.8984,27.2212,0.8271,,,,,
+Validacion,CAJAMARCA,2,Regresion con rezagos,53.2009,33.2570,0.7074,,,,,
+Validacion,CAJAMARCA,3,Persistencia,47.7544,34.5192,0.7643,,,,,
+Validacion,CAJAMARCA,3,Regresion con rezagos,65.5309,41.5136,0.5561,,,,,
+Validacion,CAJAMARCA,4,Persistencia,58.4675,40.8365,0.6466,,,,,
+Validacion,CAJAMARCA,4,Regresion con rezagos,77.9022,49.4457,0.3726,,,,,
+Validacion,CUSCO,1,Persistencia,15.8821,11.1250,0.8795,,,,,
+Validacion,CUSCO,1,Regresion con rezagos,17.4379,12.8796,0.8548,,,,,
+Validacion,CUSCO,2,Persistencia,22.0063,16.1635,0.7687,,,,,
+Validacion,CUSCO,2,Regresion con rezagos,24.0988,17.2504,0.7227,,,,,
+Validacion,CUSCO,3,Persistencia,25.3902,18.6635,0.6921,,,,,
+Validacion,CUSCO,3,Regresion con rezagos,29.2561,22.3029,0.5913,,,,,
+Validacion,CUSCO,4,Persistencia,30.1732,22.4615,0.5652,,,,,
+Validacion,CUSCO,4,Regresion con rezagos,34.5758,26.7877,0.4291,,,,,
+Validacion,HUANUCO,1,Persistencia,13.6561,9.2981,0.8227,,,,,
+Validacion,HUANUCO,1,Regresion con rezagos,14.1119,8.8760,0.8106,,,,,
+Validacion,HUANUCO,2,Persistencia,17.1795,11.0577,0.7194,,,,,
+Validacion,HUANUCO,2,Regresion con rezagos,16.9827,10.7169,0.7258,,,,,
+Validacion,HUANUCO,3,Persistencia,18.9056,12.9615,0.6602,,,,,
+Validacion,HUANUCO,3,Regresion con rezagos,19.3833,12.1546,0.6428,,,,,
+Validacion,HUANUCO,4,Persistencia,22.6807,15.2788,0.5109,,,,,
+Validacion,HUANUCO,4,Regresion con rezagos,22.4013,13.7043,0.5229,,,,,
+Validacion,ICA,1,Persistencia,80.2901,42.2115,0.9435,,,,,
+Validacion,ICA,1,Regresion con rezagos,94.5375,39.9725,0.9217,,,,,
+Validacion,ICA,2,Persistencia,143.0759,79.6250,0.8206,,,,,
+Validacion,ICA,2,Regresion con rezagos,152.7759,66.6684,0.7954,,,,,
+Validacion,ICA,3,Persistencia,201.7665,115.6635,0.6432,,,,,
+Validacion,ICA,3,Regresion con rezagos,204.0486,91.0070,0.6351,,,,,
+Validacion,ICA,4,Persistencia,258.2365,146.7981,0.4155,,,,,
+Validacion,ICA,4,Regresion con rezagos,249.7659,113.0869,0.4532,,,,,
+Validacion,JUNIN,1,Persistencia,17.1767,12.2692,0.8162,,,,,
+Validacion,JUNIN,1,Regresion con rezagos,19.1891,13.9276,0.7707,,,,,
+Validacion,JUNIN,2,Persistencia,24.4326,17.6058,0.6282,,,,,
+Validacion,JUNIN,2,Regresion con rezagos,26.0065,18.9065,0.5788,,,,,
+Validacion,JUNIN,3,Persistencia,31.3502,21.8173,0.3879,,,,,
+Validacion,JUNIN,3,Regresion con rezagos,31.2457,22.0553,0.3920,,,,,
+Validacion,JUNIN,4,Persistencia,37.6782,26.3173,0.1158,,,,,
+Validacion,JUNIN,4,Regresion con rezagos,36.0281,25.3473,0.1916,,,,,
+Validacion,LA LIBERTAD,1,Persistencia,93.9575,41.0096,0.9536,,,,,
+Validacion,LA LIBERTAD,1,Regresion con rezagos,141.6845,60.3297,0.8945,,,,,
+Validacion,LA LIBERTAD,2,Persistencia,144.6734,66.1731,0.8900,,,,,
+Validacion,LA LIBERTAD,2,Regresion con rezagos,218.9200,94.0103,0.7482,,,,,
+Validacion,LA LIBERTAD,3,Persistencia,185.4890,89.6442,0.8192,,,,,
+Validacion,LA LIBERTAD,3,Regresion con rezagos,281.6097,126.1298,0.5833,,,,,
+Validacion,LA LIBERTAD,4,Persistencia,234.1637,111.8077,0.7119,,,,,
+Validacion,LA LIBERTAD,4,Regresion con rezagos,330.8124,151.2214,0.4250,,,,,
+Validacion,LAMBAYEQUE,1,Persistencia,178.3298,74.0577,0.9136,,,,,
+Validacion,LAMBAYEQUE,1,Regresion con rezagos,269.4404,101.3455,0.8028,,,,,
+Validacion,LAMBAYEQUE,2,Persistencia,261.3938,112.4615,0.8144,,,,,
+Validacion,LAMBAYEQUE,2,Regresion con rezagos,387.7374,154.0571,0.5915,,,,,
+Validacion,LAMBAYEQUE,3,Persistencia,339.6503,160.9904,0.6866,,,,,
+Validacion,LAMBAYEQUE,3,Regresion con rezagos,474.1533,193.6461,0.3892,,,,,
+Validacion,LAMBAYEQUE,4,Persistencia,429.5585,210.4231,0.4987,,,,,
+Validacion,LAMBAYEQUE,4,Regresion con rezagos,537.8959,224.3445,0.2139,,,,,
+Validacion,LORETO,1,Persistencia,45.7891,31.1250,0.8161,,,,,
+Validacion,LORETO,1,Regresion con rezagos,46.3387,30.7837,0.8117,,,,,
+Validacion,LORETO,2,Persistencia,62.4279,43.4135,0.6583,,,,,
+Validacion,LORETO,2,Regresion con rezagos,63.4663,44.0167,0.6468,,,,,
+Validacion,LORETO,3,Persistencia,77.5760,50.9231,0.4723,,,,,
+Validacion,LORETO,3,Regresion con rezagos,78.2585,53.5471,0.4630,,,,,
+Validacion,LORETO,4,Persistencia,94.1443,65.0962,0.2228,,,,,
+Validacion,LORETO,4,Regresion con rezagos,91.4721,63.8830,0.2663,,,,,
+Validacion,MADRE DE DIOS,1,Persistencia,16.3213,10.8654,0.9026,,,,,
+Validacion,MADRE DE DIOS,1,Regresion con rezagos,17.8035,11.2700,0.8841,,,,,
+Validacion,MADRE DE DIOS,2,Persistencia,22.7887,14.0385,0.8101,,,,,
+Validacion,MADRE DE DIOS,2,Regresion con rezagos,24.1114,16.1316,0.7875,,,,,
+Validacion,MADRE DE DIOS,3,Persistencia,28.2729,18.9327,0.7078,,,,,
+Validacion,MADRE DE DIOS,3,Regresion con rezagos,29.0977,19.7179,0.6905,,,,,
+Validacion,MADRE DE DIOS,4,Persistencia,34.4171,23.1731,0.5670,,,,,
+Validacion,MADRE DE DIOS,4,Regresion con rezagos,34.2388,23.6046,0.5714,,,,,
+Validacion,PASCO,1,Persistencia,8.7569,5.5096,0.6169,,,,,
+Validacion,PASCO,1,Regresion con rezagos,8.8447,5.6284,0.6091,,,,,
+Validacion,PASCO,2,Persistencia,9.8815,6.2596,0.5121,,,,,
+Validacion,PASCO,2,Regresion con rezagos,10.4413,6.6307,0.4553,,,,,
+Validacion,PASCO,3,Persistencia,9.7191,6.7692,0.5280,,,,,
+Validacion,PASCO,3,Regresion con rezagos,11.4586,7.4710,0.3440,,,,,
+Validacion,PASCO,4,Persistencia,10.9527,7.6538,0.4006,,,,,
+Validacion,PASCO,4,Regresion con rezagos,12.5382,8.2147,0.2145,,,,,
+Validacion,PIURA,1,Persistencia,460.3801,182.3077,0.9158,,,,,
+Validacion,PIURA,1,Regresion con rezagos,571.3858,203.6011,0.8703,,,,,
+Validacion,PIURA,2,Persistencia,768.3751,330.3750,0.7654,,,,,
+Validacion,PIURA,2,Regresion con rezagos,822.0432,295.6700,0.7315,,,,,
+Validacion,PIURA,3,Persistencia,1075.9291,484.2981,0.5400,,,,,
+Validacion,PIURA,3,Regresion con rezagos,1054.2484,383.5845,0.5583,,,,,
+Validacion,PIURA,4,Persistencia,1309.4494,607.7115,0.3186,,,,,
+Validacion,PIURA,4,Regresion con rezagos,1226.2924,458.2281,0.4024,,,,,
+Validacion,SAN MARTIN,1,Persistencia,22.7093,17.0577,0.7884,,,,,
+Validacion,SAN MARTIN,1,Regresion con rezagos,26.8436,19.3957,0.7044,,,,,
+Validacion,SAN MARTIN,2,Persistencia,28.8347,21.0962,0.6589,,,,,
+Validacion,SAN MARTIN,2,Regresion con rezagos,36.1262,26.6581,0.4645,,,,,
+Validacion,SAN MARTIN,3,Persistencia,36.6576,27.5096,0.4487,,,,,
+Validacion,SAN MARTIN,3,Regresion con rezagos,44.6583,32.6382,0.1817,,,,,
+Validacion,SAN MARTIN,4,Persistencia,41.2326,30.3173,0.3025,,,,,
+Validacion,SAN MARTIN,4,Regresion con rezagos,51.4563,38.0677,-0.0863,,,,,
+Validacion,TUMBES,1,Persistencia,47.1110,25.6346,0.9488,,,,,
+Validacion,TUMBES,1,Regresion con rezagos,62.8885,31.7937,0.9088,,,,,
+Validacion,TUMBES,2,Persistencia,69.6102,37.0385,0.8883,,,,,
+Validacion,TUMBES,2,Regresion con rezagos,89.9642,45.2891,0.8134,,,,,
+Validacion,TUMBES,3,Persistencia,93.2182,50.3077,0.7997,,,,,
+Validacion,TUMBES,3,Regresion con rezagos,114.1694,58.7902,0.6995,,,,,
+Validacion,TUMBES,4,Persistencia,114.2004,60.9423,0.6994,,,,,
+Validacion,TUMBES,4,Regresion con rezagos,133.5391,70.0024,0.5889,,,,,
+Validacion,UCAYALI,1,Persistencia,39.1076,27.1923,0.8670,,,,,
+Validacion,UCAYALI,1,Regresion con rezagos,47.3136,29.3734,0.8053,,,,,
+Validacion,UCAYALI,2,Persistencia,62.7988,38.1154,0.6570,,,,,
+Validacion,UCAYALI,2,Regresion con rezagos,66.7085,38.6145,0.6130,,,,,
+Validacion,UCAYALI,3,Persistencia,81.1427,47.4038,0.4273,,,,,
+Validacion,UCAYALI,3,Regresion con rezagos,81.5700,47.3450,0.4213,,,,,
+Validacion,UCAYALI,4,Persistencia,94.2430,54.8173,0.2275,,,,,
+Validacion,UCAYALI,4,Regresion con rezagos,93.5264,56.2049,0.2392,,,,,

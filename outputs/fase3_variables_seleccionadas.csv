@@ -1,0 +1,681 @@
+departamento,horizonte,modelo,categoria,variable,rezago_mas_correlacionado,abs_spearman
+AMAZONAS,1,XGBoost con clima,temperatura,rango_term,rango_term_l4,0.187
+AMAZONAS,1,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l4,0.051
+AMAZONAS,1,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.109
+AMAZONAS,1,XGBoost con clima,viento,viento,viento_l3,0.129
+AMAZONAS,1,XGBoost con clima,icen,icen_lag5,icen_lag5_s1,0.254
+AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l7,0.194
+AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l9,0.072
+AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.109
+AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.167
+AMAZONAS,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s1,0.254
+AMAZONAS,2,XGBoost con clima,temperatura,rango_term,rango_term_l4,0.189
+AMAZONAS,2,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l4,0.054
+AMAZONAS,2,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.109
+AMAZONAS,2,XGBoost con clima,viento,viento,viento_l5,0.14
+AMAZONAS,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.254
+AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l7,0.194
+AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l9,0.072
+AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.109
+AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.167
+AMAZONAS,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.254
+AMAZONAS,3,XGBoost con clima,temperatura,rango_term,rango_term_l4,0.189
+AMAZONAS,3,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l4,0.055
+AMAZONAS,3,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.11
+AMAZONAS,3,XGBoost con clima,viento,viento,viento_l5,0.14
+AMAZONAS,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.253
+AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l7,0.194
+AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l9,0.072
+AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.11
+AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.167
+AMAZONAS,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.253
+AMAZONAS,4,XGBoost con clima,temperatura,rango_term,rango_term_l7,0.194
+AMAZONAS,4,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l4,0.055
+AMAZONAS,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.11
+AMAZONAS,4,XGBoost con clima,viento,viento,viento_l7,0.165
+AMAZONAS,4,XGBoost con clima,icen,icen_lag4,icen_lag4_s4,0.253
+AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l7,0.194
+AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l9,0.072
+AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.11
+AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.167
+AMAZONAS,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s4,0.253
+ANCASH,1,XGBoost con clima,temperatura,temp_media,temp_media_l4,0.282
+ANCASH,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.15
+ANCASH,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.079
+ANCASH,1,XGBoost con clima,viento,viento,viento_l2,0.039
+ANCASH,1,XGBoost con clima,icen,icen_lag6,icen_lag6_s1,0.358
+ANCASH,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l11,0.38
+ANCASH,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.251
+ANCASH,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.105
+ANCASH,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.152
+ANCASH,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s1,0.358
+ANCASH,2,XGBoost con clima,temperatura,temp_media,temp_media_l5,0.303
+ANCASH,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.152
+ANCASH,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.068
+ANCASH,2,XGBoost con clima,viento,viento,viento_l5,0.054
+ANCASH,2,XGBoost con clima,icen,icen_lag6,icen_lag6_s2,0.366
+ANCASH,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l11,0.38
+ANCASH,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.251
+ANCASH,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.105
+ANCASH,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.152
+ANCASH,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s2,0.366
+ANCASH,3,XGBoost con clima,temperatura,temp_media,temp_media_l6,0.328
+ANCASH,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l6,0.188
+ANCASH,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.065
+ANCASH,3,XGBoost con clima,viento,viento,viento_l6,0.064
+ANCASH,3,XGBoost con clima,icen,icen_lag6,icen_lag6_s3,0.376
+ANCASH,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l11,0.38
+ANCASH,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.251
+ANCASH,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.105
+ANCASH,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.152
+ANCASH,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s3,0.376
+ANCASH,4,XGBoost con clima,temperatura,temp_media,temp_media_l7,0.344
+ANCASH,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l7,0.219
+ANCASH,4,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.039
+ANCASH,4,XGBoost con clima,viento,viento,viento_l7,0.112
+ANCASH,4,XGBoost con clima,icen,icen_lag6,icen_lag6_s4,0.378
+ANCASH,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l11,0.38
+ANCASH,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.251
+ANCASH,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.105
+ANCASH,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.152
+ANCASH,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s4,0.378
+AYACUCHO,1,XGBoost con clima,temperatura,temp_min,temp_min_l3,0.205
+AYACUCHO,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l3,0.024
+AYACUCHO,1,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.034
+AYACUCHO,1,XGBoost con clima,viento,viento,viento_l1,0.049
+AYACUCHO,1,XGBoost con clima,icen,icen_lag6,icen_lag6_s1,0.174
+AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l3,0.205
+AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.037
+AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.034
+AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l1,0.049
+AYACUCHO,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s1,0.174
+AYACUCHO,2,XGBoost con clima,temperatura,temp_min,temp_min_l3,0.205
+AYACUCHO,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.032
+AYACUCHO,2,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.036
+AYACUCHO,2,XGBoost con clima,viento,viento,viento_l2,0.039
+AYACUCHO,2,XGBoost con clima,icen,icen_lag6,icen_lag6_s2,0.177
+AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l3,0.205
+AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.037
+AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.036
+AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l2,0.039
+AYACUCHO,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s2,0.177
+AYACUCHO,3,XGBoost con clima,temperatura,temp_min,temp_min_l3,0.208
+AYACUCHO,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.034
+AYACUCHO,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.037
+AYACUCHO,3,XGBoost con clima,viento,viento,viento_l4,0.012
+AYACUCHO,3,XGBoost con clima,icen,icen_lag6,icen_lag6_s3,0.182
+AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l3,0.208
+AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.037
+AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.037
+AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.023
+AYACUCHO,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s3,0.182
+AYACUCHO,4,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.206
+AYACUCHO,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.035
+AYACUCHO,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.028
+AYACUCHO,4,XGBoost con clima,viento,viento,viento_l7,0.013
+AYACUCHO,4,XGBoost con clima,icen,icen_lag6,icen_lag6_s4,0.187
+AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l5,0.206
+AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.037
+AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.028
+AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.023
+AYACUCHO,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s4,0.187
+CAJAMARCA,1,XGBoost con clima,temperatura,temp_media,temp_media_l1,0.202
+CAJAMARCA,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.076
+CAJAMARCA,1,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.163
+CAJAMARCA,1,XGBoost con clima,viento,viento,viento_l4,0.143
+CAJAMARCA,1,XGBoost con clima,icen,icen_lag6,icen_lag6_s1,0.128
+CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l9,0.248
+CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.177
+CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l5,0.173
+CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.286
+CAJAMARCA,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s1,0.128
+CAJAMARCA,2,XGBoost con clima,temperatura,rango_term,rango_term_l5,0.233
+CAJAMARCA,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.102
+CAJAMARCA,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.173
+CAJAMARCA,2,XGBoost con clima,viento,viento,viento_l5,0.155
+CAJAMARCA,2,XGBoost con clima,icen,icen_lag6,icen_lag6_s2,0.132
+CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l9,0.248
+CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.177
+CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l5,0.173
+CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.286
+CAJAMARCA,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s2,0.132
+CAJAMARCA,3,XGBoost con clima,temperatura,rango_term,rango_term_l6,0.239
+CAJAMARCA,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.103
+CAJAMARCA,3,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.174
+CAJAMARCA,3,XGBoost con clima,viento,viento,viento_l6,0.195
+CAJAMARCA,3,XGBoost con clima,icen,icen_lag6,icen_lag6_s3,0.138
+CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l9,0.248
+CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.177
+CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l5,0.174
+CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.286
+CAJAMARCA,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s3,0.138
+CAJAMARCA,4,XGBoost con clima,temperatura,rango_term,rango_term_l7,0.246
+CAJAMARCA,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l7,0.126
+CAJAMARCA,4,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.174
+CAJAMARCA,4,XGBoost con clima,viento,viento,viento_l7,0.215
+CAJAMARCA,4,XGBoost con clima,icen,icen_lag6,icen_lag6_s4,0.144
+CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l9,0.248
+CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l12,0.177
+CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l5,0.174
+CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.286
+CAJAMARCA,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag6,icen_lag6_s4,0.144
+CUSCO,1,XGBoost con clima,temperatura,temp_min,temp_min_l2,0.234
+CUSCO,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.1
+CUSCO,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.073
+CUSCO,1,XGBoost con clima,viento,viento,viento_l1,0.064
+CUSCO,1,XGBoost con clima,icen,icen_lag5,icen_lag5_s1,0.023
+CUSCO,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l2,0.234
+CUSCO,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l5,0.112
+CUSCO,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.073
+CUSCO,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.07
+CUSCO,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s1,0.023
+CUSCO,2,XGBoost con clima,temperatura,temp_min,temp_min_l2,0.238
+CUSCO,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.112
+CUSCO,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.072
+CUSCO,2,XGBoost con clima,viento,viento,viento_l2,0.041
+CUSCO,2,XGBoost con clima,icen,icen_lag5,icen_lag5_s2,0.02
+CUSCO,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l2,0.238
+CUSCO,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l5,0.112
+CUSCO,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.072
+CUSCO,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.07
+CUSCO,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s2,0.02
+CUSCO,3,XGBoost con clima,temperatura,temp_min,temp_min_l3,0.237
+CUSCO,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.114
+CUSCO,3,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.071
+CUSCO,3,XGBoost con clima,viento,viento,viento_l3,0.029
+CUSCO,3,XGBoost con clima,icen,icen_lag5,icen_lag5_s3,0.019
+CUSCO,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l3,0.237
+CUSCO,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l5,0.114
+CUSCO,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.071
+CUSCO,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.07
+CUSCO,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s3,0.019
+CUSCO,4,XGBoost con clima,temperatura,temp_min,temp_min_l4,0.227
+CUSCO,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.116
+CUSCO,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.072
+CUSCO,4,XGBoost con clima,viento,viento,viento_l7,0.029
+CUSCO,4,XGBoost con clima,icen,icen_lag5,icen_lag5_s4,0.017
+CUSCO,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l4,0.227
+CUSCO,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l5,0.116
+CUSCO,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.072
+CUSCO,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.07
+CUSCO,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s4,0.017
+HUANUCO,1,XGBoost con clima,temperatura,temp_min,temp_min_l2,0.327
+HUANUCO,1,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.083
+HUANUCO,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.03
+HUANUCO,1,XGBoost con clima,viento,viento,viento_l3,0.18
+HUANUCO,1,XGBoost con clima,icen,icen_lag4,icen_lag4_s1,0.124
+HUANUCO,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l2,0.327
+HUANUCO,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l4,0.083
+HUANUCO,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.17
+HUANUCO,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l10,0.282
+HUANUCO,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s1,0.124
+HUANUCO,2,XGBoost con clima,temperatura,temp_min,temp_min_l2,0.326
+HUANUCO,2,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.084
+HUANUCO,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.036
+HUANUCO,2,XGBoost con clima,viento,viento,viento_l3,0.178
+HUANUCO,2,XGBoost con clima,icen,icen_lag4,icen_lag4_s2,0.123
+HUANUCO,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l2,0.326
+HUANUCO,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l4,0.084
+HUANUCO,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.17
+HUANUCO,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l10,0.282
+HUANUCO,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s2,0.123
+HUANUCO,3,XGBoost con clima,temperatura,temp_min,temp_min_l3,0.315
+HUANUCO,3,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.088
+HUANUCO,3,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.044
+HUANUCO,3,XGBoost con clima,viento,viento,viento_l6,0.217
+HUANUCO,3,XGBoost con clima,icen,icen_lag4,icen_lag4_s3,0.118
+HUANUCO,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l3,0.315
+HUANUCO,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l4,0.088
+HUANUCO,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.17
+HUANUCO,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l10,0.282
+HUANUCO,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s3,0.118
+HUANUCO,4,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.313
+HUANUCO,4,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.087
+HUANUCO,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.062
+HUANUCO,4,XGBoost con clima,viento,viento,viento_l7,0.223
+HUANUCO,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.114
+HUANUCO,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l5,0.313
+HUANUCO,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l4,0.087
+HUANUCO,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.17
+HUANUCO,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l10,0.282
+HUANUCO,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.114
+ICA,1,XGBoost con clima,temperatura,temp_min,temp_min_l4,0.195
+ICA,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.146
+ICA,1,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.149
+ICA,1,XGBoost con clima,viento,viento,viento_l2,0.176
+ICA,1,XGBoost con clima,icen,icen_lag5,icen_lag5_s1,0.095
+ICA,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.235
+ICA,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.219
+ICA,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l10,0.196
+ICA,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l2,0.176
+ICA,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s1,0.095
+ICA,2,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.21
+ICA,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l5,0.166
+ICA,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.155
+ICA,2,XGBoost con clima,viento,viento,viento_l2,0.175
+ICA,2,XGBoost con clima,icen,icen_lag5,icen_lag5_s2,0.095
+ICA,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.235
+ICA,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.219
+ICA,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l10,0.196
+ICA,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l2,0.175
+ICA,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s2,0.095
+ICA,3,XGBoost con clima,temperatura,temp_min,temp_min_l6,0.223
+ICA,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l6,0.176
+ICA,3,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.17
+ICA,3,XGBoost con clima,viento,viento,viento_l3,0.161
+ICA,3,XGBoost con clima,icen,icen_lag5,icen_lag5_s3,0.094
+ICA,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.235
+ICA,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.219
+ICA,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l10,0.196
+ICA,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l3,0.161
+ICA,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s3,0.094
+ICA,4,XGBoost con clima,temperatura,temp_media,temp_media_l7,0.23
+ICA,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l7,0.195
+ICA,4,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.172
+ICA,4,XGBoost con clima,viento,viento,viento_l4,0.154
+ICA,4,XGBoost con clima,icen,icen_lag5,icen_lag5_s4,0.094
+ICA,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.235
+ICA,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l10,0.219
+ICA,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l10,0.196
+ICA,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.154
+ICA,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s4,0.094
+JUNIN,1,XGBoost con clima,temperatura,temp_min,temp_min_l4,0.249
+JUNIN,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.151
+JUNIN,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.205
+JUNIN,1,XGBoost con clima,viento,viento,viento_l4,0.08
+JUNIN,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.057
+JUNIN,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.253
+JUNIN,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.151
+JUNIN,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.205
+JUNIN,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.191
+JUNIN,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.057
+JUNIN,2,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.25
+JUNIN,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.151
+JUNIN,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.192
+JUNIN,2,XGBoost con clima,viento,viento,viento_l5,0.113
+JUNIN,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.057
+JUNIN,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.253
+JUNIN,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.151
+JUNIN,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.192
+JUNIN,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.191
+JUNIN,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.057
+JUNIN,3,XGBoost con clima,temperatura,temp_min,temp_min_l6,0.252
+JUNIN,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.152
+JUNIN,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.179
+JUNIN,3,XGBoost con clima,viento,viento,viento_l6,0.131
+JUNIN,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.055
+JUNIN,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.253
+JUNIN,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.152
+JUNIN,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.179
+JUNIN,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.191
+JUNIN,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.055
+JUNIN,4,XGBoost con clima,temperatura,temp_min,temp_min_l7,0.253
+JUNIN,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.152
+JUNIN,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.159
+JUNIN,4,XGBoost con clima,viento,viento,viento_l7,0.137
+JUNIN,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.054
+JUNIN,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.253
+JUNIN,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.152
+JUNIN,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.159
+JUNIN,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l12,0.191
+JUNIN,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.054
+LA LIBERTAD,1,XGBoost con clima,temperatura,temp_media,temp_media_l4,0.595
+LA LIBERTAD,1,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.113
+LA LIBERTAD,1,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.327
+LA LIBERTAD,1,XGBoost con clima,viento,viento,viento_l3,0.136
+LA LIBERTAD,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.546
+LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l8,0.605
+LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.335
+LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.465
+LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.146
+LA LIBERTAD,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.546
+LA LIBERTAD,2,XGBoost con clima,temperatura,temp_media,temp_media_l4,0.595
+LA LIBERTAD,2,XGBoost con clima,lluvia,precip_total,precip_total_l5,0.176
+LA LIBERTAD,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.358
+LA LIBERTAD,2,XGBoost con clima,viento,viento,viento_l5,0.145
+LA LIBERTAD,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.541
+LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l8,0.605
+LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.335
+LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.465
+LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.146
+LA LIBERTAD,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.541
+LA LIBERTAD,3,XGBoost con clima,temperatura,temp_media,temp_media_l6,0.602
+LA LIBERTAD,3,XGBoost con clima,lluvia,precip_total,precip_total_l6,0.209
+LA LIBERTAD,3,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.391
+LA LIBERTAD,3,XGBoost con clima,viento,viento,viento_l5,0.149
+LA LIBERTAD,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.536
+LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l8,0.605
+LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.335
+LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.465
+LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l5,0.149
+LA LIBERTAD,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.536
+LA LIBERTAD,4,XGBoost con clima,temperatura,temp_media,temp_media_l7,0.601
+LA LIBERTAD,4,XGBoost con clima,lluvia,precip_total,precip_total_l7,0.241
+LA LIBERTAD,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.419
+LA LIBERTAD,4,XGBoost con clima,viento,viento,viento_l5,0.152
+LA LIBERTAD,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.529
+LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l8,0.605
+LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.335
+LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.465
+LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l5,0.152
+LA LIBERTAD,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.529
+LAMBAYEQUE,1,XGBoost con clima,temperatura,temp_media,temp_media_l4,0.583
+LAMBAYEQUE,1,XGBoost con clima,lluvia,precip_total,precip_total_l3,0.264
+LAMBAYEQUE,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.182
+LAMBAYEQUE,1,XGBoost con clima,viento,viento,viento_l4,0.208
+LAMBAYEQUE,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.469
+LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.617
+LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l8,0.351
+LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l7,0.238
+LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.235
+LAMBAYEQUE,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.469
+LAMBAYEQUE,2,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.598
+LAMBAYEQUE,2,XGBoost con clima,lluvia,precip_total,precip_total_l5,0.298
+LAMBAYEQUE,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.214
+LAMBAYEQUE,2,XGBoost con clima,viento,viento,viento_l5,0.22
+LAMBAYEQUE,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.461
+LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.617
+LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l8,0.351
+LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l7,0.238
+LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.235
+LAMBAYEQUE,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.461
+LAMBAYEQUE,3,XGBoost con clima,temperatura,temp_min,temp_min_l6,0.616
+LAMBAYEQUE,3,XGBoost con clima,lluvia,precip_total,precip_total_l6,0.315
+LAMBAYEQUE,3,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.214
+LAMBAYEQUE,3,XGBoost con clima,viento,viento,viento_l6,0.234
+LAMBAYEQUE,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.449
+LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.617
+LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l8,0.351
+LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l7,0.238
+LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l11,0.235
+LAMBAYEQUE,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.449
+LAMBAYEQUE,4,XGBoost con clima,temperatura,temp_min,temp_min_l7,0.617
+LAMBAYEQUE,4,XGBoost con clima,lluvia,precip_total,precip_total_l7,0.344
+LAMBAYEQUE,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.238
+LAMBAYEQUE,4,XGBoost con clima,viento,viento,viento_l6,0.235
+LAMBAYEQUE,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.433
+LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l7,0.617
+LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l8,0.351
+LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l7,0.238
+LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.235
+LAMBAYEQUE,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.433
+LORETO,1,XGBoost con clima,temperatura,rango_term,rango_term_l1,0.312
+LORETO,1,XGBoost con clima,lluvia,precip_total,precip_total_l1,0.22
+LORETO,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.255
+LORETO,1,XGBoost con clima,viento,viento,viento_l4,0.297
+LORETO,1,XGBoost con clima,icen,icen_lag5,icen_lag5_s1,0.446
+LORETO,1,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l1,0.312
+LORETO,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l1,0.22
+LORETO,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.255
+LORETO,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.297
+LORETO,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s1,0.446
+LORETO,2,XGBoost con clima,temperatura,rango_term,rango_term_l2,0.278
+LORETO,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l2,0.218
+LORETO,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.223
+LORETO,2,XGBoost con clima,viento,viento,viento_l4,0.298
+LORETO,2,XGBoost con clima,icen,icen_lag5,icen_lag5_s2,0.445
+LORETO,2,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l2,0.278
+LORETO,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l2,0.218
+LORETO,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.223
+LORETO,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.298
+LORETO,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag5,icen_lag5_s2,0.445
+LORETO,3,XGBoost con clima,temperatura,rango_term,rango_term_l3,0.237
+LORETO,3,XGBoost con clima,lluvia,precip_total,precip_total_l3,0.212
+LORETO,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.19
+LORETO,3,XGBoost con clima,viento,viento,viento_l4,0.3
+LORETO,3,XGBoost con clima,icen,icen_lag4,icen_lag4_s3,0.444
+LORETO,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.252
+LORETO,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l3,0.212
+LORETO,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.203
+LORETO,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.3
+LORETO,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s3,0.444
+LORETO,4,XGBoost con clima,temperatura,rango_term,rango_term_l4,0.198
+LORETO,4,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.2
+LORETO,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.157
+LORETO,4,XGBoost con clima,viento,viento,viento_l4,0.3
+LORETO,4,XGBoost con clima,icen,icen_lag4,icen_lag4_s4,0.45
+LORETO,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.252
+LORETO,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l4,0.2
+LORETO,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.203
+LORETO,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.3
+LORETO,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag4,icen_lag4_s4,0.45
+MADRE DE DIOS,1,XGBoost con clima,temperatura,rango_term,rango_term_l1,0.425
+MADRE DE DIOS,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.354
+MADRE DE DIOS,1,XGBoost con clima,viento,viento,viento_l4,0.241
+MADRE DE DIOS,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.325
+MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l1,0.425
+MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.354
+MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.251
+MADRE DE DIOS,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.325
+MADRE DE DIOS,2,XGBoost con clima,temperatura,rango_term,rango_term_l2,0.385
+MADRE DE DIOS,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.308
+MADRE DE DIOS,2,XGBoost con clima,viento,viento,viento_l5,0.244
+MADRE DE DIOS,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.322
+MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l2,0.385
+MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.308
+MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.251
+MADRE DE DIOS,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.322
+MADRE DE DIOS,3,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.381
+MADRE DE DIOS,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.281
+MADRE DE DIOS,3,XGBoost con clima,viento,viento,viento_l6,0.251
+MADRE DE DIOS,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.314
+MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l5,0.381
+MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l3,0.359
+MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.281
+MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.251
+MADRE DE DIOS,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.314
+MADRE DE DIOS,4,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.38
+MADRE DE DIOS,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.357
+MADRE DE DIOS,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.234
+MADRE DE DIOS,4,XGBoost con clima,viento,viento,viento_l6,0.25
+MADRE DE DIOS,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.307
+MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l5,0.38
+MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.357
+MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.234
+MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.25
+MADRE DE DIOS,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.307
+PASCO,1,XGBoost con clima,temperatura,rango_term,rango_term_l1,0.155
+PASCO,1,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l4,0.052
+PASCO,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.066
+PASCO,1,XGBoost con clima,viento,viento,viento_l1,0.168
+PASCO,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.209
+PASCO,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l12,0.264
+PASCO,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.106
+PASCO,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.205
+PASCO,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l1,0.168
+PASCO,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.209
+PASCO,2,XGBoost con clima,temperatura,rango_term,rango_term_l3,0.147
+PASCO,2,XGBoost con clima,lluvia,precip_total,precip_total_l2,0.052
+PASCO,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.048
+PASCO,2,XGBoost con clima,viento,viento,viento_l3,0.11
+PASCO,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.205
+PASCO,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l12,0.264
+PASCO,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.106
+PASCO,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.205
+PASCO,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l3,0.11
+PASCO,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.205
+PASCO,3,XGBoost con clima,temperatura,rango_term,rango_term_l3,0.147
+PASCO,3,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l6,0.074
+PASCO,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.037
+PASCO,3,XGBoost con clima,viento,viento,viento_l3,0.112
+PASCO,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.205
+PASCO,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l12,0.264
+PASCO,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.106
+PASCO,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.205
+PASCO,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l3,0.112
+PASCO,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.205
+PASCO,4,XGBoost con clima,temperatura,temp_max,temp_max_l7,0.136
+PASCO,4,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l6,0.073
+PASCO,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.054
+PASCO,4,XGBoost con clima,viento,viento,viento_l4,0.106
+PASCO,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.203
+PASCO,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l12,0.264
+PASCO,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.106
+PASCO,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.205
+PASCO,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l4,0.106
+PASCO,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.203
+PIURA,1,XGBoost con clima,temperatura,temp_min,temp_min_l4,0.431
+PIURA,1,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.169
+PIURA,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.12
+PIURA,1,XGBoost con clima,viento,viento,viento_l4,0.286
+PIURA,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.44
+PIURA,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l8,0.507
+PIURA,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.246
+PIURA,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.12
+PIURA,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.314
+PIURA,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.44
+PIURA,2,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.459
+PIURA,2,XGBoost con clima,lluvia,precip_total,precip_total_l5,0.184
+PIURA,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.095
+PIURA,2,XGBoost con clima,viento,viento,viento_l4,0.287
+PIURA,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.436
+PIURA,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l8,0.507
+PIURA,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.246
+PIURA,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.095
+PIURA,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.314
+PIURA,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.436
+PIURA,3,XGBoost con clima,temperatura,temp_min,temp_min_l6,0.475
+PIURA,3,XGBoost con clima,lluvia,precip_total,precip_total_l6,0.202
+PIURA,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.08
+PIURA,3,XGBoost con clima,viento,viento,viento_l6,0.298
+PIURA,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.431
+PIURA,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l8,0.507
+PIURA,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.246
+PIURA,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.08
+PIURA,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.314
+PIURA,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.431
+PIURA,4,XGBoost con clima,temperatura,temp_min,temp_min_l7,0.493
+PIURA,4,XGBoost con clima,lluvia,precip_total,precip_total_l7,0.208
+PIURA,4,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.06
+PIURA,4,XGBoost con clima,viento,viento,viento_l7,0.307
+PIURA,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.426
+PIURA,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_min,temp_min_l8,0.507
+PIURA,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.246
+PIURA,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l4,0.06
+PIURA,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.314
+PIURA,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.426
+SAN MARTIN,1,XGBoost con clima,temperatura,rango_term,rango_term_l1,0.194
+SAN MARTIN,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l1,0.08
+SAN MARTIN,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.101
+SAN MARTIN,1,XGBoost con clima,viento,viento,viento_l3,0.185
+SAN MARTIN,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.276
+SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l1,0.194
+SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l10,0.09
+SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l1,0.101
+SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l7,0.199
+SAN MARTIN,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.276
+SAN MARTIN,2,XGBoost con clima,temperatura,rango_term,rango_term_l2,0.18
+SAN MARTIN,2,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l5,0.069
+SAN MARTIN,2,XGBoost con clima,humedad,hum_rel,hum_rel_l2,0.085
+SAN MARTIN,2,XGBoost con clima,viento,viento,viento_l3,0.185
+SAN MARTIN,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.277
+SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l2,0.18
+SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l10,0.09
+SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l2,0.085
+SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l7,0.199
+SAN MARTIN,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.277
+SAN MARTIN,3,XGBoost con clima,temperatura,rango_term,rango_term_l3,0.163
+SAN MARTIN,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l6,0.07
+SAN MARTIN,3,XGBoost con clima,humedad,hum_rel,hum_rel_l3,0.068
+SAN MARTIN,3,XGBoost con clima,viento,viento,viento_l6,0.199
+SAN MARTIN,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.276
+SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l3,0.163
+SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l10,0.09
+SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l3,0.068
+SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l7,0.199
+SAN MARTIN,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.276
+SAN MARTIN,4,XGBoost con clima,temperatura,rango_term,rango_term_l5,0.157
+SAN MARTIN,4,XGBoost con clima,lluvia,precip_max_d,precip_max_d_l7,0.069
+SAN MARTIN,4,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.06
+SAN MARTIN,4,XGBoost con clima,viento,viento,viento_l6,0.201
+SAN MARTIN,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.275
+SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",temperatura,rango_term,rango_term_l5,0.157
+SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_max_d,precip_max_d_l10,0.09
+SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l5,0.06
+SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l6,0.201
+SAN MARTIN,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.275
+TUMBES,1,XGBoost con clima,temperatura,temp_media,temp_media_l4,0.404
+TUMBES,1,XGBoost con clima,lluvia,precip_total,precip_total_l4,0.103
+TUMBES,1,XGBoost con clima,humedad,hum_rel,hum_rel_l4,0.228
+TUMBES,1,XGBoost con clima,viento,viento,viento_l4,0.071
+TUMBES,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.387
+TUMBES,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.471
+TUMBES,1,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.271
+TUMBES,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.358
+TUMBES,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.115
+TUMBES,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.387
+TUMBES,2,XGBoost con clima,temperatura,temp_media,temp_media_l5,0.421
+TUMBES,2,XGBoost con clima,lluvia,precip_total,precip_total_l5,0.151
+TUMBES,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.27
+TUMBES,2,XGBoost con clima,viento,viento,viento_l5,0.094
+TUMBES,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.387
+TUMBES,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.471
+TUMBES,2,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.271
+TUMBES,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.358
+TUMBES,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.115
+TUMBES,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.387
+TUMBES,3,XGBoost con clima,temperatura,temp_media,temp_media_l6,0.444
+TUMBES,3,XGBoost con clima,lluvia,precip_total,precip_total_l6,0.166
+TUMBES,3,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.291
+TUMBES,3,XGBoost con clima,viento,viento,viento_l6,0.102
+TUMBES,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.383
+TUMBES,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.471
+TUMBES,3,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.271
+TUMBES,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.358
+TUMBES,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.115
+TUMBES,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.383
+TUMBES,4,XGBoost con clima,temperatura,temp_media,temp_media_l7,0.458
+TUMBES,4,XGBoost con clima,lluvia,precip_total,precip_total_l7,0.203
+TUMBES,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.308
+TUMBES,4,XGBoost con clima,viento,viento,viento_l7,0.113
+TUMBES,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.379
+TUMBES,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_media,temp_media_l9,0.471
+TUMBES,4,"XGBoost con clima, rezagos hasta 12",lluvia,precip_total,precip_total_l12,0.271
+TUMBES,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l11,0.358
+TUMBES,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.115
+TUMBES,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.379
+UCAYALI,1,XGBoost con clima,temperatura,temp_min,temp_min_l1,0.216
+UCAYALI,1,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l1,0.195
+UCAYALI,1,XGBoost con clima,humedad,hum_rel,hum_rel_l1,0.08
+UCAYALI,1,XGBoost con clima,viento,viento,viento_l4,0.282
+UCAYALI,1,XGBoost con clima,icen,icen_lag3,icen_lag3_s1,0.124
+UCAYALI,1,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.397
+UCAYALI,1,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l1,0.195
+UCAYALI,1,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.344
+UCAYALI,1,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.378
+UCAYALI,1,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s1,0.124
+UCAYALI,2,XGBoost con clima,temperatura,temp_min,temp_min_l5,0.22
+UCAYALI,2,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l2,0.174
+UCAYALI,2,XGBoost con clima,humedad,hum_rel,hum_rel_l5,0.06
+UCAYALI,2,XGBoost con clima,viento,viento,viento_l5,0.302
+UCAYALI,2,XGBoost con clima,icen,icen_lag3,icen_lag3_s2,0.119
+UCAYALI,2,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.397
+UCAYALI,2,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l2,0.174
+UCAYALI,2,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.344
+UCAYALI,2,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.378
+UCAYALI,2,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s2,0.119
+UCAYALI,3,XGBoost con clima,temperatura,temp_min,temp_min_l6,0.246
+UCAYALI,3,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l3,0.17
+UCAYALI,3,XGBoost con clima,humedad,hum_rel,hum_rel_l6,0.098
+UCAYALI,3,XGBoost con clima,viento,viento,viento_l6,0.332
+UCAYALI,3,XGBoost con clima,icen,icen_lag3,icen_lag3_s3,0.11
+UCAYALI,3,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.397
+UCAYALI,3,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l3,0.17
+UCAYALI,3,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.344
+UCAYALI,3,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.378
+UCAYALI,3,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s3,0.11
+UCAYALI,4,XGBoost con clima,temperatura,temp_media,temp_media_l7,0.255
+UCAYALI,4,XGBoost con clima,lluvia,dias_lluvia,dias_lluvia_l4,0.152
+UCAYALI,4,XGBoost con clima,humedad,hum_rel,hum_rel_l7,0.147
+UCAYALI,4,XGBoost con clima,viento,viento,viento_l7,0.362
+UCAYALI,4,XGBoost con clima,icen,icen_lag3,icen_lag3_s4,0.099
+UCAYALI,4,"XGBoost con clima, rezagos hasta 12",temperatura,temp_max,temp_max_l12,0.397
+UCAYALI,4,"XGBoost con clima, rezagos hasta 12",lluvia,dias_lluvia,dias_lluvia_l4,0.152
+UCAYALI,4,"XGBoost con clima, rezagos hasta 12",humedad,hum_rel,hum_rel_l12,0.344
+UCAYALI,4,"XGBoost con clima, rezagos hasta 12",viento,viento,viento_l8,0.378
+UCAYALI,4,"XGBoost con clima, rezagos hasta 12",icen,icen_lag3,icen_lag3_s4,0.099
