@@ -10,3 +10,6 @@ outputs/*.parquet
 __pycache__/
 *.pyc
 .venv/
+
+# OpenDengue (descargado por scripts/10_validacion_externa.py)
+data/external/opendengue/
