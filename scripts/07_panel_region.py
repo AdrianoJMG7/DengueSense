@@ -5,8 +5,14 @@ limpieza): panel departamento x semana.
 
   - casos: suma de los casos de los distritos del departamento (ubigeo -> depto,
     exacto; no pasa por la celda, porque 24 celdas abarcan mas de un depto).
-  - clima: promedio simple de las celdas que contienen al menos un distrito del
-    departamento. La precipitacion es el promedio de los acumulados semanales.
+  - clima: promedio de las celdas que contienen al menos un distrito del
+    departamento, PONDERADO por los casos de entrenamiento (2010-2021) de los
+    distritos del departamento en cada celda. Asi el clima representa donde
+    ocurre el dengue: con el promedio simple, Piura salia 2.2 grados mas fria y
+    5 puntos mas humeda por incluir celdas de sierra sin casos. Solo se usan
+    anos de entrenamiento para no filtrar informacion de validacion o prueba.
+    Si un departamento no tiene casos en esos anos, se usa el promedio simple.
+    La comparacion queda en outputs/clima_ponderado_vs_simple.csv.
   - ICEN y fecha: iguales para todas las celdas; se toman del panel de celdas.
 
 Solo variables base del clima: los rezagos se crean en la fase de modelado
@@ -28,6 +34,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from comun import ENTRENAMIENTO
+
 ROOT = Path(__file__).resolve().parents[1]
 INTERIM = ROOT / "data" / "interim"
 PROC = ROOT / "data" / "processed"
@@ -47,12 +55,45 @@ print(f"Departamentos: {celdas_depto['departamento'].nunique()}, "
       f"pares depto-celda: {len(celdas_depto)}")
 
 clima = panel_celda[["celda_grilla", "ano", "semana"] + CLIMA_BASE]
-clima_depto = (celdas_depto.merge(clima, on="celda_grilla", how="inner")
-               .groupby(CLAVE, as_index=False)[CLIMA_BASE].mean())
-clima_depto = clima_depto.merge(
-    celdas_depto.groupby("departamento").size().rename("n_celdas").reset_index(),
-    on="departamento",
-)
+
+# Peso de cada (depto, celda): casos de entrenamiento de sus distritos
+casos_limpios = pd.read_parquet(INTERIM / "casos_limpios.parquet", columns=["ubigeo", "ano"])
+en_train = casos_limpios["ano"].between(*ENTRENAMIENTO)
+peso = (casos_limpios[en_train].groupby("ubigeo").size().rename("peso").reset_index()
+        .merge(mapa[["ubigeo", "departamento", "celda_grilla"]], on="ubigeo")
+        .groupby(["departamento", "celda_grilla"])["peso"].sum().reset_index())
+celdas_depto = celdas_depto.merge(peso, on=["departamento", "celda_grilla"], how="left")
+celdas_depto["peso"] = celdas_depto["peso"].fillna(0)
+sin_casos = celdas_depto.groupby("departamento")["peso"].transform("sum") == 0
+celdas_depto.loc[sin_casos, "peso"] = 1  # promedio simple si no hay casos de entrenamiento
+print("Departamentos sin casos de entrenamiento (clima con promedio simple):",
+      sorted(celdas_depto.loc[sin_casos, "departamento"].unique()))
+
+unido = celdas_depto.merge(clima, on="celda_grilla", how="inner")
+ponderado = unido[CLIMA_BASE].mul(unido["peso"], axis=0)
+ponderado[CLAVE] = unido[CLAVE]
+ponderado["peso"] = unido["peso"]
+sumas = ponderado.groupby(CLAVE)[CLIMA_BASE + ["peso"]].sum()
+clima_depto = sumas[CLIMA_BASE].div(sumas["peso"], axis=0).reset_index()
+clima_simple = unido.groupby(CLAVE)[CLIMA_BASE].mean()
+
+resumen_celdas = celdas_depto.groupby("departamento").agg(
+    n_celdas=("celda_grilla", "size"),
+    pct_casos_celda_principal=("peso", lambda s: round(100 * s.max() / s.sum(), 1)),
+).reset_index()
+clima_depto = clima_depto.merge(resumen_celdas[["departamento", "n_celdas"]], on="departamento")
+
+# Comparacion ponderado vs. simple (media de la diferencia y correlacion semanal)
+comp = clima_depto.set_index(CLAVE)[CLIMA_BASE].join(clima_simple.add_suffix("_simple"))
+filas_comp = []
+for depto, d in comp.groupby(level="departamento"):
+    fila = {"departamento": depto}
+    for v in ["temp_media", "precip_total", "hum_rel"]:
+        fila[f"{v}_dif_media"] = (d[v] - d[f"{v}_simple"]).mean()
+        fila[f"{v}_corr"] = d[v].corr(d[f"{v}_simple"])
+    filas_comp.append(fila)
+(resumen_celdas.merge(pd.DataFrame(filas_comp), on="departamento")
+ .to_csv(OUT / "clima_ponderado_vs_simple.csv", index=False, float_format="%.3f"))
 
 icen_cols = [c for c in panel_celda.columns if c.startswith("icen")]
 calendario = panel_celda[["ano", "semana", "fecha", "mes"] + icen_cols].drop_duplicates(["ano", "semana"])
