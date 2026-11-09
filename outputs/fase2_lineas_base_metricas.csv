@@ -59,12 +59,6 @@ Validacion,LAMBAYEQUE,1,Regresion con rezagos,269.4404,101.3455,0.8028,33846,104
 Prueba,LAMBAYEQUE,1,Persistencia,56.6034,34.8654,0.9430,9305,52,726
 Prueba,LAMBAYEQUE,1,Promedio estacional,261.0481,152.0893,-0.2126,9305,52,726
 Prueba,LAMBAYEQUE,1,Regresion con rezagos,71.9217,38.9036,0.9080,9305,52,726
-Validacion,LIMA,1,Persistencia,171.5430,67.8173,0.9441,31673,104,622
-Validacion,LIMA,1,Promedio estacional,782.3722,300.0010,-0.1619,31673,104,622
-Validacion,LIMA,1,Regresion con rezagos,424.3793,150.8057,0.6581,31673,104,622
-Prueba,LIMA,1,Persistencia,724.4048,395.3269,0.9367,87864,52,726
-Prueba,LIMA,1,Promedio estacional,3281.7289,1643.0728,-0.2998,87864,52,726
-Prueba,LIMA,1,Regresion con rezagos,1122.9892,536.1062,0.8478,87864,52,726
 Validacion,LORETO,1,Persistencia,45.7891,31.1250,0.8161,15508,104,622
 Validacion,LORETO,1,Promedio estacional,121.7220,88.8111,-0.2992,15508,104,622
 Validacion,LORETO,1,Regresion con rezagos,46.3387,30.7837,0.8117,15508,104,622
@@ -167,12 +161,6 @@ Validacion,LAMBAYEQUE,2,Regresion con rezagos,387.7374,154.0571,0.5915,33846,104
 Prueba,LAMBAYEQUE,2,Persistencia,92.0579,55.6923,0.8492,9305,52,725
 Prueba,LAMBAYEQUE,2,Promedio estacional,261.0481,152.0893,-0.2126,9305,52,725
 Prueba,LAMBAYEQUE,2,Regresion con rezagos,111.3237,61.2291,0.7795,9305,52,725
-Validacion,LIMA,2,Persistencia,311.4491,127.6827,0.8159,31673,104,621
-Validacion,LIMA,2,Promedio estacional,782.3722,300.0010,-0.1619,31673,104,621
-Validacion,LIMA,2,Regresion con rezagos,600.7626,217.9892,0.3149,31673,104,621
-Prueba,LIMA,2,Persistencia,1305.6804,745.8654,0.7943,87864,52,725
-Prueba,LIMA,2,Promedio estacional,3281.7289,1643.0728,-0.2998,87864,52,725
-Prueba,LIMA,2,Regresion con rezagos,1792.3979,865.6108,0.6123,87864,52,725
 Validacion,LORETO,2,Persistencia,62.4279,43.4135,0.6583,15508,104,621
 Validacion,LORETO,2,Promedio estacional,121.7220,88.8111,-0.2992,15508,104,621
 Validacion,LORETO,2,Regresion con rezagos,63.4663,44.0167,0.6468,15508,104,621
@@ -275,12 +263,6 @@ Validacion,LAMBAYEQUE,3,Regresion con rezagos,474.1533,193.6461,0.3892,33846,104
 Prueba,LAMBAYEQUE,3,Persistencia,131.0677,80.2500,0.6943,9305,52,724
 Prueba,LAMBAYEQUE,3,Promedio estacional,261.0481,152.0893,-0.2126,9305,52,724
 Prueba,LAMBAYEQUE,3,Regresion con rezagos,147.2329,81.4623,0.6143,9305,52,724
-Validacion,LIMA,3,Persistencia,449.6260,186.4904,0.6163,31673,104,620
-Validacion,LIMA,3,Promedio estacional,782.3722,300.0010,-0.1619,31673,104,620
-Validacion,LIMA,3,Regresion con rezagos,695.9005,257.6808,0.0808,31673,104,620
-Prueba,LIMA,3,Persistencia,1883.0896,1079.8654,0.5720,87864,52,724
-Prueba,LIMA,3,Promedio estacional,3281.7289,1643.0728,-0.2998,87864,52,724
-Prueba,LIMA,3,Regresion con rezagos,2310.3348,1123.5449,0.3558,87864,52,724
 Validacion,LORETO,3,Persistencia,77.5760,50.9231,0.4723,15508,104,620
 Validacion,LORETO,3,Promedio estacional,121.7220,88.8111,-0.2992,15508,104,620
 Validacion,LORETO,3,Regresion con rezagos,78.2585,53.5471,0.4630,15508,104,620
@@ -383,12 +365,6 @@ Validacion,LAMBAYEQUE,4,Regresion con rezagos,537.8959,224.3445,0.2139,33846,104
 Prueba,LAMBAYEQUE,4,Persistencia,166.4443,103.0962,0.5070,9305,52,723
 Prueba,LAMBAYEQUE,4,Promedio estacional,261.0481,152.0893,-0.2126,9305,52,723
 Prueba,LAMBAYEQUE,4,Regresion con rezagos,176.2746,98.3295,0.4471,9305,52,723
-Validacion,LIMA,4,Persistencia,572.0345,241.8173,0.3789,31673,104,619
-Validacion,LIMA,4,Promedio estacional,782.3722,300.0010,-0.1619,31673,104,619
-Validacion,LIMA,4,Regresion con rezagos,739.3234,277.0066,-0.0375,31673,104,619
-Prueba,LIMA,4,Persistencia,2402.3461,1404.4038,0.3035,87864,52,723
-Prueba,LIMA,4,Promedio estacional,3281.7289,1643.0728,-0.2998,87864,52,723
-Prueba,LIMA,4,Regresion con rezagos,2654.6475,1295.6986,0.1495,87864,52,723
 Validacion,LORETO,4,Persistencia,94.1443,65.0962,0.2228,15508,104,619
 Validacion,LORETO,4,Promedio estacional,121.7220,88.8111,-0.2992,15508,104,619
 Validacion,LORETO,4,Regresion con rezagos,91.4721,63.8830,0.2663,15508,104,619

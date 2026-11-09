@@ -19,6 +19,19 @@ ENTRENAMIENTO = (2010, 2021)
 VALIDACION = (2022, 2023)
 PRUEBA = (2024, 2024)
 
+# Horizontes de pronostico en semanas (guia: 1 a 4)
+HORIZONTES = [1, 2, 3, 4]
+# Regiones principales (guia, fase 0): costa norte, selva baja y selva alta.
+# Alternativas para la tercera: UCAYALI o MADRE DE DIOS.
+REGIONES = ["PIURA", "LORETO", "SAN MARTIN"]
+# Departamentos con datos suficientes: >= MIN_CASOS_TRAIN casos en entrenamiento
+MIN_CASOS_TRAIN = 1000
+# Fuera del modelo principal:
+#   - LIMA: epidemia nueva (96 % de sus casos 2010-2024 son de 2023-2024; nunca
+#     paso de 362 casos al ano antes de 2021), asi que el entrenamiento casi no
+#     tiene ejemplos. Se analiza aparte como dengue emergente.
+EXCLUIR_MODELO = ["LIMA"]
+
 
 def fecha_central(ano: int, semana: int) -> pd.Timestamp:
     """Miercoles (dia central) de la semana epidemiologica.

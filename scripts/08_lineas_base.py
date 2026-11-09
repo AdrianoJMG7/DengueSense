@@ -37,19 +37,14 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-from comun import ENTRENAMIENTO, PRUEBA, VALIDACION
+from comun import (ENTRENAMIENTO, EXCLUIR_MODELO, HORIZONTES, MIN_CASOS_TRAIN, PRUEBA, REGIONES,
+                   VALIDACION)
 
 ROOT = Path(__file__).resolve().parents[1]
 PROC = ROOT / "data" / "processed"
 OUT = ROOT / "outputs"
 
-HORIZONTES = [1, 2, 3, 4]
 N_REZAGOS = 4               # rezagos de casos del modelo 2: h .. h + 3
-# Regiones principales (guia, fase 0): costa norte, selva baja y selva alta.
-# Alternativas para la tercera: UCAYALI o MADRE DE DIOS.
-REGIONES = ["PIURA", "LORETO", "SAN MARTIN"]
-# Departamentos con datos suficientes para evaluar
-MIN_CASOS_TRAIN = 1000
 # (nombre, ultimo ano de ajuste, rango evaluado)
 EVALUACIONES = [("Validacion", ENTRENAMIENTO[1], VALIDACION), ("Prueba", VALIDACION[1], PRUEBA)]
 
@@ -77,7 +72,7 @@ panel["log_casos"] = np.log1p(panel["casos"])
 
 filas_metricas, predicciones = [], []
 casos_train = panel[panel["ano"] <= ENTRENAMIENTO[1]].groupby("departamento")["casos"].sum()
-deptos = casos_train[casos_train >= MIN_CASOS_TRAIN].index.tolist()
+deptos = [d for d in casos_train[casos_train >= MIN_CASOS_TRAIN].index if d not in EXCLUIR_MODELO]
 print(f"Departamentos evaluados ({len(deptos)}): {', '.join(deptos)}")
 
 for h in HORIZONTES:
