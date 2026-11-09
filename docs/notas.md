@@ -40,9 +40,15 @@ python scripts/06_modelado_prep.py
 
 ## Fase 2 de la guía metodológica: líneas base (scripts 07 y 08)
 - **Panel departamento × semana** (`07_panel_region.py` → `data/processed/panel_depto_semana.parquet`): 23 departamentos × 782 semanas = 17,986 filas, 937,119 casos (los mismos del panel de celdas). Los casos se suman por ubigeo → departamento; el clima es el promedio simple de las celdas que tienen algún distrito del departamento (24 celdas abarcan más de un departamento y cuentan en ambos).
-- **Regiones principales**: Piura (costa norte), Loreto (selva baja) y San Martín (selva alta), constante `REGIONES` en `08_lineas_base.py`. Alternativas para la tercera: Ucayali o Madre de Dios. Las líneas base se calculan para los 19 departamentos con ≥ 1,000 casos en entrenamiento.
-- **Pronóstico a h = 1..4 semanas**: la fila de la semana T solo usa información hasta T − h. Entrenamiento 2010–2023, prueba 2024.
+- **Población e incidencia** (casos por 100,000 habitantes): INEI, población proyectada por distrito 2018–2026 (`data/external/poblacion_distrital_2018_2026.csv`), sumando **todos** los distritos de cada departamento. **Supuesto:** 2010–2017 no están en la fuente y se estiman hacia atrás con el crecimiento anual compuesto 2018–2024 de cada departamento (−0.39 % a 3.39 %); la columna `poblacion_estimada` las marca. Las proyecciones 2018+ incluyen la migración venezolana, así que 2010–2017 podría quedar algo subestimada.
+- **División temporal** (`scripts/comun.py`): entrenamiento 2010–2021, validación 2022–2023 y prueba 2024. La validación sirve para elegir hiperparámetros y comparar modelos; para la prueba se reajusta con 2010–2023. (`06_modelado_prep.py`, a nivel celda, mantiene su corte 2010–2023 / 2024.)
+- **Regiones principales**: Piura (costa norte), Loreto (selva baja) y San Martín (selva alta), constante `REGIONES` en `08_lineas_base.py`. Alternativas para la tercera: Ucayali o Madre de Dios. Las líneas base se calculan para los 18 departamentos con ≥ 1,000 casos en 2010–2021.
+- **Pronóstico a h = 1..4 semanas**: la fila de la semana T solo usa información hasta T − h.
 - **Modelos**: persistencia (casos de T − h), promedio estacional (media de la misma semana en los años anteriores) y regresión lineal de log1p(casos) sobre los casos de T − h a T − h − 3, una por departamento y horizonte.
-- **Resultados (prueba 2024, R²)**: Piura 0.92 / 0.84 / 0.73 / 0.60 con la regresión a 1–4 semanas; Loreto 0.82 / 0.63 / 0.42 / 0.23; San Martín 0.77 / 0.53 / 0.21 / −0.08 (ahí gana la persistencia: 0.88 / 0.82 / 0.65 / 0.51). El promedio estacional falla en 2024 (R² 0.01 en Piura, negativo en Loreto y San Martín) porque fue un año epidémico atípico. Detalle en `outputs/fase2_lineas_base_metricas.csv` y `outputs/fase2_lineas_base_2024.png`.
+- **Resultados (R², h = 1 / 2 / 3 / 4 semanas)**:
+  - Piura, regresión: validación 0.87 / 0.73 / 0.56 / 0.40; prueba 0.92 / 0.84 / 0.74 / 0.61.
+  - Loreto, regresión: validación 0.81 / 0.65 / 0.46 / 0.27; prueba 0.82 / 0.63 / 0.41 / 0.22.
+  - San Martín, persistencia (mejor que la regresión): validación 0.79 / 0.66 / 0.45 / 0.30; prueba 0.88 / 0.82 / 0.65 / 0.51.
+  - El promedio estacional falla en 2022–2024 (R² cercano a 0 o negativo): son años epidémicos atípicos.
+  - Detalle en `outputs/fase2_lineas_base_metricas.csv` y `outputs/fase2_lineas_base_2024.png`.
 - **Lectura**: a 1 semana casi todo lo explica la inercia de los casos; desde 3–4 semanas el R² cae rápido. Ese es el espacio que el clima rezagado (fase 3, XGBoost) tiene que mejorar. La regresión subestima los picos al volver de la escala log (sesgo de retransformación).
-- **Pendiente para la fase 3**: un conjunto de validación (por ejemplo 2022–2023) para ajustar XGBoost sin tocar 2024, y la incidencia por 100,000 habitantes (falta la población del INEI 2010–2024).

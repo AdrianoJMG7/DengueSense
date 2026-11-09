@@ -41,3 +41,6 @@ mapa,n_distritos_en_celda,Cantidad de distritos en la celda,entero,conteo,contex
 distritos,casos_2011_2024,Casos agregados 2011-2024,entero,casos,validacion,Util para sanity check interno (OpenDengue no disponible)
 distritos,pct_alarma_grave,% casos graves+alarma,porcentaje,%,contexto,
 distritos,idh_2019/pct_pobreza*,Indicadores INEI,numerico,,contexto,Disponibles para analisis de contexto (no entran al panel base)
+panel_depto,poblacion,Poblacion del departamento al 30 de junio,entero,habitantes,contexto,"INEI 2018-2026 sumando todos los distritos; 2010-2017 estimada con el crecimiento anual 2018-2024"
+panel_depto,poblacion_estimada,La poblacion de ese ano es estimada,booleano,,control,True para 2010-2017
+panel_depto,incidencia,Casos por 100 000 habitantes en la semana,numerico,casos/100000 hab,objetivo_alternativo,casos / poblacion * 100000

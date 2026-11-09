@@ -11,6 +11,14 @@ import datetime as dt
 import pandas as pd
 from epiweeks import Week
 
+# Division temporal de la fase de modelado (por departamento). Nunca al azar.
+#   - entrenamiento: ajustar los modelos
+#   - validacion: elegir hiperparametros y comparar modelos sin tocar la prueba
+#   - prueba: evaluacion final; al final se reentrena con entrenamiento + validacion
+ENTRENAMIENTO = (2010, 2021)
+VALIDACION = (2022, 2023)
+PRUEBA = (2024, 2024)
+
 
 def fecha_central(ano: int, semana: int) -> pd.Timestamp:
     """Miercoles (dia central) de la semana epidemiologica.
