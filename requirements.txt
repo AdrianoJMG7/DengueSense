@@ -6,3 +6,6 @@ scikit-learn>=1.5
 matplotlib>=3.8
 xgboost>=2.0
 shap>=0.45
+jupyter>=1.0
+nbconvert>=7
+ipykernel>=6

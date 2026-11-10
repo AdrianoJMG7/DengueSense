@@ -36,13 +36,24 @@ python scripts/03_clima.py
 python scripts/04_icen.py
 python scripts/05_panel.py
 python scripts/06_modelado_prep.py
+python scripts/07_panel_region.py
+python scripts/10_validacion_externa.py   # opcional: descarga OpenDengue (55 MB)
 ```
 
-## Fase 2 de la guía metodológica: líneas base (scripts 07 y 08)
+Los entrenamientos están en notebooks (ejecutar en este orden, con el entorno `.venv` activado):
+
+```powershell
+cd notebooks
+jupyter nbconvert --to notebook --execute --inplace 08_lineas_base.ipynb
+jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=3600 09_xgboost_shap.ipynb   # ~15 min
+```
+También se pueden abrir y ejecutar celda por celda en VS Code o Jupyter.
+
+## Fase 2 de la guía metodológica: líneas base (`scripts/07_panel_region.py` y `notebooks/08_lineas_base.ipynb`)
 - **Panel departamento × semana** (`07_panel_region.py` → `data/processed/panel_depto_semana.parquet`): 23 departamentos × 782 semanas = 17,986 filas, 937,119 casos (los mismos del panel de celdas). Los casos se suman por ubigeo → departamento; el clima es el promedio simple de las celdas que tienen algún distrito del departamento (24 celdas abarcan más de un departamento y cuentan en ambos).
 - **Población e incidencia** (casos por 100,000 habitantes): INEI, población proyectada por distrito 2018–2026 (`data/external/poblacion_distrital_2018_2026.csv`), sumando **todos** los distritos de cada departamento. **Supuesto:** 2010–2017 no están en la fuente y se estiman hacia atrás con el crecimiento anual compuesto 2018–2024 de cada departamento (−0.39 % a 3.39 %); la columna `poblacion_estimada` las marca. Las proyecciones 2018+ incluyen la migración venezolana, así que 2010–2017 podría quedar algo subestimada.
 - **División temporal** (`scripts/comun.py`): entrenamiento 2010–2021, validación 2022–2023 y prueba 2024. La validación sirve para elegir hiperparámetros y comparar modelos; para la prueba se reajusta con 2010–2023. (`06_modelado_prep.py`, a nivel celda, mantiene su corte 2010–2023 / 2024.)
-- **Regiones principales**: Piura (costa norte), Loreto (selva baja) y San Martín (selva alta), constante `REGIONES` en `08_lineas_base.py`. Alternativas para la tercera: Ucayali o Madre de Dios. Las líneas base se calculan para los 18 departamentos con ≥ 1,000 casos en 2010–2021.
+- **Regiones principales**: Piura (costa norte), Loreto (selva baja) y San Martín (selva alta), constante `REGIONES` en `scripts/comun.py`. Alternativas para la tercera: Ucayali o Madre de Dios. Las líneas base se calculan para los 18 departamentos con ≥ 1,000 casos en 2010–2021.
 - **Pronóstico a h = 1..4 semanas**: la fila de la semana T solo usa información hasta T − h.
 - **Modelos**: persistencia (casos de T − h), promedio estacional (media de la misma semana en los años anteriores) y regresión lineal de log1p(casos) sobre los casos de T − h a T − h − 3, una por departamento y horizonte.
 - **Resultados (R², h = 1 / 2 / 3 / 4 semanas)**:
@@ -58,7 +69,7 @@ python scripts/06_modelado_prep.py
 - **Clima ponderado por casos** (`07_panel_region.py`): el promedio simple de celdas incluía celdas de sierra sin dengue (Piura salía 2.2 °C más fría y 5 puntos más húmeda que donde ocurren los casos). Ahora cada celda pesa según los casos 2010–2021 de sus distritos (solo entrenamiento, sin fuga). Comparación en `outputs/clima_ponderado_vs_simple.csv`.
 - **Lima fuera del modelo principal** (`EXCLUIR_MODELO` en `comun.py`): el 96 % de sus casos 2010–2024 son de 2023–2024 (antes de 2021 nunca pasó de 362 al año) y el 87 % están en Lima Metropolitana. Analizarla aparte como dengue emergente (hipótesis H3).
 
-## Fase 3 de la guía metodológica: XGBoost y SHAP (script 09)
+## Fase 3 de la guía metodológica: XGBoost y SHAP (`notebooks/09_xgboost_shap.ipynb`)
 - **Modelos** (un XGBoost por departamento y horizonte h = 1..4, 17 departamentos): sin clima (casos rezagados T−h..T−h−3 + estacionalidad), con clima (+ clima rezagado T−h..T−h−3 + ICEN conocido en T−h) y con clima rezagado hasta 12 semanas (sensibilidad).
 - **Selección de variables** (como el artículo): por categoría (temperatura, lluvia, humedad, viento, ICEN) la variable con mayor |Spearman| con log1p(casos), solo con entrenamiento. Detalle en `outputs/fase3_variables_seleccionadas.csv`.
 - **Hiperparámetros**: profundidad, min_child_weight y objetivo, elegidos por MAE en validación 2022–2023 con parada temprana; para la prueba se reentrena con 2010–2023.
