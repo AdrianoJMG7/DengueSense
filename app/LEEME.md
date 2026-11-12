@@ -1,7 +1,7 @@
 # DengueSense: interfaz
 
 ```powershell
-.venv\Scriptsctivate
+.venv\Scripts\activate
 streamlit run app/tablero.py
 ```
 
