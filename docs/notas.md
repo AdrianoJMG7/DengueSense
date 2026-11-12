@@ -111,3 +111,9 @@ También se pueden abrir y ejecutar celda por celda en VS Code o Jupyter.
 - **Prueba fuera de muestra 2025** (casos provisionales del CSV del CDC 2000–2025, nunca usados): el XGBoost sin clima tiene menor error que la persistencia en 13, 12, 13 y 11 de 17 departamentos (h = 1..4), con mejora mediana de ~3 %. Piura falla a 3–4 semanas (sobreestima la subida estacional aprendida de años epidémicos en un año tranquilo).
 - **Pronóstico 2026 S1–S4**: solo San Martín supera el canal endémico (~165–171 casos/semana).
 - `umbral_brote(..., hasta_ano=)` calcula umbrales de años futuros (solo usa años anteriores).
+
+## Tablero (`app/tablero.py`)
+- `streamlit run app/tablero.py` (con el `.venv` activado). Lee `data/processed/tablero.parquet` (notebook 13).
+- Mapa de riesgo por departamento (pronóstico / umbral del canal endémico), ranking de la semana y serie de tiempo con casos, pronóstico, umbral y semanas de brote. Tres periodos: validación 2016–2024, prueba fuera de muestra 2025 y pronóstico 2026 S1–S4; anticipación de 1 a 4 semanas; modelo a elegir (por defecto XGBoost sin clima).
+- Límites de departamentos: `app/peru_departamental.geojson`, de *peru-geojson* (MPL-2.0), solo para dibujar.
+- Probado con `streamlit.testing` (los tres periodos, cambio de semana, departamento, horizonte y modelo) y arrancando el servidor.
