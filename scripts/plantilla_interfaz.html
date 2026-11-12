@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DengueSense · Riesgo de dengue</title>
+<style>
+  :root {
+    --azul: #2a78d6; --naranja: #eb6834; --aqua: #1baf7a; --amarillo: #eda100; --magenta: #e87ba4;
+    --tinta: #0b0b0b; --tinta2: #52514e; --tenue: #898781; --rej: #e1e0d9; --fondo: #fcfcfb; --suave: #f1f4f8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fondo); color: var(--tinta);
+         font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; font-size: 15px; }
+  .contenedor { max-width: 1320px; margin: 0 auto; padding: 18px 16px 40px; }
+  .hero { background: linear-gradient(120deg, #0d366b 0%, var(--azul) 70%, #4f95e6 100%); color: white;
+          padding: 22px 26px; border-radius: 14px; margin-bottom: 16px; }
+  .hero h1 { margin: 0 0 6px; font-size: 30px; }
+  .hero p { margin: 0; color: #e6efff; line-height: 1.45; }
+  .fila { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+  .col { flex: 1 1 420px; min-width: 0; }
+  .tarjeta { flex: 1 1 220px; background: white; border: 1px solid var(--rej); border-radius: 12px;
+             padding: 12px 15px; box-shadow: 0 1px 3px rgba(0,0,0,.05); border-top: 4px solid var(--azul); min-width: 0; }
+  .tarjeta .titulo { color: var(--tinta2); font-size: 13px; margin-bottom: 4px; }
+  .tarjeta .valor { font-size: 26px; font-weight: 700; line-height: 1.15; }
+  .tarjeta .nota { color: var(--tenue); font-size: 12.5px; margin-top: 4px; }
+  .pestanas { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 2px solid var(--rej); margin: 8px 0 16px; }
+  .pestanas button { background: none; border: none; padding: 10px 14px; font-size: 15px; font-weight: 600;
+                     color: var(--tinta2); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+  .pestanas button.activa { color: var(--azul); border-bottom-color: var(--azul); }
+  .seccion { display: none; } .seccion.activa { display: block; }
+  .controles { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: flex-end; background: white;
+               border: 1px solid var(--rej); border-radius: 12px; padding: 12px 15px; margin-bottom: 14px; }
+  .controles label { display: flex; flex-direction: column; gap: 5px; font-size: 13px; color: var(--tinta2); min-width: 0; }
+  select, input[type=range] { font-size: 14px; }
+  select { padding: 6px 8px; border: 1px solid var(--rej); border-radius: 8px; background: white; min-width: 170px; max-width: 100%; }
+  input[type=range] { width: min(420px, 80vw); accent-color: var(--azul); }
+  .grafico { background: white; border: 1px solid var(--rej); border-radius: 12px; padding: 6px; min-height: 200px; }
+  .caja { background: var(--suave); border-left: 4px solid var(--azul); padding: 10px 14px; border-radius: 6px;
+          margin: 8px 0 14px; line-height: 1.45; }
+  .caja.naranja { border-left-color: var(--naranja); background: #fdf1eb; }
+  h3 { margin: 18px 0 8px; font-size: 18px; }
+  details { background: white; border: 1px solid var(--rej); border-radius: 10px; padding: 8px 12px; margin-top: 8px; }
+  summary { cursor: pointer; color: var(--tinta2); font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { padding: 6px 8px; border-bottom: 1px solid var(--rej); text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  .tabla-scroll { overflow-x: auto; }
+  .etq { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .etq.si { background: #fde1d5; color: #a3330c; } .etq.no { background: #d8f3e8; color: #0f6e4c; }
+  .paso { background: white; border: 1px solid var(--rej); border-left: 4px solid var(--azul); border-radius: 10px;
+          padding: 10px 14px; margin-bottom: 8px; }
+  .paso span { color: var(--tinta2); }
+  footer { color: var(--tenue); font-size: 12.5px; margin-top: 26px; text-align: center; }
+  @media (max-width: 600px) { .hero h1 { font-size: 24px; } .tarjeta .valor { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="contenedor">
+  <div class="hero">
+    <h1>🦟 DengueSense</h1>
+    <p>Pronóstico semanal de casos de dengue y alerta de brotes por departamento en el Perú, con 1 a 4 semanas de
+       anticipación. Datos abiertos del CDC-MINSA (2010–2025), clima e índice de El Niño costero.</p>
+  </div>
+  <div class="fila" id="kpis"></div>
+
+  <nav class="pestanas" id="pestanas">
+    <button data-sec="mapa" class="activa">🗺️ Mapa de riesgo</button>
+    <button data-sec="depto">📈 Departamento</button>
+    <button data-sec="desempeno">🎯 Desempeño de los modelos</button>
+    <button data-sec="clima">🌦️ Factores climáticos</button>
+    <button data-sec="lima">🏙️ Lima</button>
+    <button data-sec="acerca">ℹ️ Acerca del proyecto</button>
+  </nav>
+
+  <!-- 1. MAPA -->
+  <section class="seccion activa" id="sec-mapa">
+    <div class="controles">
+      <label>Periodo <select id="m-tipo"></select></label>
+      <label>Modelo <select id="m-modelo"></select></label>
+      <label>Anticipación <select id="m-h"></select></label>
+      <label id="m-sem-caja">Semana epidemiológica: <b id="m-sem-txt"></b><input type="range" id="m-sem"></label>
+    </div>
+    <div class="fila" id="m-kpis"></div>
+    <div class="fila">
+      <div class="col" style="flex-basis:560px"><div class="grafico" id="g-mapa" style="height:620px"></div>
+        <div style="color:var(--tenue);font-size:12.5px;margin-top:4px">Rojo: el pronóstico supera el canal endémico (alerta). Gris: fuera del modelo.</div></div>
+      <div class="col"><div class="grafico" id="g-ranking" style="height:620px"></div></div>
+    </div>
+    <details><summary>Ver la tabla de la semana</summary><div class="tabla-scroll" id="m-tabla"></div></details>
+  </section>
+
+  <!-- 2. DEPARTAMENTO -->
+  <section class="seccion" id="sec-depto">
+    <div class="controles">
+      <label>Departamento <select id="d-depto"></select></label>
+      <label>Anticipación <select id="d-h"></select></label>
+      <label>Modelo <select id="d-modelo"></select></label>
+    </div>
+    <div class="fila" id="d-kpis"></div>
+    <div class="grafico" id="g-serie" style="height:520px"></div>
+    <div class="caja" id="d-nota"></div>
+  </section>
+
+  <!-- 3. DESEMPEÑO -->
+  <section class="seccion" id="sec-desempeno">
+    <h3>¿Qué tan bien pronostica? Validación con 9 años de prueba (2016–2024)</h3>
+    <div class="caja">Cada año se pronosticó con modelos entrenados <b>solo con los años anteriores</b>. Menor error = mejor.</div>
+    <div class="fila">
+      <div class="col"><div class="grafico" id="g-mae" style="height:400px"></div></div>
+      <div class="col"><div class="grafico" id="g-h2" style="height:400px"></div></div>
+    </div>
+    <div class="caja naranja"><b>Hallazgo principal:</b> el clima reduce el error en alrededor de la mitad de los departamentos
+      cada año, lo que se esperaría si no aportara nada. El XGBoost sí mejora a la persistencia, pero <b>la ventaja viene del
+      modelo, no del clima</b>.</div>
+    <h3>Alertas de brote</h3>
+    <div class="controles"><label>Anticipación <select id="a-h"></select></label></div>
+    <div class="grafico" id="g-alertas" style="height:410px"></div>
+    <div class="caja">Avisar que un brote <b>sigue</b> es fácil (≈ 90 %). Lo difícil es anticipar un brote <b>nuevo</b>
+      (sin brote en las 4 semanas previas): ningún modelo pasa del 28 %.</div>
+    <div class="fila">
+      <div class="col"><h3>Prueba real: 2025</h3><div class="grafico" id="g-oos" style="height:370px"></div>
+        <div style="color:var(--tenue);font-size:12.5px;margin-top:4px">Modelos entrenados hasta 2024 y aplicados a 2025, un año que nunca vieron.</div></div>
+      <div class="col"><h3>Extensión: red neuronal LSTM (prueba 2024)</h3><div class="grafico" id="g-lstm" style="height:370px"></div>
+        <div style="color:var(--tenue);font-size:12.5px;margin-top:4px">El LSTM con clima destaca en Piura, pero es un solo año de prueba.</div></div>
+    </div>
+  </section>
+
+  <!-- 4. CLIMA -->
+  <section class="seccion" id="sec-clima">
+    <div class="caja">SHAP mide cuánto <b>usa</b> el modelo cada variable para pronosticar. Muestra asociaciones, <b>no causas</b>.</div>
+    <div class="controles">
+      <label>Anticipación <select id="s-h"></select></label>
+      <label>Departamento (variables) <select id="s-depto"></select></label>
+    </div>
+    <div class="fila">
+      <div class="col"><div class="grafico" id="g-calor" style="height:640px"></div></div>
+      <div class="col"><div class="grafico" id="g-top" style="height:500px"></div><div class="caja" id="s-nota"></div></div>
+    </div>
+    <div class="caja"><b>Costa norte</b> (Piura, Lambayeque, Ica): domina la temperatura. <b>Selva</b> (Ucayali, Madre de Dios,
+      Loreto): pesan más la humedad, la lluvia y el viento. Se confirma la hipótesis H1: los factores climáticos cambian por región.</div>
+  </section>
+
+  <!-- 5. LIMA -->
+  <section class="seccion" id="sec-lima">
+    <div class="fila" id="l-kpis"></div>
+    <div class="fila">
+      <div class="col"><div class="grafico" id="g-lima-anual" style="height:380px"></div></div>
+      <div class="col"><div class="grafico" id="g-lima-clima" style="height:380px"></div></div>
+    </div>
+    <div class="grafico" id="g-lima-pred" style="height:430px"></div>
+    <div class="fila" style="margin-top:14px">
+      <div class="col"><div class="tabla-scroll" id="l-tabla"></div></div>
+      <div class="col"><div class="caja naranja">Un modelo entrenado <b>solo con la historia de Lima</b> es el peor en 2023: no había visto
+        dengue. Uno entrenado con los <b>departamentos de la costa</b> reduce el error un 30 %. Se confirma la hipótesis H3: el desempeño
+        cae en periodos atípicos y sin historia.</div></div>
+    </div>
+  </section>
+
+  <!-- 6. ACERCA -->
+  <section class="seccion" id="sec-acerca">
+    <div class="fila">
+      <div class="col">
+        <h3>Cómo funciona</h3>
+        <div class="paso"><b>1. Datos.</b> <span>Casos notificados del CDC-MINSA (2000–2025), clima semanal por celda, ICEN (ENFEN) y población del INEI.</span></div>
+        <div class="paso"><b>2. Limpieza y panel.</b> <span>Casos por departamento y semana epidemiológica; clima ponderado por dónde ocurren los casos.</span></div>
+        <div class="paso"><b>3. Líneas base.</b> <span>Persistencia, promedio estacional y regresión con casos rezagados.</span></div>
+        <div class="paso"><b>4. Modelo principal.</b> <span>XGBoost por departamento y horizonte que aprende el <b>cambio</b> de casos; SHAP para explicarlo.</span></div>
+        <div class="paso"><b>5. Evaluación honesta.</b> <span>Validación con 9 años (origen móvil), alertas de brote y prueba real en 2025.</span></div>
+        <div class="paso"><b>6. Pronóstico.</b> <span>Modelos finales con 2010–2024 y pronóstico de las semanas siguientes al último dato.</span></div>
+      </div>
+      <div class="col">
+        <h3>Limitaciones</h3>
+        <ul style="line-height:1.55">
+          <li>Los datos abiertos tienen algo menos de casos que el total oficial (−3 % a −6 % en años epidémicos).</li>
+          <li>Los modelos suponen que los casos recientes ya están completos; en la práctica llegan con retraso.</li>
+          <li>El clima es el promedio de celdas de unos 55 km; faltan punto de rocío y presión.</li>
+          <li>La población de 2010–2017 es estimada.</li>
+          <li>Anticipar el <b>inicio</b> de un brote sigue siendo difícil.</li>
+        </ul>
+        <div class="grafico" id="g-externa" style="height:340px"></div>
+      </div>
+    </div>
+    <h3>Fuentes</h3>
+    <p style="color:var(--tinta2)">CDC-MINSA, datos abiertos (ODC-By) · ENFEN (ICEN) · INEI (población) · OpenDengue (validación) ·
+      mapa: peru-geojson (MPL-2.0). Proyecto DengueSense.</p>
+  </section>
+
+  <footer id="pie"></footer>
+</div>
+
+<script>/*__PLOTLY__*/</script>
+<script>
+"use strict";
+const D = /*__DATOS__*/null;
+const C = { azul: "#2a78d6", naranja: "#eb6834", aqua: "#1baf7a", amarillo: "#eda100", magenta: "#e87ba4",
+            tinta: "#0b0b0b", tinta2: "#52514e", tenue: "#898781", rej: "#e1e0d9", gris: "#c3c2b7" };
+const COLOR_MODELO = { "Persistencia": C.aqua, "Regresion con rezagos": C.amarillo, "XGBoost sin clima": C.magenta,
+                       "XGBoost con clima": C.azul, "LSTM sin clima": C.tenue, "LSTM con clima": C.naranja };
+const TIPO_TXT = { "Pronostico": "Pronóstico 2026 (semanas 1 a 4)", "Fuera de muestra 2025": "Prueba fuera de muestra 2025",
+                   "Validacion 2016-2024": "Validación 2016–2024" };
+const CONFIG = { displayModeBar: false, responsive: true };
+const $ = (id) => document.getElementById(id);
+const nombre = (m) => (m === "Regresion con rezagos" ? "Regresión con rezagos" : m);
+const titulo = (s) => s.toLowerCase().replace(/(^|\s)\S/g, (x) => x.toUpperCase());
+const miles = (x) => Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+const pct = (x) => Math.round(x * 100) + " %";
+const F = D.filas;
+const N = F.d.length;
+const DEF = D.modelo_defecto;
+
+// Indice de filas por periodo|modelo|horizonte
+const IDX = {};
+for (let i = 0; i < N; i++) {
+  const k = F.t[i] + "|" + F.m[i] + "|" + F.h[i];
+  (IDX[k] = IDX[k] || []).push(i);
+}
+const filasDe = (t, m, h) => IDX[t + "|" + m + "|" + h] || [];
+
+function base(extra) {
+  const l = { paper_bgcolor: "white", plot_bgcolor: "white", separators: ", ",
+              font: { family: "Segoe UI, system-ui, sans-serif", color: C.tinta, size: 12 },
+              margin: { l: 55, r: 20, t: 46, b: 45 }, hoverlabel: { bgcolor: "white" },
+              legend: { orientation: "h", y: -0.2, x: 0 },
+              xaxis: { gridcolor: C.rej, zeroline: false }, yaxis: { gridcolor: C.rej, zeroline: false } };
+  for (const k in extra) {
+    if (typeof extra[k] === "object" && extra[k] !== null && !Array.isArray(extra[k]) && l[k]) {
+      l[k] = Object.assign({}, l[k], extra[k]);
+    } else { l[k] = extra[k]; }
+  }
+  return l;
+}
+const grafico = (id, trazas, layout) => Plotly.react(id, trazas, base(layout), CONFIG);
+
+function tarjeta(t, v, nota, color) {
+  return `<div class="tarjeta" style="border-top-color:${color}"><div class="titulo">${t}</div>` +
+         `<div class="valor">${v}</div><div class="nota">${nota || ""}</div></div>`;
+}
+function opciones(sel, valores, textos, valor) {
+  sel.innerHTML = valores.map((v, i) => `<option value="${v}">${textos[i]}</option>`).join("");
+  sel.value = String(valor);
+}
+
+// ------------------------------------------------------------ cabecera ----
+function cabecera() {
+  const pron = filasDe(0, DEF, 1).concat(filasDe(0, DEF, 2), filasDe(0, DEF, 3), filasDe(0, DEF, 4));
+  const alerta = [...new Set(pron.filter((i) => F.al[i]).map((i) => D.deptos[F.d[i]]))].sort();
+  const a2 = D.alertas["2|" + D.modelos[DEF]];
+  $("kpis").innerHTML =
+    tarjeta("Departamentos con alerta (pronóstico 2026, semanas 1–4)", `${alerta.length} de ${D.deptos.length}`,
+            alerta.map(titulo).join(", ") || "ninguno", C.naranja) +
+    tarjeta("Prueba real 2025 (año nunca visto)", pct(D.oos.total),
+            "de las combinaciones departamento-horizonte en que el modelo supera a la persistencia", C.aqua) +
+    tarjeta("Departamentos modelados", D.deptos.length, "con ≥ 1 000 casos en 2010–2021 (sin Lima)", C.azul) +
+    tarjeta("Semanas de brote con alerta (2 semanas antes)", pct(a2[0]),
+            `precisión ${pct(a2[1])} · brotes nuevos anticipados ${pct(a2[2])}`, C.magenta);
+  $("pie").textContent = `DengueSense · generado el ${D.generado} · ${miles(N)} pronósticos semanales`;
+}
+
+// ---------------------------------------------------------------- mapa ----
+let semanasMapa = [];
+function prepararMapa() {
+  opciones($("m-tipo"), [0, 1, 2], D.tipos.map((t) => TIPO_TXT[t]), 0);
+  opciones($("m-h"), [1, 2, 3, 4], ["1 semana", "2 semanas", "3 semanas", "4 semanas"], 2);
+  $("m-tipo").addEventListener("change", () => { modelosMapa(); semanasMapaPrep(true); dibujarMapa(); });
+  $("m-modelo").addEventListener("change", () => { semanasMapaPrep(false); dibujarMapa(); });
+  $("m-h").addEventListener("change", () => { semanasMapaPrep(false); dibujarMapa(); });
+  $("m-sem").addEventListener("input", dibujarMapa);
+  modelosMapa(); semanasMapaPrep(true);
+}
+function modelosMapa() {
+  const t = +$("m-tipo").value;
+  const disp = D.modelos.map((m, i) => i).filter((i) => filasDe(t, i, 2).length);
+  disp.sort((a, b) => (a === DEF ? -1 : b === DEF ? 1 : a - b));
+  opciones($("m-modelo"), disp, disp.map((i) => nombre(D.modelos[i])), disp[0]);
+}
+function semanasMapaPrep(reiniciar) {
+  const t = +$("m-tipo").value, m = +$("m-modelo").value, h = +$("m-h").value;
+  const anterior = semanasMapa[+$("m-sem").value];
+  semanasMapa = [...new Set(filasDe(t, m, h).map((i) => F.w[i]))].sort((a, b) => a - b);
+  const r = $("m-sem");
+  r.min = 0; r.max = semanasMapa.length - 1; r.step = 1;
+  let pos = semanasMapa.length - 1;
+  const idx15 = semanasMapa.findIndex((w) => D.semanas.a[w] === 2024 && D.semanas.s[w] === 15);
+  if (!reiniciar && semanasMapa.indexOf(anterior) >= 0) pos = semanasMapa.indexOf(anterior);
+  else if (idx15 >= 0) pos = idx15;
+  r.value = pos;
+  $("m-sem-caja").style.display = t === 0 ? "none" : "flex";
+}
+function dibujarMapa() {
+  const t = +$("m-tipo").value, m = +$("m-modelo").value, h = +$("m-h").value;
+  const w = semanasMapa[+$("m-sem").value];
+  $("m-sem-txt").textContent = `${D.semanas.a[w]} · semana ${D.semanas.s[w]}`;
+  const filas = filasDe(t, m, h).filter((i) => F.w[i] === w);
+  const porDepto = {};
+  filas.forEach((i) => { porDepto[D.deptos[F.d[i]]] = i; });
+  const fecha = D.semanas.f[w].split("-").reverse().join("/");
+  const conObs = filas.filter((i) => F.c[i] !== null);
+  const alertas = filas.filter((i) => F.al[i]).length;
+  const bien = conObs.filter((i) => F.al[i] === F.b[i]).length;
+  $("m-kpis").innerHTML =
+    tarjeta("Semana", `${D.semanas.s[w]} / ${D.semanas.a[w]}`, `miércoles ${fecha}`, C.azul) +
+    tarjeta("Departamentos con alerta", `${alertas} de ${filas.length}`, `pronóstico hecho ${h} semana${h > 1 ? "s" : ""} antes`, C.naranja) +
+    tarjeta("Casos pronosticados", miles(filas.reduce((s, i) => s + F.p[i], 0)), nombre(D.modelos[m]), C.magenta) +
+    (conObs.length
+      ? tarjeta("Casos observados", miles(conObs.reduce((s, i) => s + F.c[i], 0)), `${pct(bien / conObs.length)} de departamentos bien clasificados`, C.aqua)
+      : tarjeta("Casos observados", "—", "todavía no disponibles", C.aqua));
+
+  const nombres = D.deptos_mapa;
+  const modelados = nombres.filter((d) => d in porDepto);
+  const fuera = nombres.filter((d) => !(d in porDepto));
+  const razon = (i) => Math.min(F.p[i] / Math.max(F.u[i], 1), 3);
+  const texto = (d) => {
+    const i = porDepto[d];
+    return `<b>${titulo(d)}</b><br>${F.al[i] ? "⚠️ ALERTA" : "Sin alerta"}<br>Pronóstico: ${miles(F.p[i])}` +
+           `<br>Umbral de brote: ${miles(F.u[i])}` + (F.c[i] !== null ? `<br>Observados: ${miles(F.c[i])}` : "");
+  };
+  grafico("g-mapa", [
+    { type: "choropleth", geojson: D.geo, featureidkey: "properties.NOMBDEP", locations: fuera, z: fuera.map(() => 1),
+      colorscale: [[0, "#e7e6e1"], [1, "#e7e6e1"]], showscale: false, marker: { line: { color: "white", width: 0.8 } },
+      text: fuera.map((d) => `<b>${titulo(d)}</b><br>Fuera del modelo`), hoverinfo: "text" },
+    { type: "choropleth", geojson: D.geo, featureidkey: "properties.NOMBDEP", locations: modelados,
+      z: modelados.map((d) => razon(porDepto[d])), zmin: 0, zmax: 3,
+      colorscale: [[0, "#cde2fb"], [0.33, "#f4f6f8"], [0.45, "#fbd3bf"], [1, "#a3330c"]],
+      marker: { line: { color: "white", width: 0.8 } }, text: modelados.map(texto), hoverinfo: "text",
+      colorbar: { title: { text: "Pronóstico<br>/ umbral" }, tickvals: [0, 1, 2, 3], ticktext: ["0", "1 = umbral", "2", "≥ 3"], len: 0.6 } },
+  ], { geo: { fitbounds: "locations", visible: false }, margin: { l: 0, r: 0, t: 0, b: 0 }, dragmode: false });
+
+  const orden = filas.slice().sort((a, b) => razon(a) - razon(b));
+  grafico("g-ranking", [{
+    type: "bar", orientation: "h", x: orden.map(razon), y: orden.map((i) => titulo(D.deptos[F.d[i]])),
+    marker: { color: orden.map((i) => (F.al[i] ? C.naranja : "#9ec5f4")) },
+    text: orden.map((i) => `${miles(F.p[i])} casos`), textposition: "outside", cliponaxis: false,
+    hovertemplate: "%{y}<br>pronóstico / umbral: %{x:.2f}<extra></extra>" }],
+    { title: { text: "Departamentos ordenados por riesgo", x: 0.02 }, margin: { l: 105, r: 70, t: 46, b: 45 },
+      xaxis: { title: { text: "Pronóstico / umbral del canal endémico" } },
+      shapes: [{ type: "line", x0: 1, x1: 1, yref: "paper", y0: 0, y1: 1, line: { color: C.tinta2, dash: "dash", width: 1 } }] });
+
+  const filasTabla = filas.slice().sort((a, b) => razon(b) - razon(a)).map((i) =>
+    `<tr><td>${titulo(D.deptos[F.d[i]])}</td><td>${miles(F.p[i])}</td><td>${miles(F.u[i])}</td>` +
+    `<td>${F.c[i] === null ? "—" : miles(F.c[i])}</td><td><span class="etq ${F.al[i] ? "si" : "no"}">${F.al[i] ? "Alerta" : "No"}</span></td>` +
+    `<td>${F.c[i] === null ? "—" : `<span class="etq ${F.b[i] ? "si" : "no"}">${F.b[i] ? "Brote" : "No"}</span>`}</td></tr>`).join("");
+  $("m-tabla").innerHTML = `<table><tr><th>Departamento</th><th>Pronóstico</th><th>Umbral</th><th>Observados</th><th>Alerta</th><th>Brote real</th></tr>${filasTabla}</table>`;
+}
+
+// -------------------------------------------------------- departamento ----
+function prepararDepto() {
+  const idx = D.deptos.map((d, i) => i);
+  opciones($("d-depto"), idx, D.deptos.map(titulo), D.deptos.indexOf("PIURA"));
+  opciones($("d-h"), [1, 2, 3, 4], ["1 semana", "2 semanas", "3 semanas", "4 semanas"], 2);
+  const mods = ["XGBoost sin clima", "XGBoost con clima", "Persistencia", "Regresion con rezagos"].map((m) => D.modelos.indexOf(m)).filter((i) => i >= 0);
+  opciones($("d-modelo"), mods, mods.map((i) => nombre(D.modelos[i])), mods[0]);
+  ["d-depto", "d-h", "d-modelo"].forEach((id) => $(id).addEventListener("change", dibujarDepto));
+}
+function dibujarDepto() {
+  const d = +$("d-depto").value, h = +$("d-h").value, m = +$("d-modelo").value;
+  const filas = [0, 1, 2].flatMap((t) => filasDe(t, m, h)).filter((i) => F.d[i] === d).sort((a, b) => F.w[a] - F.w[b]);
+  const futuro = filasDe(0, DEF, h).filter((i) => F.d[i] === d);
+  const obs = filas.filter((i) => F.c[i] !== null);
+  const brotes = obs.filter((i) => F.b[i]);
+  const mae = obs.reduce((s, i) => s + Math.abs(F.c[i] - F.p[i]), 0) / Math.max(obs.length, 1);
+  const pico = obs.reduce((s, i) => Math.max(s, F.c[i]), 0);
+  $("d-kpis").innerHTML =
+    tarjeta("Casos 2016–2025", miles(obs.reduce((s, i) => s + F.c[i], 0)), `pico: ${miles(pico)} casos en una semana`, C.azul) +
+    tarjeta("Semanas de brote", brotes.length, `${pct(brotes.length / Math.max(obs.length, 1))} de las semanas`, C.naranja) +
+    tarjeta("Brotes con alerta a tiempo", brotes.length ? pct(brotes.filter((i) => F.al[i]).length / brotes.length) : "—",
+            `alerta ${h} semana${h > 1 ? "s" : ""} antes`, C.magenta) +
+    tarjeta("Error medio del pronóstico", mae.toFixed(1).replace(".", ","), "casos por semana (MAE)", C.aqua);
+  if (!filas.length) { $("d-nota").innerHTML = "Ese modelo no tiene predicciones para este departamento."; return; }
+  const f = (i) => D.semanas.f[F.w[i]];
+  const tope = Math.max(pico, ...filas.map((i) => F.p[i])) * 1.08;
+  const ultimo = f(obs[obs.length - 1]);
+  grafico("g-serie", [
+    { type: "bar", x: brotes.map(f), y: brotes.map(() => tope), marker: { color: "#fde7dd", line: { width: 0 } },
+      width: 7 * 24 * 3600 * 1000, name: "Semana de brote", hoverinfo: "skip" },
+    { type: "scatter", x: filas.map(f), y: filas.map((i) => F.u[i]), name: "Umbral (canal endémico)", line: { color: C.naranja, dash: "dash", width: 1.3 } },
+    { type: "scatter", x: obs.map(f), y: obs.map((i) => F.c[i]), name: "Casos observados", line: { color: C.tinta, width: 2.2 } },
+    { type: "scatter", x: obs.map(f), y: obs.map((i) => F.p[i]), name: `Pronóstico (${nombre(D.modelos[m])})`, line: { color: C.azul, width: 1.6 } },
+    { type: "scatter", mode: "lines+markers", x: futuro.map(f), y: futuro.map((i) => F.p[i]), name: "Pronóstico 2026",
+      marker: { color: C.naranja, size: 10, line: { color: "white", width: 1.5 } }, line: { color: C.naranja, width: 2 } },
+  ], { barmode: "overlay", hovermode: "x unified", yaxis: { title: { text: "Casos por semana" } },
+       xaxis: { type: "date", hoverformat: "%d/%m/%Y", tickformat: "%m/%Y",
+                rangeslider: { visible: true, thickness: 0.06 },
+                rangeselector: { buttons: [{ count: 1, label: "1 año", step: "year", stepmode: "backward" },
+                                           { count: 3, label: "3 años", step: "year", stepmode: "backward" },
+                                           { step: "all", label: "Todo" }] } },
+       shapes: [{ type: "rect", xref: "x", yref: "paper", x0: "2025-01-01", x1: ultimo, y0: 0, y1: 1,
+                  fillcolor: C.aqua, opacity: 0.07, line: { width: 0 } }],
+       annotations: [{ x: "2025-01-01", y: 1, xref: "x", yref: "paper", text: "2025: fuera de muestra", showarrow: false,
+                       xanchor: "left", yanchor: "bottom", font: { color: C.tinta2, size: 11 } }],
+       legend: { orientation: "h", y: -0.32, x: 0 }, margin: { l: 55, r: 20, t: 30, b: 50 } });
+  $("d-nota").innerHTML = `Las barras naranjas claras marcan las <b>semanas de brote</b> (casos sobre el canal endémico). ` +
+    `La línea azul es lo que el modelo pronosticó <b>${h} semana${h > 1 ? "s" : ""} antes</b>, usando solo datos de años anteriores.`;
+}
+
+// ------------------------------------------------------------ desempeño ---
+function dibujarDesempeno() {
+  const hs = [1, 2, 3, 4];
+  grafico("g-mae", Object.keys(D.mae_validacion).map((m) => ({
+    type: "bar", name: nombre(m), x: hs, y: D.mae_validacion[m], marker: { color: COLOR_MODELO[m] } })),
+    { title: { text: "Error mediano por departamento y año", x: 0.02 }, barmode: "group",
+      xaxis: { title: { text: "Semanas de anticipación" }, dtick: 1 }, yaxis: { title: { text: "Casos por semana" } } });
+  const azules = ["#cde2fb", "#86b6ef", "#256abf", "#0d366b"];
+  grafico("g-h2", hs.map((h, k) => ({
+    type: "scatter", mode: "lines+markers", name: `${h} semana${h > 1 ? "s" : ""}`, x: D.h2.anios, y: D.h2.por_h[h],
+    line: { color: azules[k], width: 2.2 }, marker: { size: 7 } })),
+    { title: { text: "¿El clima reduce el error? (hipótesis H2)", x: 0.02 },
+      xaxis: { title: { text: "Año evaluado" }, dtick: 1 }, yaxis: { title: { text: `Departamentos (de ${D.h2.n})` }, range: [0, D.h2.n] },
+      shapes: [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: D.h2.n / 2, y1: D.h2.n / 2, line: { color: C.tinta2, dash: "dash", width: 1 } }],
+      annotations: [{ xref: "paper", x: 0.01, y: D.h2.n / 2, text: "mitad: el clima no aporta", showarrow: false,
+                      yanchor: "bottom", xanchor: "left", font: { size: 11, color: C.tinta2 } }] });
+  dibujarAlertas();
+  grafico("g-oos", [{ type: "bar", x: hs, y: D.oos.por_h, text: D.oos.por_h.map(String), textposition: "outside",
+                      marker: { color: C.azul } }],
+    { title: { text: "Departamentos donde XGBoost supera a la persistencia", x: 0.02 },
+      xaxis: { title: { text: "Semanas de anticipación" }, dtick: 1 }, yaxis: { title: { text: "Departamentos (de 17)" }, range: [0, 17.5] } });
+  grafico("g-lstm", Object.keys(D.lstm).map((m) => ({
+    type: "scatter", mode: "lines+markers", name: nombre(m), x: hs, y: D.lstm[m],
+    line: { color: COLOR_MODELO[m], width: 2, dash: m.startsWith("LSTM") ? "dash" : "solid" } })),
+    { title: { text: "Error mediano entre departamentos", x: 0.02 }, xaxis: { title: { text: "Semanas de anticipación" }, dtick: 1 },
+      yaxis: { title: { text: "Casos por semana" } } });
+}
+function dibujarAlertas() {
+  const h = +$("a-h").value;
+  const ind = ["Brotes con alerta (recall)", "Alertas correctas (precisión)", "Brotes NUEVOS anticipados"];
+  const mods = D.modelos.filter((m) => D.alertas[h + "|" + m]);
+  grafico("g-alertas", mods.map((m) => {
+    const v = D.alertas[h + "|" + m].map((x) => x * 100);
+    return { type: "bar", name: nombre(m), x: ind, y: v, text: v.map((x) => Math.round(x) + "%"), textposition: "outside",
+             marker: { color: COLOR_MODELO[m] } };
+  }), { barmode: "group", yaxis: { title: { text: "%" }, range: [0, 105] } });
+}
+
+// --------------------------------------------------------------- clima ----
+function prepararClima() {
+  opciones($("s-h"), [1, 2, 3, 4], ["1 semana", "2 semanas", "3 semanas", "4 semanas"], 2);
+  const ds = D.shap["2"].deptos;
+  opciones($("s-depto"), ds, ds.map(titulo), "PIURA");
+  $("s-h").addEventListener("change", dibujarClima);
+  $("s-depto").addEventListener("change", dibujarClima);
+  $("a-h") && opciones($("a-h"), [1, 2, 3, 4], ["1 semana", "2 semanas", "3 semanas", "4 semanas"], 2);
+  $("a-h").addEventListener("change", dibujarAlertas);
+}
+function dibujarClima() {
+  const s = D.shap[$("s-h").value];
+  const cats = ["Temperatura", "Lluvia", "Humedad", "Viento", "ICEN"];
+  grafico("g-calor", [{ type: "heatmap", z: s.matriz, x: cats, y: s.deptos.map(titulo), zmin: 0, zmax: 100,
+                        colorscale: [[0, "#f4f8fd"], [0.35, "#86b6ef"], [0.7, "#256abf"], [1, "#0d366b"]],
+                        texttemplate: "%{z:.0f}", hovertemplate: "%{y} · %{x}: %{z:.0f} %<extra></extra>",
+                        colorbar: { title: { text: "% del<br>clima" } } }],
+    { title: { text: "Peso de cada factor climático, por departamento", x: 0.02 }, yaxis: { autorange: "reversed" },
+      margin: { l: 110, r: 20, t: 46, b: 40 } });
+  const depto = $("s-depto").value;
+  const top = (s.top[depto] || []).slice().reverse();
+  const colorCat = { "casos pasados": C.gris, "estacionalidad": C.tenue, "temperatura": C.naranja, "lluvia": C.azul,
+                     "humedad": C.aqua, "viento": C.magenta, "icen": C.amarillo };
+  const categorias = [...new Set(top.map((r) => r[1]))];
+  grafico("g-top", categorias.map((cat) => {
+    const r = top.filter((x) => x[1] === cat);
+    return { type: "bar", orientation: "h", name: cat, x: r.map((x) => x[2]), y: r.map((x) => x[0]), marker: { color: colorCat[cat] } };
+  }), { title: { text: `Variables que más usa el modelo · ${titulo(depto)}`, x: 0.02 }, barmode: "stack",
+        yaxis: { categoryorder: "array", categoryarray: top.map((x) => x[0]) },
+        xaxis: { title: { text: "% de la importancia" } }, margin: { l: 130, r: 20, t: 46, b: 45 } });
+  const cp = s.casos_pct[depto];
+  $("s-nota").innerHTML = `En ${titulo(depto)}, los <b>casos pasados y la estacionalidad</b> explican el ${Math.round(cp)} % ` +
+    `de lo que usa el modelo; el clima, el ${Math.round(100 - cp)} %.`;
+}
+
+// ---------------------------------------------------------------- lima ----
+function dibujarLima() {
+  const L = D.lima, anual = {};
+  L.anual.a.forEach((a, i) => { anual[a] = L.anual.c[i]; });
+  $("l-kpis").innerHTML =
+    tarjeta("Casos en 2022", miles(anual[2022] || 0), "antes de la emergencia", C.azul) +
+    tarjeta("Casos en 2023", miles(anual[2023] || 0), "año de El Niño costero", C.naranja) +
+    tarjeta("Casos en 2024", miles(anual[2024] || 0), "la mayor epidemia de Lima", C.magenta) +
+    tarjeta("Distritos con casos por primera vez", "36 de 79", "en 2023 o 2024", C.aqua);
+  grafico("g-lima-anual", [{ type: "bar", x: L.anual.a, y: L.anual.c, marker: { color: L.anual.a.map((a) => (a >= 2023 ? C.naranja : C.azul)) } }],
+    { title: { text: "Casos de dengue por año, departamento de Lima", x: 0.02 }, xaxis: { dtick: 2 } });
+  grafico("g-lima-clima", [
+    { type: "bar", x: L.clima.f, y: L.clima.c, name: "Casos por semana", marker: { color: "#fbd3bf" }, yaxis: "y2" },
+    { type: "scatter", x: L.clima.f, y: L.clima.anom, name: "Anomalía de temperatura (°C)", line: { color: C.azul } },
+    { type: "scatter", x: L.clima.f, y: L.clima.icen, name: "ICEN (El Niño costero)", line: { color: C.amarillo, width: 2.5 } },
+  ], { title: { text: "Clima, El Niño costero y casos, 2022–2024", x: 0.02 }, xaxis: { tickformat: "%m/%Y", hoverformat: "%d/%m/%Y" },
+       yaxis: { title: { text: "°C / ICEN" } },
+       yaxis2: { title: { text: "Casos" }, overlaying: "y", side: "right", showgrid: false } });
+  const colores = { "Persistencia": C.aqua, "XGBoost solo Lima": C.magenta, "XGBoost costa, sin clima": C.amarillo,
+                    "XGBoost costa, con clima": C.azul };
+  const b = L.pred["Persistencia"];
+  grafico("g-lima-pred", [{ type: "scatter", x: b.f, y: b.c, name: "Casos observados", line: { color: C.tinta, width: 2.5 } }]
+    .concat(Object.keys(colores).filter((m) => L.pred[m]).map((m) => ({
+      type: "scatter", x: L.pred[m].f, y: L.pred[m].p, name: m, line: { color: colores[m], width: 1.5 } }))),
+    { title: { text: "¿Se podía pronosticar? Pronóstico a 2 semanas en 2023–2024", x: 0.02 }, hovermode: "x unified",
+      xaxis: { tickformat: "%m/%Y", hoverformat: "%d/%m/%Y" }, yaxis: { title: { text: "Casos por semana" } } });
+  $("l-tabla").innerHTML = "<table><tr><th>Error medio (casos/semana)</th><th>2023</th><th>2024</th></tr>" +
+    Object.keys(L.error).map((m) => `<tr><td>${m}</td><td>${miles(L.error[m][0])}</td><td>${miles(L.error[m][1])}</td></tr>`).join("") + "</table>";
+}
+
+// -------------------------------------------------------------- acerca ----
+function dibujarAcerca() {
+  const E = D.externa;
+  grafico("g-externa", [
+    { type: "bar", name: "Datos del proyecto", x: E.a, y: E.panel, marker: { color: C.azul } },
+    { type: "bar", name: "Total nacional (OpenDengue)", x: E.a, y: E.od, marker: { color: C.gris } },
+  ], { title: { text: "Validación externa de los casos", x: 0.02 }, barmode: "group", xaxis: { dtick: 2 } });
+}
+
+// ------------------------------------------------------------ pestañas ----
+const dibujadas = {};
+const DIBUJAR = { mapa: dibujarMapa, depto: dibujarDepto, desempeno: dibujarDesempeno, clima: dibujarClima,
+                  lima: dibujarLima, acerca: dibujarAcerca };
+function mostrar(sec) {
+  document.querySelectorAll("#pestanas button").forEach((b) => b.classList.toggle("activa", b.dataset.sec === sec));
+  document.querySelectorAll(".seccion").forEach((s) => s.classList.toggle("activa", s.id === "sec-" + sec));
+  if (!dibujadas[sec]) { DIBUJAR[sec](); dibujadas[sec] = true; }
+  document.querySelectorAll("#sec-" + sec + " .js-plotly-plot").forEach((g) => Plotly.Plots.resize(g));
+}
+document.querySelectorAll("#pestanas button").forEach((b) => b.addEventListener("click", () => mostrar(b.dataset.sec)));
+
+cabecera();
+prepararMapa();
+prepararDepto();
+prepararClima();
+mostrar("mapa");
+</script>
+</body>
+</html>

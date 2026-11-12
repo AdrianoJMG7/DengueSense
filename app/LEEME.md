@@ -20,3 +20,12 @@ Se abre en http://localhost:8501. No entrena nada: usa resultados ya calculados.
 ## Archivos
 - `tablero.py`: la aplicación. El tema está en `../.streamlit/config.toml`.
 - `peru_departamental.geojson`: límites de los departamentos, solo para dibujar el mapa. Viene de [*peru-geojson*](https://github.com/juaneladio/peru-geojson) de Juan Eladio, basado en el INEI, con licencia **MPL-2.0**.
+
+## Versión en un solo archivo HTML
+`DengueSense.html`, en la raíz del proyecto, tiene la misma interfaz en un solo archivo. **Cualquier persona puede abrirlo con doble clic**, sin Python, sin instalar nada y sin internet, porque los datos y Plotly.js van incrustados (unos 9 MB). Para regenerarlo cuando cambien los resultados:
+
+```powershell
+python scripts/12_exportar_interfaz_html.py
+```
+
+La plantilla está en `scripts/plantilla_interfaz.html`.
