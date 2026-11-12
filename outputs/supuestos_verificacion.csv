@@ -1,0 +1,43 @@
+supuesto,hipotesis,diferencia_maxima,coincide,detalle
+temp_media_mm4_lag2,media de t-2..t-5 (rolling 4 y shift 2),0.0,True,"NA reales 724, NA calculados 905"
+temp_media_mm4_lag2,media de t-1..t-4 (rolling 4 y shift 1),1.864286,False,"NA reales 724, NA calculados 724"
+temp_media_mm4_lag2,media de t-2..t-5 aceptando ventanas incompletas,0.0,True,"NA reales 724, NA calculados 362"
+temp_media_mm4_lag2,media de t-3..t (rolling 4 sin shift),3.475357,False,"NA reales 724, NA calculados 543"
+precip_total_mm4_lag2,media de t-2..t-5 (rolling 4 y shift 2),0.0,True,"NA reales 724, NA calculados 905"
+precip_total_mm4_lag2,media de t-1..t-4 (rolling 4 y shift 1),196.3625,False,"NA reales 724, NA calculados 724"
+precip_total_mm4_lag2,media de t-2..t-5 aceptando ventanas incompletas,0.0,True,"NA reales 724, NA calculados 362"
+precip_total_mm4_lag2,media de t-3..t (rolling 4 sin shift),197.0875,False,"NA reales 724, NA calculados 543"
+hum_rel_mm4_lag2,media de t-2..t-5 (rolling 4 y shift 2),0.0,True,"NA reales 724, NA calculados 905"
+hum_rel_mm4_lag2,media de t-1..t-4 (rolling 4 y shift 1),11.302857,False,"NA reales 724, NA calculados 724"
+hum_rel_mm4_lag2,media de t-2..t-5 aceptando ventanas incompletas,0.0,True,"NA reales 724, NA calculados 362"
+hum_rel_mm4_lag2,media de t-3..t (rolling 4 sin shift),21.776429,False,"NA reales 724, NA calculados 543"
+temp_media_anomalia,valor - media de la celda y semana en 2010-2024,0.0,True,
+temp_media_anomalia,valor - media de la celda y semana en 2010-2023,0.413544,False,
+temp_media_anomalia,valor - media de la celda y semana en 2010-2020,1.190606,False,
+temp_media_anomalia,valor - media de la celda y semana en 2010-2019,1.496333,False,
+temp_media_anomalia,valor - media de la celda y semana en 2011-2020,1.413571,False,
+temp_media_anomalia,valor - media de la celda y semana en 2014-2023,0.783143,False,
+temp_media_anomalia,valor - media de la celda y mes en 2010-2024,1.78841,False,
+precip_total_anomalia,valor - media de la celda y semana en 2010-2024,0.0,True,
+precip_total_anomalia,valor - media de la celda y semana en 2010-2023,16.849667,False,
+precip_total_anomalia,valor - media de la celda y semana en 2010-2020,44.334909,False,
+precip_total_anomalia,valor - media de la celda y semana en 2010-2019,86.945,False,
+precip_total_anomalia,valor - media de la celda y semana en 2011-2020,47.292,False,
+precip_total_anomalia,valor - media de la celda y semana en 2014-2023,24.094667,False,
+precip_total_anomalia,valor - media de la celda y mes en 2010-2024,53.99629,False,
+hum_rel_anomalia,valor - media de la celda y semana en 2010-2024,0.0,True,
+hum_rel_anomalia,valor - media de la celda y semana en 2010-2023,2.220544,False,
+hum_rel_anomalia,valor - media de la celda y semana en 2010-2020,6.577818,False,
+hum_rel_anomalia,valor - media de la celda y semana en 2010-2019,12.597143,False,
+hum_rel_anomalia,valor - media de la celda y semana en 2011-2020,8.333857,False,
+hum_rel_anomalia,valor - media de la celda y semana en 2014-2023,4.758238,False,
+hum_rel_anomalia,valor - media de la celda y mes en 2010-2024,13.287051,False,
+semanas del clima,"anos con semana 53 = calendario epidemiologico MMWR [2014, 2020]",0.0,True,"clima: [2014, 2020]; ISO: [2015, 2020]"
+icen_lag1,icen del mes anterior,0.0,True,
+icen_lag3,icen de tres meses antes,0.0,True,
+icen_mm3,"media de icen en los meses m, m-1 y m-2",0.0,True,
+icen_mm3,"media centrada de icen en m-1, m y m+1",0.76,False,
+icen_tendencia,icen - icen del mes anterior,1.7,False,
+icen_tendencia,icen - icen de tres meses antes,0.0,True,
+icen_cap,icen igual a icen_cap,0.69,False,"filas distintas: 6, max icen 2.92, max icen_cap 2.23"
+icen_trad,icen igual a icen_trad,0.27,False,correlacion 0.998
