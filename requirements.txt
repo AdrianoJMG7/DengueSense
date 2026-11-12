@@ -11,3 +11,5 @@ nbconvert>=7
 ipykernel>=6
 streamlit>=1.35
 plotly>=5.20
+# LSTM (notebook 14); en CPU: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
