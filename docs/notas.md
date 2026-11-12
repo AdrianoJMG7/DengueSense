@@ -104,3 +104,10 @@ También se pueden abrir y ejecutar celda por celda en VS Code o Jupyter.
 - Lima pasó de 938 casos (2022) a 30,735 (2023) y 87,864 (2024); el 86 % en Lima Metropolitana (Lima norte y este) y 36 de 79 distritos tuvieron casos por primera vez.
 - 2023: El Niño costero (ICEN hasta 2.9); en la zona de los casos, temperatura +1.05 °C y humedad +3.5 puntos frente a 2010–2022 (mismas semanas).
 - Pronóstico a 2 semanas (MAE 2023 / 2024): persistencia 247 / 746; XGBoost solo con historia de Lima 291 / 606 (el peor en 2023, R² 0.62); XGBoost entrenado con 6 departamentos de la costa, sin clima 175 / 610 y con clima 174 / 604. **H3 se confirma**: sin historia, el modelo local falla el año de la emergencia; transferir un modelo de la costa (objetivo "delta") reduce el error 30 % en 2023. El clima casi no cambia el resultado.
+
+## Modelos finales, prueba fuera de muestra 2025 y pronóstico (`notebooks/13_modelos_finales_y_pronostico.ipynb`)
+- 136 modelos (17 departamentos × 4 horizontes × sin/con clima) entrenados con 2010–2024 y la configuración elegida en el notebook 09; se guardan en `modelos/` (ignorado por git) con `metadatos.json`.
+- **Modelo de producción: XGBoost sin clima** (el clima no mejora de forma robusta y la tabla de clima termina en 2024).
+- **Prueba fuera de muestra 2025** (casos provisionales del CSV del CDC 2000–2025, nunca usados): el XGBoost sin clima tiene menor error que la persistencia en 13, 12, 13 y 11 de 17 departamentos (h = 1..4), con mejora mediana de ~3 %. Piura falla a 3–4 semanas (sobreestima la subida estacional aprendida de años epidémicos en un año tranquilo).
+- **Pronóstico 2026 S1–S4**: solo San Martín supera el canal endémico (~165–171 casos/semana).
+- `umbral_brote(..., hasta_ano=)` calcula umbrales de años futuros (solo usa años anteriores).
