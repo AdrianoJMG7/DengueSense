@@ -117,3 +117,9 @@ También se pueden abrir y ejecutar celda por celda en VS Code o Jupyter.
 - Mapa de riesgo por departamento (pronóstico / umbral del canal endémico), ranking de la semana y serie de tiempo con casos, pronóstico, umbral y semanas de brote. Tres periodos: validación 2016–2024, prueba fuera de muestra 2025 y pronóstico 2026 S1–S4; anticipación de 1 a 4 semanas; modelo a elegir (por defecto XGBoost sin clima).
 - Límites de departamentos: `app/peru_departamental.geojson`, de *peru-geojson* (MPL-2.0), solo para dibujar.
 - Probado con `streamlit.testing` (los tres periodos, cambio de semana, departamento, horizonte y modelo) y arrancando el servidor.
+
+## Fase 4 (opcional): LSTM (`notebooks/14_lstm.ipynb`)
+- Un LSTM global por horizonte (17 departamentos, *embedding* del departamento), ventana de 12 semanas que termina en T − h, objetivo "delta", misma partición que el notebook 09 (parada temprana con 2022–2023, reentrenamiento con 2010–2023, prueba 2024). Variantes sin clima y con clima (temperatura media, lluvia, humedad). ~2 minutos en CPU.
+- **MAE mediano en prueba 2024** (h = 1..4): LSTM con clima 12.4 / 15.1 / 17.5 / 20.1, el menor; XGBoost sin clima 12.7 / 16.1 / 19.2 / 24.5; persistencia 12.8 / 17.0 / 20.8 / 26.6. En Piura el LSTM con clima llega a R² 0.89 y 0.87 a 3–4 semanas.
+- Pero gana al XGBoost sin clima en solo 5–6 de 17 departamentos a 3–4 semanas (fuerte en los grandes, peor en varios pequeños, como San Martín), y el clima mejora al LSTM sin clima en solo 6–10 de 17: **mismo resultado de H2**.
+- Es un solo año de prueba: antes de preferirlo habría que validarlo con origen móvil. Se mantiene el XGBoost sin clima como modelo de producción.
