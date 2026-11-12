@@ -114,7 +114,7 @@ También se pueden abrir y ejecutar celda por celda en VS Code o Jupyter.
 
 ## Tablero (`app/tablero.py`)
 - `streamlit run app/tablero.py` (con el `.venv` activado). Lee `data/processed/tablero.parquet` (notebook 13).
-- Mapa de riesgo por departamento (pronóstico / umbral del canal endémico), ranking de la semana y serie de tiempo con casos, pronóstico, umbral y semanas de brote. Tres periodos: validación 2016–2024, prueba fuera de muestra 2025 y pronóstico 2026 S1–S4; anticipación de 1 a 4 semanas; modelo a elegir (por defecto XGBoost sin clima).
+- Interfaz con 6 pestañas: mapa de riesgo y ranking, serie por departamento, desempeño de los modelos (validación de 9 años, H2, alertas, prueba 2025, LSTM), factores climáticos (SHAP, H1), Lima (H3) y acerca del proyecto. Tres periodos (validación 2016–2024, prueba 2025 y pronóstico 2026 S1–S4), anticipación de 1 a 4 semanas y modelo a elegir (por defecto XGBoost sin clima). Tema en `.streamlit/config.toml`. Detalle en `app/LEEME.md`.
 - Límites de departamentos: `app/peru_departamental.geojson`, de *peru-geojson* (MPL-2.0), solo para dibujar.
 - Probado con `streamlit.testing` (los tres periodos, cambio de semana, departamento, horizonte y modelo) y arrancando el servidor.
 
