@@ -133,14 +133,15 @@ def metricas(y, p) -> dict:
 
 
 # ---------------------------------------------------- canal endemico ------
-def umbral_brote(casos_depto: pd.DataFrame) -> pd.DataFrame:
+def umbral_brote(casos_depto: pd.DataFrame, hasta_ano: int | None = None) -> pd.DataFrame:
     """Umbral de brote por departamento, ano y semana.
 
     Q3 (percentil 75) de los casos de la MISMA semana epidemiologica en los 7
     anos previos no epidemicos (se excluyen 2017, 2023 y 2024). Solo usa anos
     anteriores, asi que el umbral se conoce de antemano. La semana 53 usa la
     historia de la 52. casos_depto: departamento, ano, semana, casos (con
-    historia desde 2000, sin filas para las semanas sin casos).
+    historia desde 2000, sin filas para las semanas sin casos). Con hasta_ano se
+    calculan tambien umbrales de anos futuros (solo usan anos con datos).
     """
     anios = range(int(casos_depto["ano"].min()), int(casos_depto["ano"].max()) + 1)
     deptos = casos_depto["departamento"].unique()
@@ -150,7 +151,7 @@ def umbral_brote(casos_depto: pd.DataFrame) -> pd.DataFrame:
                                                     names=["departamento", "ano", "semana"]), fill_value=0))
     tabla = completo.unstack("ano")  # filas: (departamento, semana); columnas: anos
     filas = []
-    for anio in anios:
+    for anio in range(anios.start, max(anios.stop, (hasta_ano or 0) + 1)):
         previos = [a for a in anios if a < anio and a not in ANIOS_EPIDEMICOS][-ANIOS_CANAL:]
         if len(previos) < ANIOS_CANAL:
             continue

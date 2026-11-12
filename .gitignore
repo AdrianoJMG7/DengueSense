@@ -13,3 +13,6 @@ __pycache__/
 
 # OpenDengue (descargado por scripts/10_validacion_externa.py)
 data/external/opendengue/
+
+# Modelos entrenados (se regeneran con notebooks/13_modelos_finales_y_pronostico.ipynb)
+modelos/
